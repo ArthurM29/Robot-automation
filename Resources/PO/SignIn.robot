@@ -10,7 +10,7 @@ ${INVALID_EMAIL}            arthur.m1199@gmail.co
 ${INVALID_PASSWORD}         ArtPass1
 
 # string values
-${SIGN_IN_PAGE_TITLE}          Login - My Store
+${SIGN_IN_PAGE_TITLE}       Login - My Store
 ${EMAIL_REQUIRED_MSQ}       An email address required.
 ${PASSWORD_REQUIRED_MSG}    Password is required.
 ${INVALID_CRED_MSG}         Authentication failed.
@@ -19,7 +19,7 @@ ${INVALID_CRED_MSG}         Authentication failed.
 ${EMAIL_FIELD}              id=email
 ${PASSWORD_FIELD}           id=passwd
 ${SIGN_IN_BUTTON}           id=SubmitLogin
-${VALIDATION_MSG}           css=.alert.alert-danger>ol>li
+${VALIDATION_ALERT}           css=.alert.alert-danger>ol>li
 
 
 *** Keywords ***
@@ -39,4 +39,4 @@ Submit Credentials
 
 Validation Message Should Be
     [Arguments]  ${message}
-    Element Text Should Be  ${VALIDATION_MSG}  ${message}
+    Element Text Should Be  ${VALIDATION_ALERT}  ${message}

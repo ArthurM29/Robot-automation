@@ -46,16 +46,3 @@ Verify Empty Credentials Message
 Verify Invalid Credentials Message
     SignIn.Validation Message Should Be  ${INVALID_CRED_MSG}
 
-
-
-
-
-Verify Empty Search Message
-    Search.Verify Empty Search Message
-
-Verify No Search Results Message
-    Search.Verify No Search Results Message
-
-Verify Search Results
-    [Arguments]  ${message}  ${count}
-
