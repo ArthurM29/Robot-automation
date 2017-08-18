@@ -40,9 +40,9 @@ Verify Email Required Message
 Verify Password Required Message
     SignIn.Validation Message Should Be  ${PASSWORD_REQUIRED_MSG}
 
-Verify Empty Credentials Message
-    SignIn.Validation Message Should Be  ${EMAIL_REQUIRED_MSQ}
-
 Verify Invalid Credentials Message
     SignIn.Validation Message Should Be  ${INVALID_CRED_MSG}
+
+Verify Invalid Email Format Message
+    SignIn.Validation Message Should Be  ${INVALID_EMAIL_MSG}
 

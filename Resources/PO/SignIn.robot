@@ -14,12 +14,13 @@ ${SIGN_IN_PAGE_TITLE}       Login - My Store
 ${EMAIL_REQUIRED_MSQ}       An email address required.
 ${PASSWORD_REQUIRED_MSG}    Password is required.
 ${INVALID_CRED_MSG}         Authentication failed.
+${INVALID_EMAIL_MSG}        Invalid email address.
 
 # locators
 ${EMAIL_FIELD}              id=email
 ${PASSWORD_FIELD}           id=passwd
 ${SIGN_IN_BUTTON}           id=SubmitLogin
-${VALIDATION_ALERT}           css=.alert.alert-danger>ol>li
+${VALIDATION_ALERT}         css=.alert.alert-danger>ol>li
 
 
 *** Keywords ***
