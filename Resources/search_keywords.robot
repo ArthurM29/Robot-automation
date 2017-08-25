@@ -1,8 +1,10 @@
 *** Settings ***
+Library             ../Tests/MyLibrary.py
 Resource            ../Resources/PO/HomePage.robot
 Resource            ../Resources/PO/Search.robot
 Resource            ../Resources/PO/SignIn.robot
 Resource            ../Resources/PO/MyAccount.robot
+Resource            ../Resources/PO/SearchResults.robot
 Resource            sign_in_keywords.robot
 
 
@@ -37,16 +39,10 @@ Search And Verify Results
     Search  ${term}
     Verify Search Results For  ${term}
 
-Results should contain
-    # verify number of search results
-    ${search_results}=  Get Webelements  xpath=//div[@class='product-container']//a[@class='product-name']
-    # verify title of the first dress
-    ${element1}=  Get From List  ${search_results}  0
-    Element Text Should Be  ${element1}  Printed Chiffon Dress
-    # verify title of second dress
-    ${element2}=  Get From List  ${search_results}  1
-    Element Text Should Be  ${element2}  Printed Summer Dress
-
+Search Results Should Contain
+    [Arguments]  ${product}
+    ${search_results}=  Get Webelements  ${FOUND_PRODUCTS}
+    Webelements Should Contain Text  ${search_results}  ${product}
 
 Search_Count Label for ${term} is ${label}
     Search  ${term}

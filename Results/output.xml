@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170818 17:41:33.034" generator="Robot 3.0.2 (Python 2.7.10 on darwin)">
+<robot generated="20170825 19:26:26.877" generator="Robot 3.0.2 (Python 2.7.10 on darwin)">
 <suite source="/Users/amanasyan/Documents/Python-projects/Robot-automation/Tests/cart.robot" id="s1" name="Cart">
-<test id="s1-t1" name="User is able to add item to Shopping Cart">
+<test id="s1-t1" name="Logged Out user is able to add product to shopping cart">
 <kw type="setup" name="Begin Web Test" library="Common">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
@@ -9,18 +9,50 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20170818 17:41:33.231" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20170818 17:41:35.020" starttime="20170818 17:41:33.230"></status>
+<msg timestamp="20170825 19:26:27.009" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20170825 19:26:28.779" starttime="20170825 19:26:27.008"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20170818 17:41:35.432" starttime="20170818 17:41:35.021"></status>
+<status status="PASS" endtime="20170825 19:26:29.195" starttime="20170825 19:26:28.780"></status>
 </kw>
-<status status="PASS" endtime="20170818 17:41:35.433" starttime="20170818 17:41:33.230"></status>
+<status status="PASS" endtime="20170825 19:26:29.196" starttime="20170825 19:26:27.008"></status>
 </kw>
+<kw name="Given user is not logged in the application" library="gherkin">
+<kw name="Navigate To Home Page" library="sign_in_keywords">
+<kw name="Load" library="HomePage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20170825 19:26:29.198" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20170825 19:26:34.263" starttime="20170825 19:26:29.198"></status>
+</kw>
+<status status="PASS" endtime="20170825 19:26:34.263" starttime="20170825 19:26:29.197"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>${HOME_PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20170825 19:26:34.269" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" endtime="20170825 19:26:34.269" starttime="20170825 19:26:34.264"></status>
+</kw>
+<status status="PASS" endtime="20170825 19:26:34.269" starttime="20170825 19:26:34.263"></status>
+</kw>
+<status status="PASS" endtime="20170825 19:26:34.270" starttime="20170825 19:26:29.197"></status>
+</kw>
+<status status="PASS" endtime="20170825 19:26:34.270" starttime="20170825 19:26:29.196"></status>
+</kw>
+<kw name="When user searches for product" library="gherkin">
+<arguments>
+<arg>dress</arg>
+</arguments>
 <kw name="Search" library="search_keywords">
 <arguments>
-<arg>${SIMPLE_TERM}</arg>
+<arg>${product}</arg>
 </arguments>
 <kw name="Navigate To Home Page" library="sign_in_keywords">
 <kw name="Load" library="HomePage">
@@ -29,10 +61,10 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20170818 17:41:35.435" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20170818 17:41:40.629" starttime="20170818 17:41:35.435"></status>
+<msg timestamp="20170825 19:26:34.272" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20170825 19:26:36.019" starttime="20170825 19:26:34.272"></status>
 </kw>
-<status status="PASS" endtime="20170818 17:41:40.629" starttime="20170818 17:41:35.434"></status>
+<status status="PASS" endtime="20170825 19:26:36.019" starttime="20170825 19:26:34.271"></status>
 </kw>
 <kw name="Verify Page Loaded" library="HomePage">
 <kw name="Title Should Be" library="Selenium2Library">
@@ -40,12 +72,12 @@
 <arguments>
 <arg>${HOME_PAGE_TITLE}</arg>
 </arguments>
-<msg timestamp="20170818 17:41:40.634" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" endtime="20170818 17:41:40.634" starttime="20170818 17:41:40.629"></status>
+<msg timestamp="20170825 19:26:36.024" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" endtime="20170825 19:26:36.024" starttime="20170825 19:26:36.020"></status>
 </kw>
-<status status="PASS" endtime="20170818 17:41:40.634" starttime="20170818 17:41:40.629"></status>
+<status status="PASS" endtime="20170825 19:26:36.024" starttime="20170825 19:26:36.020"></status>
 </kw>
-<status status="PASS" endtime="20170818 17:41:40.634" starttime="20170818 17:41:35.434"></status>
+<status status="PASS" endtime="20170825 19:26:36.024" starttime="20170825 19:26:34.271"></status>
 </kw>
 <kw name="Clear Search Field" library="Search">
 <kw name="Clear Element Text" library="Selenium2Library">
@@ -53,9 +85,9 @@
 <arguments>
 <arg>${SEARCH_FIELD}</arg>
 </arguments>
-<status status="PASS" endtime="20170818 17:41:40.681" starttime="20170818 17:41:40.635"></status>
+<status status="PASS" endtime="20170825 19:26:36.066" starttime="20170825 19:26:36.024"></status>
 </kw>
-<status status="PASS" endtime="20170818 17:41:40.681" starttime="20170818 17:41:40.635"></status>
+<status status="PASS" endtime="20170825 19:26:36.066" starttime="20170825 19:26:36.024"></status>
 </kw>
 <kw name="Enter Search Term" library="Search">
 <arguments>
@@ -67,10 +99,10 @@
 <arg>${SEARCH_FIELD}</arg>
 <arg>${term}</arg>
 </arguments>
-<msg timestamp="20170818 17:41:40.682" level="INFO">Typing text 'blouse' into text field 'id=search_query_top'</msg>
-<status status="PASS" endtime="20170818 17:41:40.803" starttime="20170818 17:41:40.682"></status>
+<msg timestamp="20170825 19:26:36.067" level="INFO">Typing text 'dress' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20170825 19:26:36.148" starttime="20170825 19:26:36.066"></status>
 </kw>
-<status status="PASS" endtime="20170818 17:41:40.804" starttime="20170818 17:41:40.681"></status>
+<status status="PASS" endtime="20170825 19:26:36.148" starttime="20170825 19:26:36.066"></status>
 </kw>
 <kw name="Click Search Button" library="Search">
 <kw name="Click Button" library="Selenium2Library">
@@ -78,58 +110,142 @@
 <arguments>
 <arg>${SEARCH_BUTTON}</arg>
 </arguments>
-<msg timestamp="20170818 17:41:40.805" level="INFO">Clicking button 'name=submit_search'.</msg>
-<status status="PASS" endtime="20170818 17:41:42.194" starttime="20170818 17:41:40.804"></status>
+<msg timestamp="20170825 19:26:36.149" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20170825 19:26:37.940" starttime="20170825 19:26:36.148"></status>
 </kw>
-<status status="PASS" endtime="20170818 17:41:42.195" starttime="20170818 17:41:40.804"></status>
+<status status="PASS" endtime="20170825 19:26:37.940" starttime="20170825 19:26:36.148"></status>
 </kw>
-<status status="PASS" endtime="20170818 17:41:42.195" starttime="20170818 17:41:35.433"></status>
+<status status="PASS" endtime="20170825 19:26:37.940" starttime="20170825 19:26:34.270"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" endtime="20170825 19:26:37.940" starttime="20170825 19:26:34.270"></status>
+</kw>
+<kw name="And user adds the product to Shopping Cart" library="gherkin">
 <arguments>
-<arg>5</arg>
+<arg>Blouse</arg>
 </arguments>
-<msg timestamp="20170818 17:41:47.197" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20170818 17:41:47.198" starttime="20170818 17:41:42.195"></status>
-</kw>
-<kw name="Click 'Add to cart' link" library="SearchResults">
-<kw name="Click Link" library="Selenium2Library">
-<doc>Clicks a link identified by locator.</doc>
+<kw name="Click 'Add to Cart' button for" library="SearchResults">
 <arguments>
-<arg>css=.product_img_link&gt;img</arg>
+<arg>${product}</arg>
 </arguments>
-<msg timestamp="20170818 17:41:47.199" level="INFO">Clicking link 'css=.product_img_link&gt;img'.</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170818 17:41:47.891" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20170818 17:41:47.891" starttime="20170818 17:41:47.223"></status>
+<kw name="Replace String" library="String">
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<arguments>
+<arg>${ADD_TO_CART_BUTTON}</arg>
+<arg>{product_placeholder}</arg>
+<arg>${product}</arg>
+</arguments>
+<assign>
+<var>${add_to_cart_button}</var>
+</assign>
+<msg timestamp="20170825 19:26:37.942" level="INFO">${add_to_cart_button} = xpath=//div[@class='right-block']/h5//*[contains(text(), 'Blouse')]//parent::h5//following-sibling::div[@class='button-container']/a[1]/span</msg>
+<status status="PASS" endtime="20170825 19:26:37.942" starttime="20170825 19:26:37.942"></status>
 </kw>
-<msg timestamp="20170818 17:41:47.898" level="FAIL">ValueError: Element locator 'css=.product_img_link&gt;img' did not match any elements.</msg>
-<status status="FAIL" endtime="20170818 17:41:47.899" starttime="20170818 17:41:47.199"></status>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${add_to_cart_button}</arg>
+</arguments>
+<status status="PASS" endtime="20170825 19:26:37.987" starttime="20170825 19:26:37.942"></status>
 </kw>
-<status status="FAIL" endtime="20170818 17:41:47.899" starttime="20170818 17:41:47.198"></status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${add_to_cart_button}</arg>
+</arguments>
+<msg timestamp="20170825 19:26:37.987" level="INFO">Clicking element 'xpath=//div[@class='right-block']/h5//*[contains(text(), 'Blouse')]//parent::h5//following-sibling::div[@class='button-container']/a[1]/span'.</msg>
+<status status="PASS" endtime="20170825 19:26:38.055" starttime="20170825 19:26:37.987"></status>
+</kw>
+<status status="PASS" endtime="20170825 19:26:38.055" starttime="20170825 19:26:37.941"></status>
+</kw>
+<kw name="Click 'Close' button" library="AddToCart">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${CLOSE_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20170825 19:26:38.759" starttime="20170825 19:26:38.056"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${CLOSE_BUTTON}</arg>
+</arguments>
+<msg timestamp="20170825 19:26:38.759" level="INFO">Clicking element 'css=.cross'.</msg>
+<status status="PASS" endtime="20170825 19:26:38.826" starttime="20170825 19:26:38.759"></status>
+</kw>
+<status status="PASS" endtime="20170825 19:26:38.826" starttime="20170825 19:26:38.055"></status>
+</kw>
+<status status="PASS" endtime="20170825 19:26:38.826" starttime="20170825 19:26:37.940"></status>
+</kw>
+<kw name="Then the product is present in Shopping Cart" library="gherkin">
+<arguments>
+<arg>Blouse</arg>
+</arguments>
+<kw name="Verify Shopping Cart Contains Product" library="ShoppingCart">
+<arguments>
+<arg>${product}</arg>
+</arguments>
+<kw name="Open Shopping Cart" library="ShoppingCart">
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element specified by `locator`.</doc>
+<arguments>
+<arg>${SHOPPING_CART}</arg>
+</arguments>
+<msg timestamp="20170825 19:26:38.828" level="INFO">Simulating Mouse Over on element 'css=.shopping_cart&gt;a'</msg>
+<status status="PASS" endtime="20170825 19:26:38.877" starttime="20170825 19:26:38.828"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${CHECKOUT_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20170825 19:26:39.351" starttime="20170825 19:26:38.878"></status>
+</kw>
+<status status="PASS" endtime="20170825 19:26:39.351" starttime="20170825 19:26:38.827"></status>
+</kw>
+<kw name="Get Webelements" library="Selenium2Library">
+<doc>Returns list of WebElement objects matching locator.</doc>
+<arguments>
+<arg>${PRODUCTS_IN_CART}</arg>
+</arguments>
+<assign>
+<var>${products_in_cart}</var>
+</assign>
+<msg timestamp="20170825 19:26:39.369" level="INFO">${products_in_cart} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b22c3ae7989213b7f1b3d7345564dab6", element="0.07003812633633832-5")&gt;]</msg>
+<status status="PASS" endtime="20170825 19:26:39.369" starttime="20170825 19:26:39.352"></status>
+</kw>
+<kw name="Webelements Should Contain Text" library="MyLibrary">
+<doc>Fails if list of web elements does not contain text</doc>
+<arguments>
+<arg>${products_in_cart}</arg>
+<arg>${product}</arg>
+</arguments>
+<status status="PASS" endtime="20170825 19:26:39.389" starttime="20170825 19:26:39.370"></status>
+</kw>
+<status status="PASS" endtime="20170825 19:26:39.389" starttime="20170825 19:26:38.827"></status>
+</kw>
+<status status="PASS" endtime="20170825 19:26:39.389" starttime="20170825 19:26:38.827"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="Common">
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170818 17:41:47.968" starttime="20170818 17:41:47.900"></status>
+<status status="PASS" endtime="20170825 19:26:39.455" starttime="20170825 19:26:39.390"></status>
 </kw>
-<status status="PASS" endtime="20170818 17:41:47.968" starttime="20170818 17:41:47.899"></status>
+<status status="PASS" endtime="20170825 19:26:39.455" starttime="20170825 19:26:39.390"></status>
 </kw>
-<status status="FAIL" endtime="20170818 17:41:47.969" critical="yes" starttime="20170818 17:41:33.230">ValueError: Element locator 'css=.product_img_link&gt;img' did not match any elements.</status>
+<status status="PASS" endtime="20170825 19:26:39.455" critical="yes" starttime="20170825 19:26:27.007"></status>
 </test>
-<status status="FAIL" endtime="20170818 17:41:47.970" starttime="20170818 17:41:33.036"></status>
+<status status="PASS" endtime="20170825 19:26:39.456" starttime="20170825 19:26:26.881"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Cart" pass="0">Cart</stat>
+<stat fail="0" id="s1" name="Cart" pass="1">Cart</stat>
 </suite>
 </statistics>
 <errors>
