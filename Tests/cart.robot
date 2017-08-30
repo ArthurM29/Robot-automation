@@ -10,10 +10,10 @@ Test Teardown       End Web Test
 
 
 *** Test Cases ***
-#Logged out user is able to search a product
-#    Given user is not logged in the application
-#    When user searches for product  Blouse
-#    Then the product is present in search results  Blouse
+Logged out user is able to search a product
+    Given user is not logged in the application
+    When user searches for product  Blouse
+    Then the product is present in search results  Blouse
 
 
 Logged out user is able to add product to shopping cart
