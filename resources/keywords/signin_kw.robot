@@ -1,8 +1,7 @@
 *** Settings ***
-Resource            ../Resources/PO/HomePage.robot
-Resource            ../Resources/PO/Search.robot
-Resource            ../Resources/PO/SignIn.robot
-Resource            ../Resources/PO/MyAccount.robot
+Resource            ../page-objects/HomePage.robot
+Resource            ../page-objects/SignIn.robot
+Resource            ../page-objects/MyAccount.robot
 
 
 *** Keywords ***

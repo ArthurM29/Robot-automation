@@ -1,11 +1,10 @@
 *** Settings ***
-Library             ../Tests/MyLibrary.py
-Resource            ../Resources/PO/HomePage.robot
-Resource            ../Resources/PO/Search.robot
-Resource            ../Resources/PO/SignIn.robot
-Resource            ../Resources/PO/MyAccount.robot
-Resource            ../Resources/PO/SearchResults.robot
-Resource            sign_in_keywords.robot
+Library             ../MyLibrary.py
+Library             Collections
+Resource            ../page-objects/Search.robot
+Resource            ../page-objects/SearchResults.robot
+Resource            signin_kw.robot
+
 
 
 *** Keywords ***
@@ -47,3 +46,9 @@ Search Results Should Contain
 Search_Count Label for ${term} is ${label}
     Search  ${term}
     Search.Results Count Label Should Be  ${label}
+
+Verify multiple search results
+    [Arguments]  ${expected_results}
+    ${search_results}=  Get Webelements  ${SEARCH_RESULT_ITEM}
+    ${search_result_names}=  Get Texts In Webelements  ${search_results}
+    Lists Should Be Equal  ${search_result_names}  ${expected_results}

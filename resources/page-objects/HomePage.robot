@@ -1,6 +1,6 @@
 *** Settings ***
 Library  Selenium2Library
-Resource            ../../Resources/Common.robot
+Resource            ../../resources/common.robot
 
 
 *** Variables ***
