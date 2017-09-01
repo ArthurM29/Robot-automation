@@ -5,6 +5,7 @@ Test Setup          Begin Web Test
 Test Teardown       End Web Test
 
 
+# robot -d results tests/search.robot
 
 *** Test Cases ***
 User is able to search successfully

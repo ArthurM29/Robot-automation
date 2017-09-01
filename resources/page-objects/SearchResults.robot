@@ -1,27 +1,21 @@
 *** Settings ***
 Library  Selenium2Library
-Library  String
-Resource            ../../resources/common.robot
+Library  Dialogs
 
 
 *** Variables ***
-${MORE_BUTTON}          css=.button.lnk_view.btn.btn-default
-${FOUND_PRODUCTS}       xpath=//div[@class='product-container']//a[@class='product-name']
-${ADD_TO_CART_BUTTON}   xpath=//div[@class='right-block']/h5//*[contains(text(), '{product_placeholder}')]//parent::h5//following-sibling::div[@class='button-container']/a[1]/span
-${CLOSE_CART_BUTTON}
-
+${QUICK_VIEW_LINK}              css=.quick-view
+${PRODUCT_IMAGE}                xpath=//a[@class='product_img_link']/img
 
 
 *** Keywords ***
-Click 'More' button
-    Click Link  ${MORE_BUTTON}
+Click 'Quick View' Link
+    Mouse Over  ${PRODUCT_IMAGE}
+    # at this step 'Quick View' button is not visible in chrome
+    Click Link  ${QUICK_VIEW_LINK}
 
 
-Click 'Add to Cart' button for
-    [Arguments]  ${product}
-    ${add_to_cart_button}=   Replace String  ${ADD_TO_CART_BUTTON}  {product_placeholder}  ${product}
-    Wait Until Element Is Visible  ${add_to_cart_button}
-    Click Element  ${add_to_cart_button}
+
 
 
 

@@ -3,7 +3,7 @@ Library  Selenium2Library
 
 *** Variables ***
 ${URL} =  http://automationpractice.com/index.php
-${BROWSER} =  Chrome
+${BROWSER} =  Firefox
 
 *** Keywords ***
 Begin Web Test

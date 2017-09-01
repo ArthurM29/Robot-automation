@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170831 16:33:20.782" generator="Robot 3.0.2 (Python 2.7.13 on darwin)">
-<suite source="/Users/amanasyan/Documents/Python-projects/Robot-automation/tests/search.robot" id="s1" name="Search">
-<test id="s1-t1" name="User is able to search successfully">
+<robot generated="20170901 19:43:49.010" generator="Robot 3.0.2 (Python 2.7.13 on darwin)">
+<suite source="/Users/amanasyan/Documents/Python-projects/Robot-automation/tests/shopping_cart.robot" id="s1" name="Shopping Cart">
+<test id="s1-t1" name="User is able to quick view a product">
 <kw type="setup" name="Begin Web Test" library="common">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
@@ -9,547 +9,19 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20170831 16:33:20.896" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20170831 16:33:22.796" starttime="20170831 16:33:20.895"></status>
+<msg timestamp="20170901 19:43:49.247" level="INFO">Opening browser 'Firefox' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20170901 19:43:52.073" starttime="20170901 19:43:49.247"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20170831 16:33:23.221" starttime="20170831 16:33:22.797"></status>
+<status status="PASS" endtime="20170901 19:43:52.527" starttime="20170901 19:43:52.073"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:33:23.221" starttime="20170831 16:33:20.895"></status>
+<status status="PASS" endtime="20170901 19:43:52.527" starttime="20170901 19:43:49.246"></status>
 </kw>
 <kw name="Search" library="search_kw">
-<arguments>
-<arg>${SIMPLE_TERM}</arg>
-</arguments>
-<kw name="Navigate To Home Page" library="signin_kw">
-<kw name="Load" library="HomePage">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:23.223" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20170831 16:33:28.680" starttime="20170831 16:33:23.223"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:28.681" starttime="20170831 16:33:23.222"></status>
-</kw>
-<kw name="Verify Page Loaded" library="HomePage">
-<kw name="Title Should Be" library="Selenium2Library">
-<doc>Verifies that current page title equals `title`.</doc>
-<arguments>
-<arg>${HOME_PAGE_TITLE}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:28.687" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" endtime="20170831 16:33:28.688" starttime="20170831 16:33:28.681"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:28.688" starttime="20170831 16:33:28.681"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:28.688" starttime="20170831 16:33:23.222"></status>
-</kw>
-<kw name="Clear Search Field" library="Search">
-<kw name="Clear Element Text" library="Selenium2Library">
-<doc>Clears the text value of text entry element identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-</arguments>
-<status status="PASS" endtime="20170831 16:33:28.735" starttime="20170831 16:33:28.688"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:28.735" starttime="20170831 16:33:28.688"></status>
-</kw>
-<kw name="Enter Search Term" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-<arg>${term}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:28.736" level="INFO">Typing text 'blouse' into text field 'id=search_query_top'</msg>
-<status status="PASS" endtime="20170831 16:33:28.873" starttime="20170831 16:33:28.736"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:28.874" starttime="20170831 16:33:28.735"></status>
-</kw>
-<kw name="Click Search Button" library="Search">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_BUTTON}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:28.875" level="INFO">Clicking button 'name=submit_search'.</msg>
-<status status="PASS" endtime="20170831 16:33:30.311" starttime="20170831 16:33:28.874"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:30.311" starttime="20170831 16:33:28.874"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:30.311" starttime="20170831 16:33:23.221"></status>
-</kw>
-<kw name="Verify Search Results For" library="search_kw">
-<arguments>
-<arg>${SIMPLE_TERM}</arg>
-</arguments>
-<kw name="Result Title Should Be" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>'blouse'.title()</arg>
-</arguments>
-<assign>
-<var>${camel_case_value}</var>
-</assign>
-<msg timestamp="20170831 16:33:30.314" level="INFO">${camel_case_value} = Blouse</msg>
-<status status="PASS" endtime="20170831 16:33:30.314" starttime="20170831 16:33:30.313"></status>
-</kw>
-<kw name="Element Text Should Be" library="Selenium2Library">
-<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
-<arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
-<arg>${camel_case_value}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:30.315" level="INFO">Verifying element 'xpath=//div[@class='product-container']//a[@class='product-name']' contains exactly text 'Blouse'.</msg>
-<status status="PASS" endtime="20170831 16:33:30.362" starttime="20170831 16:33:30.315"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:30.362" starttime="20170831 16:33:30.313"></status>
-</kw>
-<kw name="Results Count Should Be" library="Search">
-<arguments>
-<arg>1</arg>
-</arguments>
-<kw name="Get Webelements" library="Selenium2Library">
-<doc>Returns list of WebElement objects matching locator.</doc>
-<arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
-</arguments>
-<assign>
-<var>${search_results}</var>
-</assign>
-<msg timestamp="20170831 16:33:30.372" level="INFO">${search_results} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="e64a4fb154d5cadd6be7269dbd9363b2", element="0.7603115107977114-1")&gt;]</msg>
-<status status="PASS" endtime="20170831 16:33:30.372" starttime="20170831 16:33:30.363"></status>
-</kw>
-<kw name="Length Should Be" library="BuiltIn">
-<doc>Verifies that the length of the given item is correct.</doc>
-<arguments>
-<arg>${search_results}</arg>
-<arg>${count}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:30.373" level="INFO">Length is 1</msg>
-<status status="PASS" endtime="20170831 16:33:30.373" starttime="20170831 16:33:30.372"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:30.374" starttime="20170831 16:33:30.362"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:30.374" starttime="20170831 16:33:30.312"></status>
-</kw>
-<kw type="teardown" name="End Web Test" library="common">
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170831 16:33:30.440" starttime="20170831 16:33:30.375"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:30.441" starttime="20170831 16:33:30.374"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:30.441" critical="yes" starttime="20170831 16:33:20.894"></status>
-</test>
-<test id="s1-t2" name="Search without entering search keyword">
-<kw type="setup" name="Begin Web Test" library="common">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:30.443" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20170831 16:33:32.204" starttime="20170831 16:33:30.443"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20170831 16:33:32.623" starttime="20170831 16:33:32.205"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:32.623" starttime="20170831 16:33:30.442"></status>
-</kw>
-<kw name="Search" library="search_kw">
-<arguments>
-<arg>${EMPTY}</arg>
-</arguments>
-<kw name="Navigate To Home Page" library="signin_kw">
-<kw name="Load" library="HomePage">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:32.626" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20170831 16:33:37.461" starttime="20170831 16:33:32.626"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:37.462" starttime="20170831 16:33:32.625"></status>
-</kw>
-<kw name="Verify Page Loaded" library="HomePage">
-<kw name="Title Should Be" library="Selenium2Library">
-<doc>Verifies that current page title equals `title`.</doc>
-<arguments>
-<arg>${HOME_PAGE_TITLE}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:37.467" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" endtime="20170831 16:33:37.467" starttime="20170831 16:33:37.462"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:37.467" starttime="20170831 16:33:37.462"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:37.467" starttime="20170831 16:33:32.625"></status>
-</kw>
-<kw name="Clear Search Field" library="Search">
-<kw name="Clear Element Text" library="Selenium2Library">
-<doc>Clears the text value of text entry element identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-</arguments>
-<status status="PASS" endtime="20170831 16:33:37.507" starttime="20170831 16:33:37.468"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:37.507" starttime="20170831 16:33:37.467"></status>
-</kw>
-<kw name="Enter Search Term" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-<arg>${term}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:37.508" level="INFO">Typing text '' into text field 'id=search_query_top'</msg>
-<status status="PASS" endtime="20170831 16:33:37.565" starttime="20170831 16:33:37.508"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:37.565" starttime="20170831 16:33:37.507"></status>
-</kw>
-<kw name="Click Search Button" library="Search">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_BUTTON}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:37.566" level="INFO">Clicking button 'name=submit_search'.</msg>
-<status status="PASS" endtime="20170831 16:33:38.937" starttime="20170831 16:33:37.566"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:38.937" starttime="20170831 16:33:37.565"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:38.937" starttime="20170831 16:33:32.624"></status>
-</kw>
-<kw name="Verify 'Empty Search' Message" library="search_kw">
-<kw name="Warning Message Should Be" library="Search">
-<arguments>
-<arg>${EMPTY_SEARCH_MSG}</arg>
-</arguments>
-<kw name="Element Text Should Be" library="Selenium2Library">
-<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
-<arguments>
-<arg>${SEARCH_WARNING}</arg>
-<arg>${message}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:38.939" level="INFO">Verifying element 'css=.alert.alert-warning' contains exactly text 'Please enter a search keyword'.</msg>
-<status status="PASS" endtime="20170831 16:33:39.003" starttime="20170831 16:33:38.939"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:39.003" starttime="20170831 16:33:38.938"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:39.003" starttime="20170831 16:33:38.938"></status>
-</kw>
-<kw type="teardown" name="End Web Test" library="common">
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170831 16:33:39.068" starttime="20170831 16:33:39.004"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:39.068" starttime="20170831 16:33:39.004"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:39.068" critical="yes" starttime="20170831 16:33:30.442"></status>
-</test>
-<test id="s1-t3" name="Search with no result">
-<kw type="setup" name="Begin Web Test" library="common">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:39.070" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20170831 16:33:40.990" starttime="20170831 16:33:39.070"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20170831 16:33:41.407" starttime="20170831 16:33:40.991"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:41.408" starttime="20170831 16:33:39.069"></status>
-</kw>
-<kw name="Search" library="search_kw">
-<arguments>
-<arg>${NO_RESULTS_TERM}</arg>
-</arguments>
-<kw name="Navigate To Home Page" library="signin_kw">
-<kw name="Load" library="HomePage">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:41.410" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20170831 16:33:46.102" starttime="20170831 16:33:41.410"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:46.102" starttime="20170831 16:33:41.409"></status>
-</kw>
-<kw name="Verify Page Loaded" library="HomePage">
-<kw name="Title Should Be" library="Selenium2Library">
-<doc>Verifies that current page title equals `title`.</doc>
-<arguments>
-<arg>${HOME_PAGE_TITLE}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:46.107" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" endtime="20170831 16:33:46.107" starttime="20170831 16:33:46.103"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:46.107" starttime="20170831 16:33:46.102"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:46.107" starttime="20170831 16:33:41.409"></status>
-</kw>
-<kw name="Clear Search Field" library="Search">
-<kw name="Clear Element Text" library="Selenium2Library">
-<doc>Clears the text value of text entry element identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-</arguments>
-<status status="PASS" endtime="20170831 16:33:46.157" starttime="20170831 16:33:46.108"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:46.157" starttime="20170831 16:33:46.108"></status>
-</kw>
-<kw name="Enter Search Term" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-<arg>${term}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:46.158" level="INFO">Typing text 'nothing' into text field 'id=search_query_top'</msg>
-<status status="PASS" endtime="20170831 16:33:46.295" starttime="20170831 16:33:46.158"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:46.296" starttime="20170831 16:33:46.157"></status>
-</kw>
-<kw name="Click Search Button" library="Search">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_BUTTON}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:46.297" level="INFO">Clicking button 'name=submit_search'.</msg>
-<status status="PASS" endtime="20170831 16:33:47.633" starttime="20170831 16:33:46.296"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:47.634" starttime="20170831 16:33:46.296"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:47.634" starttime="20170831 16:33:41.408"></status>
-</kw>
-<kw name="Verify 'No Search Results' Message" library="search_kw">
-<kw name="Warning Message Should Be" library="Search">
-<arguments>
-<arg>${NO_RESULTS_MSG}</arg>
-</arguments>
-<kw name="Element Text Should Be" library="Selenium2Library">
-<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
-<arguments>
-<arg>${SEARCH_WARNING}</arg>
-<arg>${message}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:47.635" level="INFO">Verifying element 'css=.alert.alert-warning' contains exactly text 'No results were found for your search "nothing"'.</msg>
-<status status="PASS" endtime="20170831 16:33:47.688" starttime="20170831 16:33:47.635"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:47.688" starttime="20170831 16:33:47.634"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:47.688" starttime="20170831 16:33:47.634"></status>
-</kw>
-<kw type="teardown" name="End Web Test" library="common">
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170831 16:33:47.753" starttime="20170831 16:33:47.689"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:47.753" starttime="20170831 16:33:47.689"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:47.753" critical="yes" starttime="20170831 16:33:39.069"></status>
-</test>
-<test id="s1-t4" name="Search works with partial match">
-<kw type="setup" name="Begin Web Test" library="common">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:47.755" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20170831 16:33:49.505" starttime="20170831 16:33:47.755"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20170831 16:33:49.920" starttime="20170831 16:33:49.506"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:49.920" starttime="20170831 16:33:47.754"></status>
-</kw>
-<kw name="Search" library="search_kw">
-<arguments>
-<arg>${PARTIAL_MATCH}</arg>
-</arguments>
-<kw name="Navigate To Home Page" library="signin_kw">
-<kw name="Load" library="HomePage">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:49.923" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20170831 16:33:54.571" starttime="20170831 16:33:49.922"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:54.571" starttime="20170831 16:33:49.922"></status>
-</kw>
-<kw name="Verify Page Loaded" library="HomePage">
-<kw name="Title Should Be" library="Selenium2Library">
-<doc>Verifies that current page title equals `title`.</doc>
-<arguments>
-<arg>${HOME_PAGE_TITLE}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:54.580" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" endtime="20170831 16:33:54.580" starttime="20170831 16:33:54.572"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:54.580" starttime="20170831 16:33:54.571"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:54.580" starttime="20170831 16:33:49.921"></status>
-</kw>
-<kw name="Clear Search Field" library="Search">
-<kw name="Clear Element Text" library="Selenium2Library">
-<doc>Clears the text value of text entry element identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-</arguments>
-<status status="PASS" endtime="20170831 16:33:54.624" starttime="20170831 16:33:54.581"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:54.624" starttime="20170831 16:33:54.580"></status>
-</kw>
-<kw name="Enter Search Term" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-<arg>${term}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:54.625" level="INFO">Typing text 'blo' into text field 'id=search_query_top'</msg>
-<status status="PASS" endtime="20170831 16:33:54.701" starttime="20170831 16:33:54.625"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:54.701" starttime="20170831 16:33:54.624"></status>
-</kw>
-<kw name="Click Search Button" library="Search">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_BUTTON}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:54.702" level="INFO">Clicking button 'name=submit_search'.</msg>
-<status status="PASS" endtime="20170831 16:33:56.157" starttime="20170831 16:33:54.702"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:56.157" starttime="20170831 16:33:54.702"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:56.157" starttime="20170831 16:33:49.921"></status>
-</kw>
-<kw name="Verify Search Results For" library="search_kw">
-<arguments>
-<arg>${SIMPLE_TERM}</arg>
-</arguments>
-<kw name="Result Title Should Be" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>'blouse'.title()</arg>
-</arguments>
-<assign>
-<var>${camel_case_value}</var>
-</assign>
-<msg timestamp="20170831 16:33:56.159" level="INFO">${camel_case_value} = Blouse</msg>
-<status status="PASS" endtime="20170831 16:33:56.159" starttime="20170831 16:33:56.158"></status>
-</kw>
-<kw name="Element Text Should Be" library="Selenium2Library">
-<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
-<arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
-<arg>${camel_case_value}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:56.159" level="INFO">Verifying element 'xpath=//div[@class='product-container']//a[@class='product-name']' contains exactly text 'Blouse'.</msg>
-<status status="PASS" endtime="20170831 16:33:56.214" starttime="20170831 16:33:56.159"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:56.214" starttime="20170831 16:33:56.158"></status>
-</kw>
-<kw name="Results Count Should Be" library="Search">
-<arguments>
-<arg>1</arg>
-</arguments>
-<kw name="Get Webelements" library="Selenium2Library">
-<doc>Returns list of WebElement objects matching locator.</doc>
-<arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
-</arguments>
-<assign>
-<var>${search_results}</var>
-</assign>
-<msg timestamp="20170831 16:33:56.221" level="INFO">${search_results} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="16f4864d976fcad1c3434feeb57ad1f7", element="0.0466057917997047-1")&gt;]</msg>
-<status status="PASS" endtime="20170831 16:33:56.221" starttime="20170831 16:33:56.214"></status>
-</kw>
-<kw name="Length Should Be" library="BuiltIn">
-<doc>Verifies that the length of the given item is correct.</doc>
-<arguments>
-<arg>${search_results}</arg>
-<arg>${count}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:56.221" level="INFO">Length is 1</msg>
-<status status="PASS" endtime="20170831 16:33:56.221" starttime="20170831 16:33:56.221"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:56.222" starttime="20170831 16:33:56.214"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:56.222" starttime="20170831 16:33:56.157"></status>
-</kw>
-<kw type="teardown" name="End Web Test" library="common">
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170831 16:33:56.285" starttime="20170831 16:33:56.222"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:56.285" starttime="20170831 16:33:56.222"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:56.285" critical="yes" starttime="20170831 16:33:47.754"></status>
-</test>
-<test id="s1-t5" name="Search is case-insensitive">
-<kw type="setup" name="Begin Web Test" library="common">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20170831 16:33:56.287" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20170831 16:33:58.032" starttime="20170831 16:33:56.287"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20170831 16:33:58.421" starttime="20170831 16:33:58.033"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:33:58.421" starttime="20170831 16:33:56.287"></status>
-</kw>
-<kw name="Search And Verify Results" library="search_kw">
 <arguments>
 <arg>blouse</arg>
 </arguments>
-<kw name="Search" library="search_kw">
-<arguments>
-<arg>${term}</arg>
-</arguments>
 <kw name="Navigate To Home Page" library="signin_kw">
 <kw name="Load" library="HomePage">
 <kw name="Go To" library="Selenium2Library">
@@ -557,10 +29,10 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20170831 16:33:58.424" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20170831 16:34:03.265" starttime="20170831 16:33:58.424"></status>
+<msg timestamp="20170901 19:43:52.529" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20170901 19:43:57.138" starttime="20170901 19:43:52.529"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:03.266" starttime="20170831 16:33:58.424"></status>
+<status status="PASS" endtime="20170901 19:43:57.138" starttime="20170901 19:43:52.529"></status>
 </kw>
 <kw name="Verify Page Loaded" library="HomePage">
 <kw name="Title Should Be" library="Selenium2Library">
@@ -568,12 +40,12 @@
 <arguments>
 <arg>${HOME_PAGE_TITLE}</arg>
 </arguments>
-<msg timestamp="20170831 16:34:03.271" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" endtime="20170831 16:34:03.271" starttime="20170831 16:34:03.267"></status>
+<msg timestamp="20170901 19:43:57.146" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" endtime="20170901 19:43:57.146" starttime="20170901 19:43:57.139"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:03.272" starttime="20170831 16:34:03.266"></status>
+<status status="PASS" endtime="20170901 19:43:57.146" starttime="20170901 19:43:57.138"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:03.272" starttime="20170831 16:33:58.423"></status>
+<status status="PASS" endtime="20170901 19:43:57.146" starttime="20170901 19:43:52.528"></status>
 </kw>
 <kw name="Clear Search Field" library="Search">
 <kw name="Clear Element Text" library="Selenium2Library">
@@ -581,9 +53,9 @@
 <arguments>
 <arg>${SEARCH_FIELD}</arg>
 </arguments>
-<status status="PASS" endtime="20170831 16:34:03.318" starttime="20170831 16:34:03.272"></status>
+<status status="PASS" endtime="20170901 19:43:57.236" starttime="20170901 19:43:57.147"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:03.318" starttime="20170831 16:34:03.272"></status>
+<status status="PASS" endtime="20170901 19:43:57.236" starttime="20170901 19:43:57.147"></status>
 </kw>
 <kw name="Enter Search Term" library="Search">
 <arguments>
@@ -595,141 +67,10 @@
 <arg>${SEARCH_FIELD}</arg>
 <arg>${term}</arg>
 </arguments>
-<msg timestamp="20170831 16:34:03.319" level="INFO">Typing text 'blouse' into text field 'id=search_query_top'</msg>
-<status status="PASS" endtime="20170831 16:34:03.414" starttime="20170831 16:34:03.318"></status>
+<msg timestamp="20170901 19:43:57.237" level="INFO">Typing text 'blouse' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20170901 19:43:57.291" starttime="20170901 19:43:57.237"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:03.414" starttime="20170831 16:34:03.318"></status>
-</kw>
-<kw name="Click Search Button" library="Search">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_BUTTON}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:03.415" level="INFO">Clicking button 'name=submit_search'.</msg>
-<status status="PASS" endtime="20170831 16:34:04.947" starttime="20170831 16:34:03.415"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:04.947" starttime="20170831 16:34:03.414"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:04.947" starttime="20170831 16:33:58.423"></status>
-</kw>
-<kw name="Verify Search Results For" library="search_kw">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Result Title Should Be" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>'blouse'.title()</arg>
-</arguments>
-<assign>
-<var>${camel_case_value}</var>
-</assign>
-<msg timestamp="20170831 16:34:04.949" level="INFO">${camel_case_value} = Blouse</msg>
-<status status="PASS" endtime="20170831 16:34:04.949" starttime="20170831 16:34:04.949"></status>
-</kw>
-<kw name="Element Text Should Be" library="Selenium2Library">
-<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
-<arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
-<arg>${camel_case_value}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:04.949" level="INFO">Verifying element 'xpath=//div[@class='product-container']//a[@class='product-name']' contains exactly text 'Blouse'.</msg>
-<status status="PASS" endtime="20170831 16:34:05.004" starttime="20170831 16:34:04.949"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:05.004" starttime="20170831 16:34:04.948"></status>
-</kw>
-<kw name="Results Count Should Be" library="Search">
-<arguments>
-<arg>1</arg>
-</arguments>
-<kw name="Get Webelements" library="Selenium2Library">
-<doc>Returns list of WebElement objects matching locator.</doc>
-<arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
-</arguments>
-<assign>
-<var>${search_results}</var>
-</assign>
-<msg timestamp="20170831 16:34:05.011" level="INFO">${search_results} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="e18839e60367584bbf7f4dba879df823", element="0.9384049391536198-1")&gt;]</msg>
-<status status="PASS" endtime="20170831 16:34:05.011" starttime="20170831 16:34:05.004"></status>
-</kw>
-<kw name="Length Should Be" library="BuiltIn">
-<doc>Verifies that the length of the given item is correct.</doc>
-<arguments>
-<arg>${search_results}</arg>
-<arg>${count}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:05.011" level="INFO">Length is 1</msg>
-<status status="PASS" endtime="20170831 16:34:05.011" starttime="20170831 16:34:05.011"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:05.012" starttime="20170831 16:34:05.004"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:05.012" starttime="20170831 16:34:04.947"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:05.012" starttime="20170831 16:33:58.422"></status>
-</kw>
-<kw name="Search And Verify Results" library="search_kw">
-<arguments>
-<arg>BLOUSE</arg>
-</arguments>
-<kw name="Search" library="search_kw">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Navigate To Home Page" library="signin_kw">
-<kw name="Load" library="HomePage">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:05.013" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20170831 16:34:06.715" starttime="20170831 16:34:05.013"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:06.715" starttime="20170831 16:34:05.013"></status>
-</kw>
-<kw name="Verify Page Loaded" library="HomePage">
-<kw name="Title Should Be" library="Selenium2Library">
-<doc>Verifies that current page title equals `title`.</doc>
-<arguments>
-<arg>${HOME_PAGE_TITLE}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:06.720" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" endtime="20170831 16:34:06.720" starttime="20170831 16:34:06.716"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:06.720" starttime="20170831 16:34:06.716"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:06.720" starttime="20170831 16:34:05.013"></status>
-</kw>
-<kw name="Clear Search Field" library="Search">
-<kw name="Clear Element Text" library="Selenium2Library">
-<doc>Clears the text value of text entry element identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-</arguments>
-<status status="PASS" endtime="20170831 16:34:06.747" starttime="20170831 16:34:06.721"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:06.747" starttime="20170831 16:34:06.720"></status>
-</kw>
-<kw name="Enter Search Term" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-<arg>${term}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:06.748" level="INFO">Typing text 'BLOUSE' into text field 'id=search_query_top'</msg>
-<status status="PASS" endtime="20170831 16:34:06.842" starttime="20170831 16:34:06.748"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:06.842" starttime="20170831 16:34:06.747"></status>
+<status status="PASS" endtime="20170901 19:43:57.292" starttime="20170901 19:43:57.237"></status>
 </kw>
 <kw name="Click Search Button" library="Search">
 <kw name="Click Button" library="Selenium2Library">
@@ -737,214 +78,77 @@
 <arguments>
 <arg>${SEARCH_BUTTON}</arg>
 </arguments>
-<msg timestamp="20170831 16:34:06.843" level="INFO">Clicking button 'name=submit_search'.</msg>
-<status status="PASS" endtime="20170831 16:34:08.133" starttime="20170831 16:34:06.842"></status>
+<msg timestamp="20170901 19:43:57.292" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20170901 19:43:58.496" starttime="20170901 19:43:57.292"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:08.133" starttime="20170831 16:34:06.842"></status>
+<status status="PASS" endtime="20170901 19:43:58.496" starttime="20170901 19:43:57.292"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:08.133" starttime="20170831 16:34:05.012"></status>
+<status status="PASS" endtime="20170901 19:43:58.496" starttime="20170901 19:43:52.528"></status>
 </kw>
-<kw name="Verify Search Results For" library="search_kw">
+<kw name="Proceed To 'Quick View'" library="shopping_cart_kw">
+<kw name="Click 'Quick View' Link" library="SearchResults">
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element specified by `locator`.</doc>
 <arguments>
-<arg>${term}</arg>
+<arg>${PRODUCT_IMAGE}</arg>
 </arguments>
-<kw name="Result Title Should Be" library="Search">
+<msg timestamp="20170901 19:43:58.497" level="INFO">Simulating Mouse Over on element 'xpath=//a[@class='product_img_link']/img'</msg>
+<status status="PASS" endtime="20170901 19:43:58.784" starttime="20170901 19:43:58.497"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
 <arguments>
-<arg>${term}</arg>
+<arg>${QUICK_VIEW_LINK}</arg>
 </arguments>
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
+<msg timestamp="20170901 19:43:58.784" level="INFO">Clicking link 'css=.quick-view'.</msg>
+<status status="PASS" endtime="20170901 19:43:59.093" starttime="20170901 19:43:58.784"></status>
+</kw>
+<status status="PASS" endtime="20170901 19:43:59.093" starttime="20170901 19:43:58.496"></status>
+</kw>
+<kw name="Load the Frame" library="ProductQuickView">
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by `locator` as current frame.</doc>
 <arguments>
-<arg>'blouse'.title()</arg>
+<arg>${QUICK_VIEW_WINDOW}</arg>
 </arguments>
-<assign>
-<var>${camel_case_value}</var>
-</assign>
-<msg timestamp="20170831 16:34:08.135" level="INFO">${camel_case_value} = Blouse</msg>
-<status status="PASS" endtime="20170831 16:34:08.135" starttime="20170831 16:34:08.135"></status>
+<msg timestamp="20170901 19:43:59.094" level="INFO">Selecting frame 'css=.fancybox-iframe'.</msg>
+<status status="PASS" endtime="20170901 19:43:59.131" starttime="20170901 19:43:59.094"></status>
 </kw>
-<kw name="Element Text Should Be" library="Selenium2Library">
-<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
-<arg>${camel_case_value}</arg>
+<arg>${QUICK_VIEW_IMAGE}</arg>
 </arguments>
-<msg timestamp="20170831 16:34:08.136" level="INFO">Verifying element 'xpath=//div[@class='product-container']//a[@class='product-name']' contains exactly text 'Blouse'.</msg>
-<status status="PASS" endtime="20170831 16:34:08.183" starttime="20170831 16:34:08.135"></status>
+<status status="PASS" endtime="20170901 19:44:00.216" starttime="20170901 19:43:59.132"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:08.183" starttime="20170831 16:34:08.134"></status>
+<status status="PASS" endtime="20170901 19:44:00.216" starttime="20170901 19:43:59.093"></status>
 </kw>
-<kw name="Results Count Should Be" library="Search">
+<status status="PASS" endtime="20170901 19:44:00.216" starttime="20170901 19:43:58.496"></status>
+</kw>
+<kw name="Verify 'Quick View' Window Is Displayed" library="shopping_cart_kw">
+<kw name="Verify The Frame is Loaded" library="ProductQuickView">
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
 <arguments>
-<arg>1</arg>
+<arg>${QUICK_VIEW_IMAGE}</arg>
 </arguments>
-<kw name="Get Webelements" library="Selenium2Library">
-<doc>Returns list of WebElement objects matching locator.</doc>
-<arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
-</arguments>
-<assign>
-<var>${search_results}</var>
-</assign>
-<msg timestamp="20170831 16:34:08.191" level="INFO">${search_results} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="e18839e60367584bbf7f4dba879df823", element="0.4139335881754582-1")&gt;]</msg>
-<status status="PASS" endtime="20170831 16:34:08.191" starttime="20170831 16:34:08.184"></status>
+<msg timestamp="20170901 19:44:00.218" level="INFO">Verifying element 'css=#bigpic' is visible.</msg>
+<status status="PASS" endtime="20170901 19:44:00.242" starttime="20170901 19:44:00.218"></status>
 </kw>
-<kw name="Length Should Be" library="BuiltIn">
-<doc>Verifies that the length of the given item is correct.</doc>
-<arguments>
-<arg>${search_results}</arg>
-<arg>${count}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:08.191" level="INFO">Length is 1</msg>
-<status status="PASS" endtime="20170831 16:34:08.192" starttime="20170831 16:34:08.191"></status>
+<status status="PASS" endtime="20170901 19:44:00.242" starttime="20170901 19:44:00.217"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:08.192" starttime="20170831 16:34:08.184"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:08.192" starttime="20170831 16:34:08.134"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:08.192" starttime="20170831 16:34:05.012"></status>
-</kw>
-<kw name="Search And Verify Results" library="search_kw">
-<arguments>
-<arg>BloUse</arg>
-</arguments>
-<kw name="Search" library="search_kw">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Navigate To Home Page" library="signin_kw">
-<kw name="Load" library="HomePage">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:08.193" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20170831 16:34:09.946" starttime="20170831 16:34:08.193"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:09.947" starttime="20170831 16:34:08.193"></status>
-</kw>
-<kw name="Verify Page Loaded" library="HomePage">
-<kw name="Title Should Be" library="Selenium2Library">
-<doc>Verifies that current page title equals `title`.</doc>
-<arguments>
-<arg>${HOME_PAGE_TITLE}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:09.955" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" endtime="20170831 16:34:09.955" starttime="20170831 16:34:09.947"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:09.955" starttime="20170831 16:34:09.947"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:09.955" starttime="20170831 16:34:08.193"></status>
-</kw>
-<kw name="Clear Search Field" library="Search">
-<kw name="Clear Element Text" library="Selenium2Library">
-<doc>Clears the text value of text entry element identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-</arguments>
-<status status="PASS" endtime="20170831 16:34:09.985" starttime="20170831 16:34:09.956"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:09.985" starttime="20170831 16:34:09.956"></status>
-</kw>
-<kw name="Enter Search Term" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-<arg>${term}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:09.986" level="INFO">Typing text 'BloUse' into text field 'id=search_query_top'</msg>
-<status status="PASS" endtime="20170831 16:34:10.059" starttime="20170831 16:34:09.986"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:10.059" starttime="20170831 16:34:09.986"></status>
-</kw>
-<kw name="Click Search Button" library="Search">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_BUTTON}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:10.060" level="INFO">Clicking button 'name=submit_search'.</msg>
-<status status="PASS" endtime="20170831 16:34:11.340" starttime="20170831 16:34:10.060"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:11.340" starttime="20170831 16:34:10.059"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:11.341" starttime="20170831 16:34:08.192"></status>
-</kw>
-<kw name="Verify Search Results For" library="search_kw">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Result Title Should Be" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>'blouse'.title()</arg>
-</arguments>
-<assign>
-<var>${camel_case_value}</var>
-</assign>
-<msg timestamp="20170831 16:34:11.342" level="INFO">${camel_case_value} = Blouse</msg>
-<status status="PASS" endtime="20170831 16:34:11.342" starttime="20170831 16:34:11.342"></status>
-</kw>
-<kw name="Element Text Should Be" library="Selenium2Library">
-<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
-<arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
-<arg>${camel_case_value}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:11.343" level="INFO">Verifying element 'xpath=//div[@class='product-container']//a[@class='product-name']' contains exactly text 'Blouse'.</msg>
-<status status="PASS" endtime="20170831 16:34:11.391" starttime="20170831 16:34:11.343"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:11.391" starttime="20170831 16:34:11.341"></status>
-</kw>
-<kw name="Results Count Should Be" library="Search">
-<arguments>
-<arg>1</arg>
-</arguments>
-<kw name="Get Webelements" library="Selenium2Library">
-<doc>Returns list of WebElement objects matching locator.</doc>
-<arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
-</arguments>
-<assign>
-<var>${search_results}</var>
-</assign>
-<msg timestamp="20170831 16:34:11.399" level="INFO">${search_results} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="e18839e60367584bbf7f4dba879df823", element="0.5888836000081901-1")&gt;]</msg>
-<status status="PASS" endtime="20170831 16:34:11.399" starttime="20170831 16:34:11.392"></status>
-</kw>
-<kw name="Length Should Be" library="BuiltIn">
-<doc>Verifies that the length of the given item is correct.</doc>
-<arguments>
-<arg>${search_results}</arg>
-<arg>${count}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:11.400" level="INFO">Length is 1</msg>
-<status status="PASS" endtime="20170831 16:34:11.400" starttime="20170831 16:34:11.399"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:11.400" starttime="20170831 16:34:11.391"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:11.400" starttime="20170831 16:34:11.341"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:11.400" starttime="20170831 16:34:08.192"></status>
+<status status="PASS" endtime="20170901 19:44:00.243" starttime="20170901 19:44:00.217"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="common">
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170831 16:34:11.467" starttime="20170831 16:34:11.401"></status>
+<status status="PASS" endtime="20170901 19:44:00.425" starttime="20170901 19:44:00.243"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:11.467" starttime="20170831 16:34:11.401"></status>
+<status status="PASS" endtime="20170901 19:44:00.425" starttime="20170901 19:44:00.243"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:11.467" critical="yes" starttime="20170831 16:33:56.286"></status>
+<status status="PASS" endtime="20170901 19:44:00.425" critical="yes" starttime="20170901 19:43:49.246"></status>
 </test>
-<test id="s1-t6" name="Search ignores spaces from both sides of search term">
+<test id="s1-t2" name="User is able to close 'Quick View' window">
 <kw type="setup" name="Begin Web Test" library="common">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
@@ -952,29 +156,18 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20170831 16:34:11.471" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20170831 16:34:13.236" starttime="20170831 16:34:11.470"></status>
+<msg timestamp="20170901 19:44:00.427" level="INFO">Opening browser 'Firefox' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20170901 19:44:03.242" starttime="20170901 19:44:00.427"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20170831 16:34:13.639" starttime="20170831 16:34:13.236"></status>
+<status status="PASS" endtime="20170901 19:44:03.700" starttime="20170901 19:44:03.242"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:13.639" starttime="20170831 16:34:11.470"></status>
-</kw>
-<kw name="Catenate" library="BuiltIn">
-<doc>Catenates the given items together and returns the resulted string.</doc>
-<arguments>
-<arg>${SPACE} ${SIMPLE_TERM} ${SPACE}</arg>
-</arguments>
-<assign>
-<var>${search_term}</var>
-</assign>
-<msg timestamp="20170831 16:34:13.640" level="INFO">${search_term} =   blouse  </msg>
-<status status="PASS" endtime="20170831 16:34:13.640" starttime="20170831 16:34:13.640"></status>
+<status status="PASS" endtime="20170901 19:44:03.700" starttime="20170901 19:44:00.426"></status>
 </kw>
 <kw name="Search" library="search_kw">
 <arguments>
-<arg>${search_term}</arg>
+<arg>blouse</arg>
 </arguments>
 <kw name="Navigate To Home Page" library="signin_kw">
 <kw name="Load" library="HomePage">
@@ -983,10 +176,10 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20170831 16:34:13.642" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20170831 16:34:18.393" starttime="20170831 16:34:13.642"></status>
+<msg timestamp="20170901 19:44:03.702" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20170901 19:44:08.689" starttime="20170901 19:44:03.702"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:18.394" starttime="20170831 16:34:13.641"></status>
+<status status="PASS" endtime="20170901 19:44:08.689" starttime="20170901 19:44:03.701"></status>
 </kw>
 <kw name="Verify Page Loaded" library="HomePage">
 <kw name="Title Should Be" library="Selenium2Library">
@@ -994,12 +187,12 @@
 <arguments>
 <arg>${HOME_PAGE_TITLE}</arg>
 </arguments>
-<msg timestamp="20170831 16:34:18.399" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" endtime="20170831 16:34:18.400" starttime="20170831 16:34:18.394"></status>
+<msg timestamp="20170901 19:44:08.695" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" endtime="20170901 19:44:08.695" starttime="20170901 19:44:08.690"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:18.400" starttime="20170831 16:34:18.394"></status>
+<status status="PASS" endtime="20170901 19:44:08.696" starttime="20170901 19:44:08.690"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:18.400" starttime="20170831 16:34:13.641"></status>
+<status status="PASS" endtime="20170901 19:44:08.696" starttime="20170901 19:44:03.701"></status>
 </kw>
 <kw name="Clear Search Field" library="Search">
 <kw name="Clear Element Text" library="Selenium2Library">
@@ -1007,9 +200,9 @@
 <arguments>
 <arg>${SEARCH_FIELD}</arg>
 </arguments>
-<status status="PASS" endtime="20170831 16:34:18.444" starttime="20170831 16:34:18.400"></status>
+<status status="PASS" endtime="20170901 19:44:08.744" starttime="20170901 19:44:08.696"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:18.444" starttime="20170831 16:34:18.400"></status>
+<status status="PASS" endtime="20170901 19:44:08.745" starttime="20170901 19:44:08.696"></status>
 </kw>
 <kw name="Enter Search Term" library="Search">
 <arguments>
@@ -1021,10 +214,10 @@
 <arg>${SEARCH_FIELD}</arg>
 <arg>${term}</arg>
 </arguments>
-<msg timestamp="20170831 16:34:18.445" level="INFO">Typing text '  blouse  ' into text field 'id=search_query_top'</msg>
-<status status="PASS" endtime="20170831 16:34:18.540" starttime="20170831 16:34:18.445"></status>
+<msg timestamp="20170901 19:44:08.745" level="INFO">Typing text 'blouse' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20170901 19:44:08.789" starttime="20170901 19:44:08.745"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:18.540" starttime="20170831 16:34:18.444"></status>
+<status status="PASS" endtime="20170901 19:44:08.789" starttime="20170901 19:44:08.745"></status>
 </kw>
 <kw name="Click Search Button" library="Search">
 <kw name="Click Button" library="Selenium2Library">
@@ -1032,666 +225,115 @@
 <arguments>
 <arg>${SEARCH_BUTTON}</arg>
 </arguments>
-<msg timestamp="20170831 16:34:18.541" level="INFO">Clicking button 'name=submit_search'.</msg>
-<status status="PASS" endtime="20170831 16:34:19.869" starttime="20170831 16:34:18.540"></status>
+<msg timestamp="20170901 19:44:08.790" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20170901 19:44:09.903" starttime="20170901 19:44:08.789"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:19.869" starttime="20170831 16:34:18.540"></status>
+<status status="PASS" endtime="20170901 19:44:09.903" starttime="20170901 19:44:08.789"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:19.869" starttime="20170831 16:34:13.641"></status>
+<status status="PASS" endtime="20170901 19:44:09.903" starttime="20170901 19:44:03.701"></status>
 </kw>
-<kw name="Verify Search Results For" library="search_kw">
+<kw name="Proceed To 'Quick View'" library="shopping_cart_kw">
+<kw name="Click 'Quick View' Link" library="SearchResults">
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element specified by `locator`.</doc>
 <arguments>
-<arg>${SIMPLE_TERM}</arg>
+<arg>${PRODUCT_IMAGE}</arg>
 </arguments>
-<kw name="Result Title Should Be" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>'blouse'.title()</arg>
-</arguments>
-<assign>
-<var>${camel_case_value}</var>
-</assign>
-<msg timestamp="20170831 16:34:19.871" level="INFO">${camel_case_value} = Blouse</msg>
-<status status="PASS" endtime="20170831 16:34:19.871" starttime="20170831 16:34:19.871"></status>
+<msg timestamp="20170901 19:44:09.904" level="INFO">Simulating Mouse Over on element 'xpath=//a[@class='product_img_link']/img'</msg>
+<status status="PASS" endtime="20170901 19:44:10.193" starttime="20170901 19:44:09.904"></status>
 </kw>
-<kw name="Element Text Should Be" library="Selenium2Library">
-<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
 <arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
-<arg>${camel_case_value}</arg>
+<arg>${QUICK_VIEW_LINK}</arg>
 </arguments>
-<msg timestamp="20170831 16:34:19.872" level="INFO">Verifying element 'xpath=//div[@class='product-container']//a[@class='product-name']' contains exactly text 'Blouse'.</msg>
-<status status="PASS" endtime="20170831 16:34:19.920" starttime="20170831 16:34:19.871"></status>
+<msg timestamp="20170901 19:44:10.193" level="INFO">Clicking link 'css=.quick-view'.</msg>
+<status status="PASS" endtime="20170901 19:44:10.485" starttime="20170901 19:44:10.193"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:19.920" starttime="20170831 16:34:19.870"></status>
+<status status="PASS" endtime="20170901 19:44:10.485" starttime="20170901 19:44:09.904"></status>
 </kw>
-<kw name="Results Count Should Be" library="Search">
+<kw name="Load the Frame" library="ProductQuickView">
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by `locator` as current frame.</doc>
 <arguments>
-<arg>1</arg>
+<arg>${QUICK_VIEW_WINDOW}</arg>
 </arguments>
-<kw name="Get Webelements" library="Selenium2Library">
-<doc>Returns list of WebElement objects matching locator.</doc>
+<msg timestamp="20170901 19:44:10.486" level="INFO">Selecting frame 'css=.fancybox-iframe'.</msg>
+<status status="PASS" endtime="20170901 19:44:10.513" starttime="20170901 19:44:10.485"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
+<arg>${QUICK_VIEW_IMAGE}</arg>
 </arguments>
-<assign>
-<var>${search_results}</var>
-</assign>
-<msg timestamp="20170831 16:34:19.928" level="INFO">${search_results} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="4f36ac02b99ac8f33f49f93c37e58a22", element="0.784175193658796-1")&gt;]</msg>
-<status status="PASS" endtime="20170831 16:34:19.928" starttime="20170831 16:34:19.921"></status>
+<status status="PASS" endtime="20170901 19:44:11.593" starttime="20170901 19:44:10.513"></status>
 </kw>
-<kw name="Length Should Be" library="BuiltIn">
-<doc>Verifies that the length of the given item is correct.</doc>
+<status status="PASS" endtime="20170901 19:44:11.594" starttime="20170901 19:44:10.485"></status>
+</kw>
+<status status="PASS" endtime="20170901 19:44:11.594" starttime="20170901 19:44:09.904"></status>
+</kw>
+<kw name="Close 'Quick View' Window" library="shopping_cart_kw">
+<kw name="Unload the Frame" library="ProductQuickView">
+<kw name="Unselect Frame" library="Selenium2Library">
+<doc>Sets the top frame as the current frame.</doc>
+<status status="PASS" endtime="20170901 19:44:11.598" starttime="20170901 19:44:11.594"></status>
+</kw>
+<status status="PASS" endtime="20170901 19:44:11.599" starttime="20170901 19:44:11.594"></status>
+</kw>
+<kw name="Click 'Close' Button" library="ProductQuickView">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>${search_results}</arg>
-<arg>${count}</arg>
+<arg>${CLOSE_QUICK_VIEW_BUTTON}</arg>
 </arguments>
-<msg timestamp="20170831 16:34:19.929" level="INFO">Length is 1</msg>
-<status status="PASS" endtime="20170831 16:34:19.929" starttime="20170831 16:34:19.929"></status>
+<status status="PASS" endtime="20170901 19:44:12.050" starttime="20170901 19:44:11.599"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:19.929" starttime="20170831 16:34:19.920"></status>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${CLOSE_QUICK_VIEW_BUTTON}</arg>
+</arguments>
+<msg timestamp="20170901 19:44:12.050" level="INFO">Clicking link 'xpath=//div[@class='fancybox-outer']/following-sibling::a'.</msg>
+<status status="PASS" endtime="20170901 19:44:12.295" starttime="20170901 19:44:12.050"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:19.929" starttime="20170831 16:34:19.869"></status>
+<status status="PASS" endtime="20170901 19:44:12.295" starttime="20170901 19:44:11.599"></status>
+</kw>
+<status status="PASS" endtime="20170901 19:44:12.296" starttime="20170901 19:44:11.594"></status>
+</kw>
+<kw name="Verify 'Quick View' Window Is Closed" library="shopping_cart_kw">
+<kw name="Verify The Frame is Closed" library="ProductQuickView">
+<kw name="Element Should Not Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is NOT visible.</doc>
+<arguments>
+<arg>${QUICK_VIEW_IMAGE}</arg>
+</arguments>
+<msg timestamp="20170901 19:44:12.297" level="INFO">Verifying element 'css=#bigpic' is not visible.</msg>
+<status status="PASS" endtime="20170901 19:44:12.302" starttime="20170901 19:44:12.297"></status>
+</kw>
+<status status="PASS" endtime="20170901 19:44:12.303" starttime="20170901 19:44:12.296"></status>
+</kw>
+<status status="PASS" endtime="20170901 19:44:12.303" starttime="20170901 19:44:12.296"></status>
 </kw>
 <kw type="teardown" name="End Web Test" library="common">
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170831 16:34:19.992" starttime="20170831 16:34:19.930"></status>
+<status status="PASS" endtime="20170901 19:44:12.493" starttime="20170901 19:44:12.303"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:19.992" starttime="20170831 16:34:19.930"></status>
+<status status="PASS" endtime="20170901 19:44:12.494" starttime="20170901 19:44:12.303"></status>
 </kw>
-<status status="PASS" endtime="20170831 16:34:19.993" critical="yes" starttime="20170831 16:34:11.468"></status>
+<status status="PASS" endtime="20170901 19:44:12.494" critical="yes" starttime="20170901 19:44:00.426"></status>
 </test>
-<test id="s1-t7" name="Search works with Enter key">
-<kw type="setup" name="Begin Web Test" library="common">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:19.994" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20170831 16:34:21.847" starttime="20170831 16:34:19.994"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20170831 16:34:22.257" starttime="20170831 16:34:21.848"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:22.257" starttime="20170831 16:34:19.994"></status>
-</kw>
-<kw name="Search with Enter Key" library="search_kw">
-<arguments>
-<arg>${SIMPLE_TERM}</arg>
-</arguments>
-<kw name="Navigate To Home Page" library="signin_kw">
-<kw name="Load" library="HomePage">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:22.259" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20170831 16:34:27.123" starttime="20170831 16:34:22.259"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:27.124" starttime="20170831 16:34:22.259"></status>
-</kw>
-<kw name="Verify Page Loaded" library="HomePage">
-<kw name="Title Should Be" library="Selenium2Library">
-<doc>Verifies that current page title equals `title`.</doc>
-<arguments>
-<arg>${HOME_PAGE_TITLE}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:27.131" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" endtime="20170831 16:34:27.132" starttime="20170831 16:34:27.124"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:27.132" starttime="20170831 16:34:27.124"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:27.132" starttime="20170831 16:34:22.258"></status>
-</kw>
-<kw name="Clear Search Field" library="Search">
-<kw name="Clear Element Text" library="Selenium2Library">
-<doc>Clears the text value of text entry element identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-</arguments>
-<status status="PASS" endtime="20170831 16:34:27.187" starttime="20170831 16:34:27.133"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:27.187" starttime="20170831 16:34:27.132"></status>
-</kw>
-<kw name="Enter Search Term" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-<arg>${term}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:27.189" level="INFO">Typing text 'blouse' into text field 'id=search_query_top'</msg>
-<status status="PASS" endtime="20170831 16:34:27.330" starttime="20170831 16:34:27.188"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:27.330" starttime="20170831 16:34:27.188"></status>
-</kw>
-<kw name="Hit Enter On Search Button" library="Search">
-<kw name="Press Key" library="Selenium2Library">
-<doc>Simulates user pressing key on element identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_BUTTON}</arg>
-<arg>\\13</arg>
-</arguments>
-<status status="PASS" endtime="20170831 16:34:28.779" starttime="20170831 16:34:27.330"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:28.780" starttime="20170831 16:34:27.330"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:28.780" starttime="20170831 16:34:22.257"></status>
-</kw>
-<kw name="Verify Search Results For" library="search_kw">
-<arguments>
-<arg>${SIMPLE_TERM}</arg>
-</arguments>
-<kw name="Result Title Should Be" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>'blouse'.title()</arg>
-</arguments>
-<assign>
-<var>${camel_case_value}</var>
-</assign>
-<msg timestamp="20170831 16:34:28.783" level="INFO">${camel_case_value} = Blouse</msg>
-<status status="PASS" endtime="20170831 16:34:28.783" starttime="20170831 16:34:28.782"></status>
-</kw>
-<kw name="Element Text Should Be" library="Selenium2Library">
-<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
-<arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
-<arg>${camel_case_value}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:28.784" level="INFO">Verifying element 'xpath=//div[@class='product-container']//a[@class='product-name']' contains exactly text 'Blouse'.</msg>
-<status status="PASS" endtime="20170831 16:34:28.861" starttime="20170831 16:34:28.784"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:28.861" starttime="20170831 16:34:28.781"></status>
-</kw>
-<kw name="Results Count Should Be" library="Search">
-<arguments>
-<arg>1</arg>
-</arguments>
-<kw name="Get Webelements" library="Selenium2Library">
-<doc>Returns list of WebElement objects matching locator.</doc>
-<arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
-</arguments>
-<assign>
-<var>${search_results}</var>
-</assign>
-<msg timestamp="20170831 16:34:28.871" level="INFO">${search_results} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="fb88bfdf0895f35555d138dfe8c9618a", element="0.28484234779066986-1")&gt;]</msg>
-<status status="PASS" endtime="20170831 16:34:28.871" starttime="20170831 16:34:28.862"></status>
-</kw>
-<kw name="Length Should Be" library="BuiltIn">
-<doc>Verifies that the length of the given item is correct.</doc>
-<arguments>
-<arg>${search_results}</arg>
-<arg>${count}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:28.872" level="INFO">Length is 1</msg>
-<status status="PASS" endtime="20170831 16:34:28.872" starttime="20170831 16:34:28.872"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:28.872" starttime="20170831 16:34:28.861"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:28.873" starttime="20170831 16:34:28.780"></status>
-</kw>
-<kw type="teardown" name="End Web Test" library="common">
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170831 16:34:28.941" starttime="20170831 16:34:28.873"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:28.941" starttime="20170831 16:34:28.873"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:28.941" critical="yes" starttime="20170831 16:34:19.993"></status>
-</test>
-<test id="s1-t8" name="Verify Search Count Label">
-<kw type="setup" name="Begin Web Test" library="common">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:28.944" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20170831 16:34:30.652" starttime="20170831 16:34:28.943"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20170831 16:34:31.055" starttime="20170831 16:34:30.652"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:31.056" starttime="20170831 16:34:28.943"></status>
-</kw>
-<kw name="Search_Count Label for ${NO_RESULTS_TERM} is 0 results have been found." library="search_kw">
-<kw name="Search" library="search_kw">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Navigate To Home Page" library="signin_kw">
-<kw name="Load" library="HomePage">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:31.058" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20170831 16:34:35.994" starttime="20170831 16:34:31.058"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:35.994" starttime="20170831 16:34:31.057"></status>
-</kw>
-<kw name="Verify Page Loaded" library="HomePage">
-<kw name="Title Should Be" library="Selenium2Library">
-<doc>Verifies that current page title equals `title`.</doc>
-<arguments>
-<arg>${HOME_PAGE_TITLE}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:36.000" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" endtime="20170831 16:34:36.000" starttime="20170831 16:34:35.995"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:36.001" starttime="20170831 16:34:35.994"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:36.001" starttime="20170831 16:34:31.057"></status>
-</kw>
-<kw name="Clear Search Field" library="Search">
-<kw name="Clear Element Text" library="Selenium2Library">
-<doc>Clears the text value of text entry element identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-</arguments>
-<status status="PASS" endtime="20170831 16:34:36.047" starttime="20170831 16:34:36.001"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:36.047" starttime="20170831 16:34:36.001"></status>
-</kw>
-<kw name="Enter Search Term" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-<arg>${term}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:36.048" level="INFO">Typing text 'nothing' into text field 'id=search_query_top'</msg>
-<status status="PASS" endtime="20170831 16:34:36.141" starttime="20170831 16:34:36.048"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:36.141" starttime="20170831 16:34:36.047"></status>
-</kw>
-<kw name="Click Search Button" library="Search">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_BUTTON}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:36.142" level="INFO">Clicking button 'name=submit_search'.</msg>
-<status status="PASS" endtime="20170831 16:34:37.531" starttime="20170831 16:34:36.142"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:37.531" starttime="20170831 16:34:36.141"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:37.531" starttime="20170831 16:34:31.057"></status>
-</kw>
-<kw name="Results Count Label Should Be" library="Search">
-<arguments>
-<arg>${label}</arg>
-</arguments>
-<kw name="Element Text Should Be" library="Selenium2Library">
-<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
-<arguments>
-<arg>${RESULT_COUNT_LABEL}</arg>
-<arg>${message}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:37.532" level="INFO">Verifying element 'css=.heading-counter' contains exactly text '0 results have been found.'.</msg>
-<status status="PASS" endtime="20170831 16:34:37.590" starttime="20170831 16:34:37.532"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:37.590" starttime="20170831 16:34:37.532"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:37.590" starttime="20170831 16:34:31.056"></status>
-</kw>
-<kw name="Search_Count Label for ${SIMPLE_TERM} is 1 result has been found." library="search_kw">
-<kw name="Search" library="search_kw">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Navigate To Home Page" library="signin_kw">
-<kw name="Load" library="HomePage">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:37.592" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20170831 16:34:39.361" starttime="20170831 16:34:37.592"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:39.361" starttime="20170831 16:34:37.592"></status>
-</kw>
-<kw name="Verify Page Loaded" library="HomePage">
-<kw name="Title Should Be" library="Selenium2Library">
-<doc>Verifies that current page title equals `title`.</doc>
-<arguments>
-<arg>${HOME_PAGE_TITLE}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:39.367" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" endtime="20170831 16:34:39.367" starttime="20170831 16:34:39.362"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:39.367" starttime="20170831 16:34:39.362"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:39.367" starttime="20170831 16:34:37.591"></status>
-</kw>
-<kw name="Clear Search Field" library="Search">
-<kw name="Clear Element Text" library="Selenium2Library">
-<doc>Clears the text value of text entry element identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-</arguments>
-<status status="PASS" endtime="20170831 16:34:39.399" starttime="20170831 16:34:39.368"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:39.400" starttime="20170831 16:34:39.367"></status>
-</kw>
-<kw name="Enter Search Term" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-<arg>${term}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:39.401" level="INFO">Typing text 'blouse' into text field 'id=search_query_top'</msg>
-<status status="PASS" endtime="20170831 16:34:39.499" starttime="20170831 16:34:39.400"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:39.499" starttime="20170831 16:34:39.400"></status>
-</kw>
-<kw name="Click Search Button" library="Search">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_BUTTON}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:39.500" level="INFO">Clicking button 'name=submit_search'.</msg>
-<status status="PASS" endtime="20170831 16:34:40.896" starttime="20170831 16:34:39.500"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:40.896" starttime="20170831 16:34:39.499"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:40.896" starttime="20170831 16:34:37.591"></status>
-</kw>
-<kw name="Results Count Label Should Be" library="Search">
-<arguments>
-<arg>${label}</arg>
-</arguments>
-<kw name="Element Text Should Be" library="Selenium2Library">
-<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
-<arguments>
-<arg>${RESULT_COUNT_LABEL}</arg>
-<arg>${message}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:40.897" level="INFO">Verifying element 'css=.heading-counter' contains exactly text '1 result has been found.'.</msg>
-<status status="PASS" endtime="20170831 16:34:40.946" starttime="20170831 16:34:40.897"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:40.947" starttime="20170831 16:34:40.896"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:40.947" starttime="20170831 16:34:37.591"></status>
-</kw>
-<kw name="Search_Count Label for dress is 7 results have been found." library="search_kw">
-<kw name="Search" library="search_kw">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Navigate To Home Page" library="signin_kw">
-<kw name="Load" library="HomePage">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:40.949" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20170831 16:34:42.600" starttime="20170831 16:34:40.948"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:42.600" starttime="20170831 16:34:40.948"></status>
-</kw>
-<kw name="Verify Page Loaded" library="HomePage">
-<kw name="Title Should Be" library="Selenium2Library">
-<doc>Verifies that current page title equals `title`.</doc>
-<arguments>
-<arg>${HOME_PAGE_TITLE}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:42.605" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" endtime="20170831 16:34:42.605" starttime="20170831 16:34:42.601"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:42.605" starttime="20170831 16:34:42.600"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:42.605" starttime="20170831 16:34:40.948"></status>
-</kw>
-<kw name="Clear Search Field" library="Search">
-<kw name="Clear Element Text" library="Selenium2Library">
-<doc>Clears the text value of text entry element identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-</arguments>
-<status status="PASS" endtime="20170831 16:34:42.643" starttime="20170831 16:34:42.606"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:42.643" starttime="20170831 16:34:42.605"></status>
-</kw>
-<kw name="Enter Search Term" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-<arg>${term}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:42.644" level="INFO">Typing text 'dress' into text field 'id=search_query_top'</msg>
-<status status="PASS" endtime="20170831 16:34:42.731" starttime="20170831 16:34:42.644"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:42.732" starttime="20170831 16:34:42.643"></status>
-</kw>
-<kw name="Click Search Button" library="Search">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_BUTTON}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:42.733" level="INFO">Clicking button 'name=submit_search'.</msg>
-<status status="PASS" endtime="20170831 16:34:44.303" starttime="20170831 16:34:42.732"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:44.304" starttime="20170831 16:34:42.732"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:44.304" starttime="20170831 16:34:40.947"></status>
-</kw>
-<kw name="Results Count Label Should Be" library="Search">
-<arguments>
-<arg>${label}</arg>
-</arguments>
-<kw name="Element Text Should Be" library="Selenium2Library">
-<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
-<arguments>
-<arg>${RESULT_COUNT_LABEL}</arg>
-<arg>${message}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:44.305" level="INFO">Verifying element 'css=.heading-counter' contains exactly text '7 results have been found.'.</msg>
-<status status="PASS" endtime="20170831 16:34:44.349" starttime="20170831 16:34:44.304"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:44.350" starttime="20170831 16:34:44.304"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:44.350" starttime="20170831 16:34:40.947"></status>
-</kw>
-<kw type="teardown" name="End Web Test" library="common">
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170831 16:34:44.413" starttime="20170831 16:34:44.350"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:44.414" starttime="20170831 16:34:44.350"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:44.414" critical="yes" starttime="20170831 16:34:28.942"></status>
-</test>
-<test id="s1-t9" name="Verify multiple search results">
-<kw type="setup" name="Begin Web Test" library="common">
-<kw name="Open Browser" library="Selenium2Library">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:44.416" level="INFO">Opening browser 'Chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20170831 16:34:46.087" starttime="20170831 16:34:44.415"></status>
-</kw>
-<kw name="Maximize Browser Window" library="Selenium2Library">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20170831 16:34:46.487" starttime="20170831 16:34:46.087"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:46.487" starttime="20170831 16:34:44.415"></status>
-</kw>
-<kw name="Search" library="search_kw">
-<arguments>
-<arg>short sleeve</arg>
-</arguments>
-<kw name="Navigate To Home Page" library="signin_kw">
-<kw name="Load" library="HomePage">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided URL.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:46.489" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20170831 16:34:51.315" starttime="20170831 16:34:46.489"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:51.315" starttime="20170831 16:34:46.489"></status>
-</kw>
-<kw name="Verify Page Loaded" library="HomePage">
-<kw name="Title Should Be" library="Selenium2Library">
-<doc>Verifies that current page title equals `title`.</doc>
-<arguments>
-<arg>${HOME_PAGE_TITLE}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:51.321" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" endtime="20170831 16:34:51.321" starttime="20170831 16:34:51.316"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:51.321" starttime="20170831 16:34:51.315"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:51.321" starttime="20170831 16:34:46.488"></status>
-</kw>
-<kw name="Clear Search Field" library="Search">
-<kw name="Clear Element Text" library="Selenium2Library">
-<doc>Clears the text value of text entry element identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-</arguments>
-<status status="PASS" endtime="20170831 16:34:51.367" starttime="20170831 16:34:51.322"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:51.368" starttime="20170831 16:34:51.321"></status>
-</kw>
-<kw name="Enter Search Term" library="Search">
-<arguments>
-<arg>${term}</arg>
-</arguments>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_FIELD}</arg>
-<arg>${term}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:51.369" level="INFO">Typing text 'short sleeve' into text field 'id=search_query_top'</msg>
-<status status="PASS" endtime="20170831 16:34:51.507" starttime="20170831 16:34:51.368"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:51.507" starttime="20170831 16:34:51.368"></status>
-</kw>
-<kw name="Click Search Button" library="Search">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>${SEARCH_BUTTON}</arg>
-</arguments>
-<msg timestamp="20170831 16:34:51.508" level="INFO">Clicking button 'name=submit_search'.</msg>
-<status status="PASS" endtime="20170831 16:34:53.009" starttime="20170831 16:34:51.507"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:53.009" starttime="20170831 16:34:51.507"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:53.009" starttime="20170831 16:34:46.488"></status>
-</kw>
-<kw name="Create List" library="BuiltIn">
-<doc>Returns a list containing given items.</doc>
-<arguments>
-<arg>Faded Short Sleeve T-shirts</arg>
-<arg>Blouse</arg>
-<arg>Printed Dress</arg>
-<arg>Printed Summer Dress</arg>
-</arguments>
-<assign>
-<var>${expected_results}</var>
-</assign>
-<msg timestamp="20170831 16:34:53.010" level="INFO">${expected_results} = [u'Faded Short Sleeve T-shirts', u'Blouse', u'Printed Dress', u'Printed Summer Dress']</msg>
-<status status="PASS" endtime="20170831 16:34:53.011" starttime="20170831 16:34:53.010"></status>
-</kw>
-<kw name="Verify multiple search results" library="search_kw">
-<arguments>
-<arg>${expected_results}</arg>
-</arguments>
-<kw name="Get Webelements" library="Selenium2Library">
-<doc>Returns list of WebElement objects matching locator.</doc>
-<arguments>
-<arg>${SEARCH_RESULT_ITEM}</arg>
-</arguments>
-<assign>
-<var>${search_results}</var>
-</assign>
-<msg timestamp="20170831 16:34:53.052" level="INFO">${search_results} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="433c9df7c989e18ad7dc1d1e41737cfb", element="0.6967326224794215-1")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (session="433c9df7c989...</msg>
-<status status="PASS" endtime="20170831 16:34:53.052" starttime="20170831 16:34:53.012"></status>
-</kw>
-<kw name="Get Texts In Webelements" library="MyLibrary">
-<doc>Fails if list of web elements is empty</doc>
-<arguments>
-<arg>${search_results}</arg>
-</arguments>
-<assign>
-<var>${search_result_names}</var>
-</assign>
-<msg timestamp="20170831 16:34:53.141" level="INFO">${search_result_names} = ['Faded Short Sleeve T-shirts', 'Blouse', 'Printed Dress', 'Printed Summer Dress']</msg>
-<status status="PASS" endtime="20170831 16:34:53.141" starttime="20170831 16:34:53.052"></status>
-</kw>
-<kw name="Lists Should Be Equal" library="Collections">
-<doc>Fails if given lists are unequal.</doc>
-<arguments>
-<arg>${search_result_names}</arg>
-<arg>${expected_results}</arg>
-</arguments>
-<status status="PASS" endtime="20170831 16:34:53.141" starttime="20170831 16:34:53.141"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:53.141" starttime="20170831 16:34:53.011"></status>
-</kw>
-<kw type="teardown" name="End Web Test" library="common">
-<kw name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20170831 16:34:53.203" starttime="20170831 16:34:53.142"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:53.204" starttime="20170831 16:34:53.142"></status>
-</kw>
-<status status="PASS" endtime="20170831 16:34:53.204" critical="yes" starttime="20170831 16:34:44.414"></status>
-</test>
-<status status="PASS" endtime="20170831 16:34:53.205" starttime="20170831 16:33:20.789"></status>
+<status status="PASS" endtime="20170901 19:44:12.495" starttime="20170901 19:43:49.012"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="9">Critical Tests</stat>
-<stat fail="0" pass="9">All Tests</stat>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Search" pass="9">Search</stat>
+<stat fail="0" id="s1" name="Shopping Cart" pass="2">Shopping Cart</stat>
 </suite>
 </statistics>
 <errors>
