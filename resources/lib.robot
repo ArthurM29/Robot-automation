@@ -30,5 +30,5 @@ ${search_keyword}=  Catenate  Hello world
 
 
 # check if element is visible or not
-    ${present}=  Run Keyword And Return Status    Element Should Not Be Visible   locator
-    Log To Console  ${present}
+${present}=  Run Keyword And Return Status    Element Should Not Be Visible   locator
+Log To Console  ${present}

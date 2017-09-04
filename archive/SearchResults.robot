@@ -8,7 +8,6 @@ Resource            ../../resources/common.robot
 ${MORE_BUTTON}          css=.button.lnk_view.btn.btn-default
 ${FOUND_PRODUCTS}       xpath=//div[@class='product-container']//a[@class='product-name']
 ${ADD_TO_CART_BUTTON}   xpath=//div[@class='right-block']/h5//*[contains(text(), '{product_placeholder}')]//parent::h5//following-sibling::div[@class='button-container']/a[1]/span
-${CLOSE_CART_BUTTON}
 
 
 
