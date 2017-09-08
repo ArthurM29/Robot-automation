@@ -3,13 +3,17 @@ Library  Selenium2Library
 
 
 *** Variables ***
-${SIGN_OUT_LINK}            css=.logout
-${MYACCOUNT_PAGE_TITLE}     My account - My Store
+${MY_ACCOUNT_PAGE_TITLE}     My account - My Store
+${MY_WISHLISTS_LINK}         css=.lnk_wishlist>a>span
 
 
 *** Keywords ***
 Verify Page Loaded
-    Title Should Be  ${MYACCOUNT_PAGE_TITLE}
+    Title Should Be  ${MY_ACCOUNT_PAGE_TITLE}
 
-Click Sign Out Link
-    Click Link  ${SIGN_OUT_LINK}
+
+Open 'My Wishlists'
+    Wait Until Element Is Visible  ${MY_WISHLISTS_LINK}
+    Click Element  ${MY_WISHLISTS_LINK}
+
+

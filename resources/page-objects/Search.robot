@@ -21,6 +21,10 @@ ${SIMPLE_TERM}                 blouse
 ${PARTIAL_MATCH}               blo
 ${MULTI_WORD_TERM}             chiffon dress
 
+# Additional search terms to find one result
+# skater
+# deep
+
 
 
 *** Keywords ***

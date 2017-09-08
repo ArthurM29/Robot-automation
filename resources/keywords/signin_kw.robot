@@ -1,5 +1,6 @@
 *** Settings ***
 Resource            ../page-objects/HomePage.robot
+Resource            ../page-objects/TopNav.robot
 Resource            ../page-objects/SignIn.robot
 Resource            ../page-objects/MyAccount.robot
 
@@ -12,14 +13,14 @@ Navigate To Home Page
 Sign In
     [Arguments]  ${email}  ${password}
     Navigate To Home Page
-    HomePage.Click Sign In Link
+    TopNav.Click 'Sign In' Link
     SignIn.Verify Page Loaded
     SignIn.Enter Email  ${email}
     SignIn.Enter Password  ${password}
     SignIn.Submit Credentials
 
 Sign Out
-    MyAccount.Click Sign Out Link
+    TopNav.Click 'Sign Out' Link
     SignIn.Verify Page Loaded
 
 Invalid Sign In

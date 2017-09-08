@@ -23,7 +23,7 @@ Click On Product Image
 
 Click 'More' button
     Mouse Over  ${PRODUCT_IMAGE}
-    Click Link  ${MORE_BUTTON}
+    Click Element  ${MORE_BUTTON}
 
 Click on Product Name
     Click Link  ${PRODUCT_NAME_LOCATOR}

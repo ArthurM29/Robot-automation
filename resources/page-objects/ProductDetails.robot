@@ -1,6 +1,5 @@
 *** Settings ***
 Library  Selenium2Library
-Resource            ../../resources/common.robot
 Library  Dialogs
 
 
@@ -14,22 +13,32 @@ ${PRODUCT_QUANTITY_VALUE}           7
 
 
 # locators
-${PRODUCT_NAME}                     css=.pb-center-column.col-xs-12.col-sm-4>h1
-${ADD_TO_CART_BUTTON}               name=Submit
-${MORE_BUTTON}                      css=.button.lnk_view.btn.btn-default
-${WRITE_REVIEW_BUTTON}              id=new_comment_tab_btn
-${REVIEW_TITLE}                     id=comment_title
-${FIVE_STAR_RATING}                 xpath=//div[@class='star_content']//a[@title='5']
-${REVIEW_CONTENT}                   id=content
-${SEND_REVIEW_BUTTON}               id=submitNewMessage
-${REVIEW_CONFIRMATION_TEXT}         xpath=//div[@class='fancybox-inner']/p[1]
-${REVIEW_CONFIRMATION_OK_BUTTON}    css=.button.btn-default.button-medium
-${REVIEW_CONFIRMATION_POPUP}        css=.fancybox-inner
-${SIZE_DROP_DOWN}                   id=group_1
-${QUANTITY_FIELD}                   id=quantity_wanted
-${QUANTITY_FIELD_VALUE}             xpath=//input[@id='quantity_wanted']@value
-${QUANTITY_MINUS_ICON}              css=.icon-minus
-${QUANTITY_PLUS_ICON}               css=.icon-plus
+${PRODUCT_NAME}                         css=.pb-center-column.col-xs-12.col-sm-4>h1
+${ADD_TO_CART_BUTTON}                   name=Submit
+${MORE_BUTTON}                          css=.button.lnk_view.btn.btn-default
+${WRITE_REVIEW_BUTTON}                  id=new_comment_tab_btn
+${REVIEW_TITLE}                         id=comment_title
+${FIVE_STAR_RATING}                     xpath=//div[@class='star_content']//a[@title='5']
+${REVIEW_CONTENT}                       id=content
+${SEND_REVIEW_BUTTON}                   id=submitNewMessage
+${REVIEW_CONFIRMATION_TEXT}             xpath=//div[@class='fancybox-inner']/p[1]
+${REVIEW_CONFIRMATION_OK_BUTTON}        css=.button.btn-default.button-medium
+${REVIEW_CONFIRMATION_POPUP}            css=.fancybox-inner
+${SIZE_DROP_DOWN}                       id=group_1
+${QUANTITY_FIELD}                       id=quantity_wanted
+${QUANTITY_FIELD_VALUE}                 xpath=//input[@id='quantity_wanted']@value
+${QUANTITY_MINUS_ICON}                  css=.icon-minus
+${QUANTITY_PLUS_ICON}                   css=.icon-plus
+${WISHLIST_BUTTON}                      id=wishlist_button
+${WISHLIST_CONFIRMATION_POPUP_TEXT}     css=.fancybox-error
+${WISHLIST_CLOSE_CONFIRMATION_BUTTON}   css=.fancybox-item.fancybox-close
+${VIEW_LARGER_BUTTON}                   css=.span_link.no-print
+${IMAGE_THUMBNAIL}                      //img[starts-with(@id,'thumb')]
+${NEXT_IMAGE_ICON}                      css=.fancybox-nav.fancybox-next>span
+${IMAGE_RIGHT_SECTION}                  css=.fancybox-nav.fancybox-next
+${FULL_SIZE_IMAGE}                      css=.fancybox-nav.fancybox-next
+
+
 
 
 
@@ -105,4 +114,40 @@ Verify Entered Quantity
     [Arguments]  ${quantity}
     ${actual_quantity}=  Get Element Attribute  ${QUANTITY_FIELD_VALUE}
     Should Be Equal As Strings  ${actual_quantity}  ${quantity}
-    sleep  4
+
+
+Click 'Add to wishlist'
+    Wait Until Element Is Visible  ${WISHLIST_BUTTON}
+    Click Link  ${WISHLIST_BUTTON}
+
+
+Verify 'Wishlist Confirmation Popup' Displayed
+    WAIT UNTIL ELEMENT IS VISIBLE  ${WISHLIST_CONFIRMATION_POPUP_TEXT}
+    Element Text Should Be  ${WISHLIST_CONFIRMATION_POPUP_TEXT}  Added to your wishlist.
+
+
+Close 'Wishlist Confirmation Popup'
+    Wait Until Element Is Visible  ${WISHLIST_CLOSE_CONFIRMATION_BUTTON}
+    Click Link  ${WISHLIST_CLOSE_CONFIRMATION_BUTTON}
+
+
+Click 'View Larger' button
+    Wait Until Element Is Visible  ${VIEW_LARGER_BUTTON}
+    Click Element  ${VIEW_LARGER_BUTTON}
+    Wait Until Element Is Visible  ${FULL_SIZE_IMAGE}
+
+
+Get Count Of Images
+    # don't use 'xpath=' with this keyword
+    ${count} =  Get Matching Xpath Count  ${IMAGE_THUMBNAIL}
+    [Return]  ${count}
+
+
+View Next Image
+    Wait Until Element Is Visible  ${IMAGE_RIGHT_SECTION}
+    Mouse Over  ${IMAGE_RIGHT_SECTION}
+    Wait Until Element Is Visible  ${NEXT_IMAGE_ICON}
+    Click Element  ${NEXT_IMAGE_ICON}
+    Wait Until Element Is Visible  ${FULL_SIZE_IMAGE}
+    Element Should Be Visible  ${FULL_SIZE_IMAGE}
+

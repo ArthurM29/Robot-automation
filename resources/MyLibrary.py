@@ -10,7 +10,7 @@ def get_texts_in_webelements(web_elements):
 def webelements_should_contain_text(elements, text):
     """ Fails if list of web elements does not contain text """
     for elem in elements:
-        if elem.text == text:
+        if elem.text.lower() == text.lower():
             return
     raise AssertionError("Webelements don't contain text '%s'" % text)
 
@@ -18,7 +18,7 @@ def webelements_should_contain_text(elements, text):
 def webelements_should_not_contain_text(elements, text):
     """ Fails if list of web elements doesn't contain text """
     for elem in elements:
-        if elem.text == text:
+        if elem.text.lower() == text.lower():
             raise AssertionError("Webelements contain text '%s'" % text)
 
 
