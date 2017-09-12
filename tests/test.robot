@@ -16,3 +16,13 @@ Test locators
     Click Link  ${ELEMENT}
     sleep  2
     Close Browser
+
+
+Test string splitting
+    Open Browser  http://automationpractice.com/index.php?controller=order&multi-shipping=  Firefox
+    Maximize Browser Window
+
+
+
+
+

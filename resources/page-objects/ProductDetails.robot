@@ -1,6 +1,7 @@
 *** Settings ***
 Library  Selenium2Library
 Library  Dialogs
+Library  String
 
 
 *** Variables ***
@@ -8,8 +9,6 @@ Library  Dialogs
 ${FIVE_STAR_RATING_VALUE}           5
 ${REVIEW_TITLE_VALUE}               Cool Dress !
 ${REVIEW_CONTENT_VALUE}             I bought this dress for my wife, and she is very happy !
-${PRODUCT_SIZE_VALUE}               S
-${PRODUCT_QUANTITY_VALUE}           7
 
 
 # locators
@@ -37,6 +36,7 @@ ${IMAGE_THUMBNAIL}                      //img[starts-with(@id,'thumb')]
 ${NEXT_IMAGE_ICON}                      css=.fancybox-nav.fancybox-next>span
 ${IMAGE_RIGHT_SECTION}                  css=.fancybox-nav.fancybox-next
 ${FULL_SIZE_IMAGE}                      css=.fancybox-nav.fancybox-next
+${COLOUR_PICKER}                        xpath=//ul[@id="color_to_pick_list"]//a[@title="{placeholder}"]
 
 
 
@@ -87,14 +87,9 @@ Click 'Ok' On Review Confirmation Popup
     Element Should Not Be Visible  ${REVIEW_CONFIRMATION_POPUP}
 
 
-Choose A Size
+Select Size Value
     [Arguments]  ${size}
     Select From List By Label  ${SIZE_DROP_DOWN}  ${size}
-
-
-Verify Selected Size
-    [Arguments]  ${size}
-    Element Text Should Be  xpath=//select[@id='group_1']/option[text()='${size}']  ${size}
 
 
 Enter Quantity Value
@@ -102,18 +97,12 @@ Enter Quantity Value
     Input Text  ${QUANTITY_FIELD}  ${quantity}
 
 
-Increase Quantity By One
-    Click Button  ${QUANTITY_PLUS_ICON}
+Click Quantity 'Plus' icon
+    Click Element  ${QUANTITY_PLUS_ICON}
 
 
-Decrease Quantity By One
-    Click Button  ${QUANTITY_MINUS_ICON}
-
-
-Verify Entered Quantity
-    [Arguments]  ${quantity}
-    ${actual_quantity}=  Get Element Attribute  ${QUANTITY_FIELD_VALUE}
-    Should Be Equal As Strings  ${actual_quantity}  ${quantity}
+Click Quantity 'Minus' icon
+    Click Element  ${QUANTITY_MINUS_ICON}
 
 
 Click 'Add to wishlist'
@@ -150,4 +139,14 @@ View Next Image
     Click Element  ${NEXT_IMAGE_ICON}
     Wait Until Element Is Visible  ${FULL_SIZE_IMAGE}
     Element Should Be Visible  ${FULL_SIZE_IMAGE}
+
+
+Select Colour Value
+    [Arguments]  ${colour}
+    ${locator} =  Replace String  ${COLOUR_PICKER}  {placeholder}  ${colour}
+    Click Element  ${locator}
+
+
+
+
 

@@ -7,11 +7,13 @@ Resource            ../page-objects/ProductDetails.robot
 Resource            ../page-objects/TopNav.robot
 Resource            ../page-objects/MyAccount.robot
 Resource            ../page-objects/MyWishlists.robot
+Resource            ../page-objects/MyAddresses.robot
 Resource            ../page-objects/AddToCart.robot
 Resource            ../page-objects/order/Order_Summary.robot
 Resource            ../page-objects/order/Order_Address.robot
 Resource            ../page-objects/order/Order_Shipping.robot
 Resource            ../page-objects/order/Order_Payment.robot
+
 
 
 
@@ -72,20 +74,9 @@ Close 'Review Confirmation' Popup
     ProductDetails.Click 'Ok' On Review Confirmation Popup
 
 
-Select Size
-    ProductDetails.Choose A Size  ${PRODUCT_SIZE_VALUE}
-
-
-Verify Size Is Selected Successfully
-    ProductDetails.Verify Selected Size  ${PRODUCT_SIZE_VALUE}
-
-
-Enter Quantity
-    ProductDetails.Enter Quantity Value  ${PRODUCT_QUANTITY_VALUE}
-
-
-Verify Quantity Is Selected Successfully
-    Verify Entered Quantity  ${PRODUCT_QUANTITY_VALUE}
+Enter Product Quantity
+    [Arguments]  ${quantity}
+    ProductDetails.Enter Quantity Value  ${quantity}
 
 
 Add Product To WishList
@@ -130,11 +121,33 @@ Checkout The Order
     Order_Payment.Click On 'Pay by bank wire' Payment Method
     Order_Payment.Click 'Proceed To Checkout'
 
+Checkout The Order From Address
+    Order_Address.Click 'Proceed To Checkout'
+    Order_Shipping.Accept Terms Of Service
+    Order_Shipping.Click 'Proceed To Checkout'
+    Order_Payment.Click On 'Pay by bank wire' Payment Method
+    Order_Payment.Click 'Proceed To Checkout'
 
 Checkout The Order and Do Not Accept 'Terms of service'
     Order_Summary.Click 'Proceed To Checkout'
     Order_Address.Click 'Proceed To Checkout'
     # Do Not accept terms of use
+    Order_Shipping.Click 'Proceed To Checkout'
+
+
+Proceed to 'Order Shipping'
+    Order_Summary.Click 'Proceed To Checkout'
+    Order_Address.Click 'Proceed To Checkout'
+
+
+Proceed to 'Order Address'
+    Order_Summary.Click 'Proceed To Checkout'
+
+
+Proceed to 'Order Payment'
+    Order_Summary.Click 'Proceed To Checkout'
+    Order_Address.Click 'Proceed To Checkout'
+    Order_Shipping.Accept Terms Of Service
     Order_Shipping.Click 'Proceed To Checkout'
 
 
@@ -177,22 +190,104 @@ Remove Product From Shopping Cart
     Order_Summary.Click 'Delete' icon
 
 
+Open 'Terms of service'
+    Order_Shipping.Click on 'Terms of service' link
 
 
+Verify 'Terms of service' is opened successfully
+    Order_Shipping.Verify 'Terms of service' opened
 
 
+Verify Product Quantity Is
+    [Arguments]  ${quantity}
+    Order_Payment.Product Quantity Should Be  ${quantity}
 
 
+Increase Quantity By One
+    ProductDetails.Click Quantity 'Plus' icon
 
 
+Decrease Quantity By One
+    ProductDetails.Click Quantity 'Minus' icon
 
 
+Select Product Size
+    [Arguments]  ${size}
+    ProductDetails.Select Size Value  ${size}
 
 
+Verify Product Size Is
+    [Arguments]  ${size}
+    Order_Payment.Product Size Should Be  ${size}
 
 
+Select Product Colour
+    [Arguments]  ${colour}
+    ProductDetails.Select Colour Value  ${colour}
 
 
+Verify Product Colour Is
+    [Arguments]  ${colour}
+    Order_Payment.Product Colour Should Be  ${colour}
 
+
+Select 'Pay by bank wire' Payment Method
+    Order_Payment.Click on 'Pay by bank wire' Payment Method
+
+
+Select 'Pay by check' Payment Method
+    Order_Payment.Click on 'Pay by check' Payment Method
+
+
+Verify Payment Method Is
+    [Arguments]  ${payment_method}
+    Order_Payment.Payment Method Should Be  ${payment_method}
+
+
+Verify Product Price Is
+    [Arguments]  ${price}
+    Order_Payment.Product Price Should Be  ${price}
+
+
+Verify Total Price Is
+    [Arguments]  ${price}
+    Order_Payment.Total Price Should Be  ${price}
+
+
+Delete Shipping Address
+    [Arguments]  ${address}
+    MyAddresses.Remove Shipping Address  ${address}
+
+
+Delete All Shipping Addresses
+    Wait Until Element Is Visible  ${ADDRESSES_SECTION}
+    ${elem} =  Get Matching Xpath Count  ${NO_ADDRESS_LABEL}
+    Run Keyword If  ${elem} == 0  MyAddresses.Remove All Shipping Addresses
+    ...  ELSE  Log  No Shipping Address is available
+
+
+Verify Shipping Address Is Deleted
+    [Arguments]  ${address}
+    MyAddresses.Address Should Be Deleted  ${address}
+
+
+Create A Shipping Address
+    [Arguments]  ${title}
+    MyAddresses.Click 'Add a new address Button'
+    MyAddresses.Populate Shipping Address Fields and Submit  ${title}
+
+
+Enter Shipping Address Values and Submit
+    [Arguments]  ${title}
+    MyAddresses.Populate Shipping Address Fields and Submit  ${title}
+
+
+Go To 'My Addresses'
+    MyAccount.Open 'My Addresses'
+
+
+Verify Shipping Address Is Created
+    [Arguments]  ${title}
+    MyAddresses.Shipping Address Should Be Created  ${title}
 
 
