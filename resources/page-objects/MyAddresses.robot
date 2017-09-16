@@ -12,7 +12,8 @@ ${ALL_DELETE_BUTTONS}           xpath=//div[@class="bloc_adresses row"]//a[@titl
 ${ADD_NEW_ADDRESS_BUTTON}       xpath=//div[@class="clearfix main-page-indent"]/a
 ${ADDRESS_TITLE}                css=.page-subheading
 ${ADDRESSES_SECTION}            css=#columns
-${NO_ADDRESS_LABEL}                    //p[@class="alert alert-warning"]
+${NO_ADDRESS_LABEL}             //p[@class="alert alert-warning"]
+${ADDRESS_DROP_DOWN}            id=id_address_delivery
 
 # address fields
 ${FIRST_NAME_FIELD}                    id=firstname
@@ -23,7 +24,7 @@ ${ADDRESS2_FIELD}                      id=address2
 ${CITY_FIELD}                          id=city
 ${STATE_DROP_DOWN}                     id=id_state
 ${ZIP_CODE_FIELD}                      id=postcode
-${COUNTRHY_DROW_DOWN}                  id=id_country
+${COUNTRY_DROW_DOWN}                   id=id_country
 ${HOME_PHONE_FIELD}                    id=phone
 ${MOBILE_PHONE_FIELD}                  id=phone_mobile
 ${ADDRESS_TITLE_FIELD}                 id=alias
@@ -71,7 +72,7 @@ Populate Shipping Address Fields and Submit
     Input Text  ${CITY_FIELD}  Yerevan
     Select From List By Label  ${STATE_DROP_DOWN}  North Carolina
     Input Text  ${ZIP_CODE_FIELD}  12345
-    Select From List By Label  ${COUNTRHY_DROW_DOWN}  United States
+    Select From List By Label  ${COUNTRY_DROW_DOWN}  United States
     Input Text  ${HOME_PHONE_FIELD}  505606707
     Input Text  ${MOBILE_PHONE_FIELD}  111222333
     Input Text  ${ADDRESS_TITLE_FIELD}  ${title}
@@ -84,7 +85,15 @@ Shipping Address Should Be Created
     Page Should Contain  ${title}
 
 
+Select Address From Drop-down
+    [Arguments]  ${address}
+    Wait Until Element Is Visible  ${ADDRESS_DROP_DOWN}
+    Select From List By Label  ${ADDRESS_DROP_DOWN}  ${address}
 
-
+Address Should Be Selected
+    [Arguments]  ${address}
+    Wait Until Element Is Visible  ${ADDRESS_DROP_DOWN}
+    ${selected_address} =  Get Selected List Label  ${ADDRESS_DROP_DOWN}
+    Should Be Equal As Strings  ${address}  ${selected_address}
 
 

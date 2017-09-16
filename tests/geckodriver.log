@@ -1,479 +1,142 @@
-1504774416974	geckodriver	INFO	geckodriver 0.18.0
-1504774416978	geckodriver	INFO	Listening on 127.0.0.1:58642
-1504774418033	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args ["-marionette"]
-1504774418299	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1596"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1596 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1631 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3152 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2246 < callProvider()@resource://gre/modules/AddonManager.jsm:271 < _startProvider()@resource://gre/modules/AddonManager.jsm:741 < startup()@resource://gre/modules/AddonManager.jsm:908 < startup()@resource://gre/modules/AddonManager.jsm:3122 < observe()@jar:file:///Applications/Firefox.app/Contents/Resources/omni.ja!/components/addonManager.js:65
-1504774418595	Marionette	INFO	Enabled via --marionette
-2017-09-07 12:53:39.708 plugin-container[11062:1027634] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xae3b, name = 'com.apple.tsm.portname'
+1505567417961	geckodriver	INFO	geckodriver 0.18.0
+1505567417966	geckodriver	INFO	Listening on 127.0.0.1:62011
+1505567419017	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args ["-marionette"]
+1505567419262	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1596"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1596 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1631 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3152 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2246 < callProvider()@resource://gre/modules/AddonManager.jsm:271 < _startProvider()@resource://gre/modules/AddonManager.jsm:741 < startup()@resource://gre/modules/AddonManager.jsm:908 < startup()@resource://gre/modules/AddonManager.jsm:3122 < observe()@jar:file:///Applications/Firefox.app/Contents/Resources/omni.ja!/components/addonManager.js:65
+1505567419626	Marionette	INFO	Enabled via --marionette
+2017-09-16 17:10:20.702 plugin-container[10980:1920607] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xad3b, name = 'com.apple.tsm.portname'
 See /usr/include/servers/bootstrap_defs.h for the error codes.
-2017-09-07 12:53:39.709 plugin-container[11062:1027634] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xb103, name = 'com.apple.CFPasteboardClient'
+2017-09-16 17:10:20.703 plugin-container[10980:1920607] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xb003, name = 'com.apple.CFPasteboardClient'
 See /usr/include/servers/bootstrap_defs.h for the error codes.
-1504774419849	Marionette	INFO	Listening on port 58651
+1505567420860	Marionette	INFO	Listening on port 62020
 JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCKET_ADDRESS_IN_USE: Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]
-1504774419910	Marionette	WARN	TLS certificate errors will be ignored for this session
-1504774419943	Marionette	DEBUG	loaded listener.js
-1504774420453	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
-1504774421061	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
-1504774421061	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
-1504774423182	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
-1504774423390	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774423395	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774423612	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f396a4fc5e052c2&origin=http%3A%2F%2Fautomationpractice.com"
-1504774423614	Marionette	DEBUG	Received DOM event "pageshow" for "http://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f396a4fc5e052c2&origin=http%3A%2F%2Fautomationpractice.com"
-1504774423714	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f396a4fc5e052c2&origin=http%3A%2F%2Fautomationpractice.com"
-1504774423716	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f396a4fc5e052c2&origin=http%3A%2F%2Fautomationpractice.com"
-1504774424451	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774424457	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774424565	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
-1504774425421	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504774425421	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
-1504774426006	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774426009	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774426178	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774427415	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774427415	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774427707	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=my-account"
-1504774427713	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=my-account"
-1504774427783	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=my-account"
-1504774428695	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=my-account"
-1504774428698	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=my-account"
-1504774429236	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
-1504774429334	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774429338	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774429367	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f2f9b1c0efd5b4a&origin=http%3A%2F%2Fautomationpractice.com"
-1504774429368	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f2f9b1c0efd5b4a&origin=http%3A%2F%2Fautomationpractice.com"
-1504774429368	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f2f9b1c0efd5b4a&origin=http%3A%2F%2Fautomationpractice.com"
-1504774429370	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f2f9b1c0efd5b4a&origin=http%3A%2F%2Fautomationpractice.com"
-1504774429476	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774429480	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774429713	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
-1504774430209	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504774430210	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
-1504774431127	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774431134	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483666"
-1504774431134	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483668"
-1504774431134	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483672"
-1504774431134	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483674"
-1504774431310	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774431588	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1504774432227	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774432765	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774432768	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774433242	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order"
-1504774433400	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order"
-1504774433502	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=order"
-1504774433994	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=order"
-1504774433995	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=order"
-1504774434304	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order&step=1"
-1504774434484	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order&step=1"
-1504774653266	geckodriver	INFO	geckodriver 0.18.0
-1504774653269	geckodriver	INFO	Listening on 127.0.0.1:58796
-1504774654321	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args ["-marionette"]
-1504774654550	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1596"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1596 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1631 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3152 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2246 < callProvider()@resource://gre/modules/AddonManager.jsm:271 < _startProvider()@resource://gre/modules/AddonManager.jsm:741 < startup()@resource://gre/modules/AddonManager.jsm:908 < startup()@resource://gre/modules/AddonManager.jsm:3122 < observe()@jar:file:///Applications/Firefox.app/Contents/Resources/omni.ja!/components/addonManager.js:65
-1504774654854	Marionette	INFO	Enabled via --marionette
-2017-09-07 12:57:35.922 plugin-container[11098:1030506] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xad3b, name = 'com.apple.tsm.portname'
+1505567420902	Marionette	WARN	TLS certificate errors will be ignored for this session
+1505567420935	Marionette	DEBUG	loaded listener.js
+1505567421024	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1505567421684	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1505567421684	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1505567423808	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
+1505567424308	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505567424316	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505567424635	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f29f8ebbebea88c&origin=http%3A%2F%2Fautomationpractice.com"
+1505567424636	Marionette	DEBUG	Received DOM event "pageshow" for "http://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f29f8ebbebea88c&origin=http%3A%2F%2Fautomationpractice.com"
+1505567424692	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f29f8ebbebea88c&origin=http%3A%2F%2Fautomationpractice.com"
+1505567424696	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f29f8ebbebea88c&origin=http%3A%2F%2Fautomationpractice.com"
+1505567424905	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505567424912	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505567425024	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
+1505567425025	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
+1505567425858	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
+1505567425859	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
+1505567426542	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
+1505567426546	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
+1505567426733	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
+1505567427941	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
+1505567427941	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
+1505567428338	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=my-account"
+1505567428345	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=my-account"
+1505567428427	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=my-account"
+1505567429244	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=my-account"
+1505567429247	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=my-account"
+1505567429837	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
+1505567429974	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505567429978	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505567430019	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f30fbb96b2bb9a8&origin=http%3A%2F%2Fautomationpractice.com"
+1505567430020	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f30fbb96b2bb9a8&origin=http%3A%2F%2Fautomationpractice.com"
+1505567430020	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f30fbb96b2bb9a8&origin=http%3A%2F%2Fautomationpractice.com"
+1505567430022	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f30fbb96b2bb9a8&origin=http%3A%2F%2Fautomationpractice.com"
+1505567430133	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505567430139	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505567430429	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
+1505567430962	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
+1505567430964	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
+1505567431960	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?id_product=1&controller=product"
+1505567432024	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483667"
+1505567432024	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483669"
+1505567432024	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483673"
+1505567432024	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483675"
+1505567432141	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?id_product=1&controller=product"
+1505567432424	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1505567433090	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
+1505567433683	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?id_product=1&controller=product"
+1505567433686	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
+1505567434231	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order"
+1505567434388	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order"
+1505567434510	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=order"
+1505567435035	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=order"
+1505567435036	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=order"
+1505567435357	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order&step=1"
+1505567435540	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order&step=1"
+2017-09-16 17:19:03.514 firefox-bin[10979:1920501] IMKInputSession presentFunctionRowItemTextInputViewWithEndpoint:completionHandler: : [self textInputContext]=0x11b8522e0 *NO* NSRemoteViewController to client, NSError=Error Domain=NSCocoaErrorDomain Code=4097 "connection from pid 0" UserInfo={NSDebugDescription=connection from pid 0}, com.apple.inputmethod.EmojiFunctionRowItem
+2017-09-16 17:19:06.615 firefox-bin[10979:1920501] IMKInputSession presentFunctionRowItemTextInputViewWithEndpoint:completionHandler: : [self textInputContext]=0x11b8522e0 *NO* NSRemoteViewController to client, NSError=Error Domain=NSCocoaErrorDomain Code=4097 "connection from pid 0" UserInfo={NSDebugDescription=connection from pid 0}, com.apple.inputmethod.EmojiFunctionRowItem
+1505589105185	geckodriver	INFO	geckodriver 0.18.0
+1505589105189	geckodriver	INFO	Listening on 127.0.0.1:56750
+1505589106238	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args ["-marionette"]
+1505589106441	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1596"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1596 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1631 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3152 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2246 < callProvider()@resource://gre/modules/AddonManager.jsm:271 < _startProvider()@resource://gre/modules/AddonManager.jsm:741 < startup()@resource://gre/modules/AddonManager.jsm:908 < startup()@resource://gre/modules/AddonManager.jsm:3122 < observe()@jar:file:///Applications/Firefox.app/Contents/Resources/omni.ja!/components/addonManager.js:65
+1505589106723	Marionette	INFO	Enabled via --marionette
+2017-09-16 23:11:47.890 plugin-container[12397:2077169] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xaf3b, name = 'com.apple.tsm.portname'
 See /usr/include/servers/bootstrap_defs.h for the error codes.
-2017-09-07 12:57:35.923 plugin-container[11098:1030506] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xb003, name = 'com.apple.CFPasteboardClient'
+2017-09-16 23:11:47.891 plugin-container[12397:2077169] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xb303, name = 'com.apple.CFPasteboardClient'
 See /usr/include/servers/bootstrap_defs.h for the error codes.
-1504774656056	Marionette	INFO	Listening on port 58805
+1505589108032	Marionette	INFO	Listening on port 56759
 JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCKET_ADDRESS_IN_USE: Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]
-1504774656109	Marionette	WARN	TLS certificate errors will be ignored for this session
-1504774656142	Marionette	DEBUG	loaded listener.js
-1504774656656	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
-1504774657250	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
-1504774657251	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
-1504774659515	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
-1504774659864	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774659872	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774660104	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f311f4cb7bbd2dc&origin=http%3A%2F%2Fautomationpractice.com"
-1504774660105	Marionette	DEBUG	Received DOM event "pageshow" for "http://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f311f4cb7bbd2dc&origin=http%3A%2F%2Fautomationpractice.com"
-1504774660178	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f311f4cb7bbd2dc&origin=http%3A%2F%2Fautomationpractice.com"
-1504774660180	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f311f4cb7bbd2dc&origin=http%3A%2F%2Fautomationpractice.com"
-1504774661062	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774661068	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774661173	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
-1504774662106	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504774662106	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
-1504774662548	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774662585	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774662747	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774663770	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774663770	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774664076	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=my-account"
-1504774664084	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=my-account"
-1504774664175	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=my-account"
-1504774665135	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=my-account"
-1504774665136	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=my-account"
-1504774665684	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
-1504774665796	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774665801	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774665831	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f25787528bcebd8&origin=http%3A%2F%2Fautomationpractice.com"
-1504774665832	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f25787528bcebd8&origin=http%3A%2F%2Fautomationpractice.com"
-1504774665844	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f25787528bcebd8&origin=http%3A%2F%2Fautomationpractice.com"
-1504774665846	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f25787528bcebd8&origin=http%3A%2F%2Fautomationpractice.com"
-1504774665946	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774665949	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774666207	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
-1504774666730	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504774666731	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
-1504774667662	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774667689	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483666"
-1504774667689	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483668"
-1504774667689	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483672"
-1504774667689	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483674"
-1504774667929	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774668197	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1504774668792	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774669290	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774669292	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774669892	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order"
-1504774670051	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order"
-1504774670157	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=order"
-1504774670642	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=order"
-1504774670642	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=order"
-1504774670946	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order&step=1"
-1504774671126	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order&step=1"
-1504774686280	geckodriver	INFO	geckodriver 0.18.0
-1504774686283	geckodriver	INFO	Listening on 127.0.0.1:58910
-1504774687347	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args ["-marionette"]
-1504774687568	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1596"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1596 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1631 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3152 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2246 < callProvider()@resource://gre/modules/AddonManager.jsm:271 < _startProvider()@resource://gre/modules/AddonManager.jsm:741 < startup()@resource://gre/modules/AddonManager.jsm:908 < startup()@resource://gre/modules/AddonManager.jsm:3122 < observe()@jar:file:///Applications/Firefox.app/Contents/Resources/omni.ja!/components/addonManager.js:65
-1504774687859	Marionette	INFO	Enabled via --marionette
-2017-09-07 12:58:08.958 plugin-container[11110:1031234] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xae3b, name = 'com.apple.tsm.portname'
-See /usr/include/servers/bootstrap_defs.h for the error codes.
-2017-09-07 12:58:08.959 plugin-container[11110:1031234] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xb103, name = 'com.apple.CFPasteboardClient'
-See /usr/include/servers/bootstrap_defs.h for the error codes.
-1504774689095	Marionette	INFO	Listening on port 58919
-JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCKET_ADDRESS_IN_USE: Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]
-1504774689125	Marionette	WARN	TLS certificate errors will be ignored for this session
-1504774689158	Marionette	DEBUG	loaded listener.js
-1504774689715	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
-1504774690299	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
-1504774690299	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
-1504774692565	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
-1504774692904	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774692909	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774693071	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=fd24e627a57768&origin=http%3A%2F%2Fautomationpractice.com"
-1504774693072	Marionette	DEBUG	Received DOM event "pageshow" for "http://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=fd24e627a57768&origin=http%3A%2F%2Fautomationpractice.com"
-1504774693216	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=fd24e627a57768&origin=http%3A%2F%2Fautomationpractice.com"
-1504774693219	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=fd24e627a57768&origin=http%3A%2F%2Fautomationpractice.com"
-1504774693627	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774693634	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774693744	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
-1504774694618	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504774694618	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
-1504774695061	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774695067	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774695253	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774696262	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774696262	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774696568	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=my-account"
-1504774696577	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=my-account"
-1504774696657	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=my-account"
-1504774697599	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=my-account"
-1504774697602	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=my-account"
-1504774698161	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
-1504774698270	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774698275	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774698309	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f1611cb6878ace6&origin=http%3A%2F%2Fautomationpractice.com"
-1504774698311	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f1611cb6878ace6&origin=http%3A%2F%2Fautomationpractice.com"
-1504774698311	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f1611cb6878ace6&origin=http%3A%2F%2Fautomationpractice.com"
-1504774698312	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f1611cb6878ace6&origin=http%3A%2F%2Fautomationpractice.com"
-1504774698435	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774698440	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774698713	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
-1504774699204	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504774699204	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
-1504774700139	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774700145	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483666"
-1504774700145	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483668"
-1504774700146	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483672"
-1504774700146	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483674"
-1504774700405	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774700683	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1504774701310	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774701783	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774701786	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774702381	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order"
-1504774702539	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order"
-1504774702636	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=order"
-1504774703105	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=order"
-1504774703106	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=order"
-1504774703409	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order&step=1"
-1504774703589	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order&step=1"
-1504774724963	geckodriver	INFO	geckodriver 0.18.0
-1504774724967	geckodriver	INFO	Listening on 127.0.0.1:59029
-1504774726021	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args ["-marionette"]
-1504774726229	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1596"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1596 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1631 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3152 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2246 < callProvider()@resource://gre/modules/AddonManager.jsm:271 < _startProvider()@resource://gre/modules/AddonManager.jsm:741 < startup()@resource://gre/modules/AddonManager.jsm:908 < startup()@resource://gre/modules/AddonManager.jsm:3122 < observe()@jar:file:///Applications/Firefox.app/Contents/Resources/omni.ja!/components/addonManager.js:65
-1504774726517	Marionette	INFO	Enabled via --marionette
-2017-09-07 12:58:47.470 plugin-container[11126:1032185] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xad33, name = 'com.apple.tsm.portname'
-See /usr/include/servers/bootstrap_defs.h for the error codes.
-2017-09-07 12:58:47.471 plugin-container[11126:1032185] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xb003, name = 'com.apple.CFPasteboardClient'
-See /usr/include/servers/bootstrap_defs.h for the error codes.
-1504774727747	Marionette	INFO	Listening on port 59038
-JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCKET_ADDRESS_IN_USE: Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]
-1504774727812	Marionette	WARN	TLS certificate errors will be ignored for this session
-1504774727844	Marionette	DEBUG	loaded listener.js
-1504774728333	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
-1504774729005	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
-1504774729005	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
-1504774731234	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
-1504774731505	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774731510	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774731724	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f3b1e8c9496df7&origin=http%3A%2F%2Fautomationpractice.com"
-1504774731725	Marionette	DEBUG	Received DOM event "pageshow" for "http://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f3b1e8c9496df7&origin=http%3A%2F%2Fautomationpractice.com"
-1504774731764	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f3b1e8c9496df7&origin=http%3A%2F%2Fautomationpractice.com"
-1504774731767	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f3b1e8c9496df7&origin=http%3A%2F%2Fautomationpractice.com"
-1504774732321	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774732328	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774732433	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
-1504774733260	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504774733260	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
-1504774733697	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774733734	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774733959	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774734893	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774734893	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504774735250	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=my-account"
-1504774735258	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=my-account"
-1504774735420	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=my-account"
-1504774736275	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=my-account"
-1504774736278	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=my-account"
-1504774736858	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
-1504774736991	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774736997	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774737046	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f18949a89c44c3a&origin=http%3A%2F%2Fautomationpractice.com"
-1504774737047	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f18949a89c44c3a&origin=http%3A%2F%2Fautomationpractice.com"
-1504774737048	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f18949a89c44c3a&origin=http%3A%2F%2Fautomationpractice.com"
-1504774737050	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f18949a89c44c3a&origin=http%3A%2F%2Fautomationpractice.com"
-1504774737147	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774737153	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504774737453	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504774737455	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
-1504774737993	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504774737995	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
-1504774738914	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774738944	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483666"
-1504774738944	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483668"
-1504774738944	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483672"
-1504774738944	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483674"
-1504774739172	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774739449	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1504774740073	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774740559	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774740561	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504774741051	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order"
-1504774741211	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order"
-1504774741321	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=order"
-1504774741795	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=order"
-1504774741796	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=order"
-1504774742100	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order&step=1"
-1504774742281	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order&step=1"
-2017-09-07 13:00:01.723 firefox-bin[11125:1032084] IMKInputSession presentFunctionRowItemTextInputViewWithEndpoint:completionHandler: : [self textInputContext]=0x11c033460 *NO* NSRemoteViewController to client, NSError=Error Domain=NSCocoaErrorDomain Code=4097 "connection from pid 0" UserInfo={NSDebugDescription=connection from pid 0}, com.apple.inputmethod.EmojiFunctionRowItem
-2017-09-07 13:05:27.948 firefox-bin[11125:1032084] IMKInputSession presentFunctionRowItemTextInputViewWithEndpoint:completionHandler: : [self textInputContext]=0x0 *NO* NSRemoteViewController to client, NSError=Error Domain=NSCocoaErrorDomain Code=4097 "connection from pid 0" UserInfo={NSDebugDescription=connection from pid 0}, com.apple.inputmethod.EmojiFunctionRowItem
-2017-09-07 13:05:28.064 firefox-bin[11125:1032084] IMKInputSession presentFunctionRowItemTextInputViewWithEndpoint:completionHandler: : [self textInputContext]=0x11c033460 *NO* NSRemoteViewController to client, NSError=Error Domain=NSCocoaErrorDomain Code=4097 "connection from pid 0" UserInfo={NSDebugDescription=connection from pid 0}, com.apple.inputmethod.EmojiFunctionRowItem
-1504775282825	geckodriver	INFO	geckodriver 0.18.0
-1504775282829	geckodriver	INFO	Listening on 127.0.0.1:59239
-1504775283874	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args ["-marionette"]
-1504775284098	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1596"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1596 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1631 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3152 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2246 < callProvider()@resource://gre/modules/AddonManager.jsm:271 < _startProvider()@resource://gre/modules/AddonManager.jsm:741 < startup()@resource://gre/modules/AddonManager.jsm:908 < startup()@resource://gre/modules/AddonManager.jsm:3122 < observe()@jar:file:///Applications/Firefox.app/Contents/Resources/omni.ja!/components/addonManager.js:65
-1504775284363	Marionette	INFO	Enabled via --marionette
-2017-09-07 13:08:05.423 plugin-container[11160:1037331] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xad3b, name = 'com.apple.tsm.portname'
-See /usr/include/servers/bootstrap_defs.h for the error codes.
-2017-09-07 13:08:05.423 plugin-container[11160:1037331] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xb003, name = 'com.apple.CFPasteboardClient'
-See /usr/include/servers/bootstrap_defs.h for the error codes.
-1504775285567	Marionette	INFO	Listening on port 59248
-JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCKET_ADDRESS_IN_USE: Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]
-1504775285656	Marionette	WARN	TLS certificate errors will be ignored for this session
-1504775285688	Marionette	DEBUG	loaded listener.js
-1504775286195	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
-1504775286822	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
-1504775286822	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
-1504775288955	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
-1504775289273	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775289278	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775289458	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f6ecfad7da580c&origin=http%3A%2F%2Fautomationpractice.com"
-1504775289459	Marionette	DEBUG	Received DOM event "pageshow" for "http://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f6ecfad7da580c&origin=http%3A%2F%2Fautomationpractice.com"
-1504775289580	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f6ecfad7da580c&origin=http%3A%2F%2Fautomationpractice.com"
-1504775289582	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f6ecfad7da580c&origin=http%3A%2F%2Fautomationpractice.com"
-1504775290526	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775290530	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775290628	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
-1504775291498	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504775291498	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
-1504775291944	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504775291951	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504775292126	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504775293081	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504775293082	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504775293390	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=my-account"
-1504775293397	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=my-account"
-1504775293474	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=my-account"
-1504775294423	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=my-account"
-1504775294426	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=my-account"
-1504775294979	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
-1504775295090	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775295094	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775295131	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f211f76c0a33b28&origin=http%3A%2F%2Fautomationpractice.com"
-1504775295132	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f211f76c0a33b28&origin=http%3A%2F%2Fautomationpractice.com"
-1504775295133	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f211f76c0a33b28&origin=http%3A%2F%2Fautomationpractice.com"
-1504775295134	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f211f76c0a33b28&origin=http%3A%2F%2Fautomationpractice.com"
-1504775295238	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775295243	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775295514	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
-1504775296006	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504775296007	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
-1504775296811	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504775296818	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483666"
-1504775296818	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483668"
-1504775296818	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483672"
-1504775296818	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483674"
-1504775296987	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504775297264	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1504775297915	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504775298428	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504775298430	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504775298910	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order"
-1504775299068	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order"
-1504775299162	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=order"
-1504775299689	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=order"
-1504775299690	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=order"
-1504775299992	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order&step=1"
-1504775300172	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order&step=1"
-[GFX1-]: Receive IPC close with reason=AbnormalShutdown
-1504775311811	geckodriver	INFO	geckodriver 0.18.0
-1504775311815	geckodriver	INFO	Listening on 127.0.0.1:59361
-1504775312873	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args ["-marionette"]
-1504775313079	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1596"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1596 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1631 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3152 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2246 < callProvider()@resource://gre/modules/AddonManager.jsm:271 < _startProvider()@resource://gre/modules/AddonManager.jsm:741 < startup()@resource://gre/modules/AddonManager.jsm:908 < startup()@resource://gre/modules/AddonManager.jsm:3122 < observe()@jar:file:///Applications/Firefox.app/Contents/Resources/omni.ja!/components/addonManager.js:65
-1504775313376	Marionette	INFO	Enabled via --marionette
-2017-09-07 13:08:34.485 plugin-container[11172:1038370] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xae3b, name = 'com.apple.tsm.portname'
-See /usr/include/servers/bootstrap_defs.h for the error codes.
-2017-09-07 13:08:34.486 plugin-container[11172:1038370] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xb103, name = 'com.apple.CFPasteboardClient'
-See /usr/include/servers/bootstrap_defs.h for the error codes.
-1504775314619	Marionette	INFO	Listening on port 59370
-JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCKET_ADDRESS_IN_USE: Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]
-1504775314652	Marionette	WARN	TLS certificate errors will be ignored for this session
-1504775314685	Marionette	DEBUG	loaded listener.js
-1504775315210	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
-1504775315798	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
-1504775315798	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
-1504775317907	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
-1504775318270	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775318278	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775318414	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f5ee422475b4ee&origin=http%3A%2F%2Fautomationpractice.com"
-1504775318415	Marionette	DEBUG	Received DOM event "pageshow" for "http://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f5ee422475b4ee&origin=http%3A%2F%2Fautomationpractice.com"
-1504775318513	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f5ee422475b4ee&origin=http%3A%2F%2Fautomationpractice.com"
-1504775318515	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f5ee422475b4ee&origin=http%3A%2F%2Fautomationpractice.com"
-1504775319028	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775319034	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775319138	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
-1504775320028	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504775320028	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
-1504775320466	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504775320473	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504775320642	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504775321593	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504775321593	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504775321918	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=my-account"
-1504775321927	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=my-account"
-1504775322003	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=my-account"
-1504775322873	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=my-account"
-1504775322875	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=my-account"
-1504775323426	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
-1504775323528	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775323533	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775323567	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f1dc58231dd115&origin=http%3A%2F%2Fautomationpractice.com"
-1504775323569	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f1dc58231dd115&origin=http%3A%2F%2Fautomationpractice.com"
-1504775323569	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f1dc58231dd115&origin=http%3A%2F%2Fautomationpractice.com"
-1504775323570	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f1dc58231dd115&origin=http%3A%2F%2Fautomationpractice.com"
-1504775323681	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775323686	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504775323928	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
-1504775324465	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504775324466	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
-1504775325274	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504775325301	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483666"
-1504775325301	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483668"
-1504775325301	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483672"
-1504775325301	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483674"
-1504775325454	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504775325730	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1504775326365	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504775326839	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504775326840	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504775327318	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order"
-1504775327476	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order"
-1504775327579	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=order"
-1504775328120	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=order"
-1504775328120	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=order"
-1504775328424	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order&step=1"
-1504775328603	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order&step=1"
-1504775328655	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=order&step=1"
-1504775329152	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=order&step=1"
-1504775329153	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=order&step=1"
-1504775329442	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order"
-1504775329500	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order"
-1504780973378	geckodriver	INFO	geckodriver 0.18.0
-1504780973381	geckodriver	INFO	Listening on 127.0.0.1:61066
-1504780974430	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args ["-marionette"]
-1504780974646	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1596"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1596 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1631 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3152 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2246 < callProvider()@resource://gre/modules/AddonManager.jsm:271 < _startProvider()@resource://gre/modules/AddonManager.jsm:741 < startup()@resource://gre/modules/AddonManager.jsm:908 < startup()@resource://gre/modules/AddonManager.jsm:3122 < observe()@jar:file:///Applications/Firefox.app/Contents/Resources/omni.ja!/components/addonManager.js:65
-1504780974939	Marionette	INFO	Enabled via --marionette
-2017-09-07 14:42:56.020 plugin-container[11478:1055787] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xae3b, name = 'com.apple.tsm.portname'
-See /usr/include/servers/bootstrap_defs.h for the error codes.
-2017-09-07 14:42:56.021 plugin-container[11478:1055787] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0xb103, name = 'com.apple.CFPasteboardClient'
-See /usr/include/servers/bootstrap_defs.h for the error codes.
-1504780976156	Marionette	INFO	Listening on port 61075
-JavaScript error: chrome://marionette/content/server.js, line 337: NS_ERROR_SOCKET_ADDRESS_IN_USE: Component returned failure code: 0x804b0036 (NS_ERROR_SOCKET_ADDRESS_IN_USE) [nsIServerSocket.initSpecialConnection]
-1504780976217	Marionette	WARN	TLS certificate errors will be ignored for this session
-1504780976249	Marionette	DEBUG	loaded listener.js
-1504780976837	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
-1504780977421	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
-1504780977421	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
-1504780979504	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
-1504780979809	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504780979813	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504780979969	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f67b8036140ea8&origin=http%3A%2F%2Fautomationpractice.com"
-1504780979970	Marionette	DEBUG	Received DOM event "pageshow" for "http://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f67b8036140ea8&origin=http%3A%2F%2Fautomationpractice.com"
-1504780980086	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f67b8036140ea8&origin=http%3A%2F%2Fautomationpractice.com"
-1504780980088	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f67b8036140ea8&origin=http%3A%2F%2Fautomationpractice.com"
-1504780980769	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504780980776	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504780980872	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
-1504780981816	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504780981816	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
-1504780982242	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504780982249	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504780982415	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504780983381	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504780983381	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
-1504780983760	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=my-account"
-1504780983767	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=my-account"
-1504780983838	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=my-account"
-1504780985078	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=my-account"
-1504780985081	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=my-account"
-1504780985630	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
-1504780985714	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504780985718	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504780985748	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f2837051a766b9&origin=http%3A%2F%2Fautomationpractice.com"
-1504780985749	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f2837051a766b9&origin=http%3A%2F%2Fautomationpractice.com"
-1504780985749	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f2837051a766b9&origin=http%3A%2F%2Fautomationpractice.com"
-1504780985750	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/0sTQzbapM8j.js?version=42#channel=f2837051a766b9&origin=http%3A%2F%2Fautomationpractice.com"
-1504780985856	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504780985860	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
-1504780986090	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
-1504780988292	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
-1504780988293	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
-1504780989086	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504780989114	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483666"
-1504780989114	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483668"
-1504780989115	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483672"
-1504780989115	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483674"
-1504780989261	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504780989543	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
-1504780990165	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504780990745	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504780990746	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
-1504780991318	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order"
-1504780991475	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order"
-1504780991567	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=order"
-1504780992157	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=order"
-1504780992157	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=order"
-1504780992450	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order&step=1"
-1504780992630	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order&step=1"
+1505589108119	Marionette	WARN	TLS certificate errors will be ignored for this session
+1505589108148	Marionette	DEBUG	loaded listener.js
+1505589108261	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1505589108856	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1505589108856	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1505589111012	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
+1505589111393	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505589111400	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505589111628	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f30e18cf5cc4b5&origin=http%3A%2F%2Fautomationpractice.com"
+1505589111631	Marionette	DEBUG	Received DOM event "pageshow" for "http://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f30e18cf5cc4b5&origin=http%3A%2F%2Fautomationpractice.com"
+1505589111711	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f30e18cf5cc4b5&origin=http%3A%2F%2Fautomationpractice.com"
+1505589111714	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f30e18cf5cc4b5&origin=http%3A%2F%2Fautomationpractice.com"
+1505589111947	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505589111956	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505589112086	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
+1505589112088	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
+1505589112924	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
+1505589112924	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
+1505589113357	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
+1505589113367	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
+1505589113581	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
+1505589114540	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
+1505589114540	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=authentication&back=my-account"
+1505589114877	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=my-account"
+1505589114884	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=my-account"
+1505589114993	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=my-account"
+1505589115855	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=my-account"
+1505589115855	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=my-account"
+1505589116431	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php"
+1505589116619	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505589116624	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505589116678	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f2266a97a07d166&origin=http%3A%2F%2Fautomationpractice.com"
+1505589116679	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f2266a97a07d166&origin=http%3A%2F%2Fautomationpractice.com"
+1505589116680	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f2266a97a07d166&origin=http%3A%2F%2Fautomationpractice.com"
+1505589116682	Marionette	DEBUG	Received DOM event "pageshow" for "https://staticxx.facebook.com/connect/xd_arbiter/r/5oivrH7Newv.js?version=42#channel=f2266a97a07d166&origin=http%3A%2F%2Fautomationpractice.com"
+1505589116776	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505589116781	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php"
+1505589117102	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
+1505589117105	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php"
+1505589117686	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php"
+1505589117687	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php"
+1505589118500	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?id_product=1&controller=product"
+1505589118507	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483667"
+1505589118507	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483669"
+1505589118508	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483673"
+1505589118508	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483675"
+1505589118678	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?id_product=1&controller=product"
+1505589118962	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1505589119617	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
+1505589120114	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?id_product=1&controller=product"
+1505589120115	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?id_product=1&controller=product"
+1505589120612	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order"
+1505589120771	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order"
+1505589120872	Marionette	DEBUG	Received DOM event "beforeunload" for "http://automationpractice.com/index.php?controller=order"
+1505589121385	Marionette	DEBUG	Received DOM event "pagehide" for "http://automationpractice.com/index.php?controller=order"
+1505589121386	Marionette	DEBUG	Received DOM event "unload" for "http://automationpractice.com/index.php?controller=order"
+1505589121741	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://automationpractice.com/index.php?controller=order&step=1"
+1505589121923	Marionette	DEBUG	Received DOM event "pageshow" for "http://automationpractice.com/index.php?controller=order&step=1"
+2017-09-16 23:19:20.622 firefox-bin[12396:2077060] IMKInputSession presentFunctionRowItemTextInputViewWithEndpoint:completionHandler: : [self textInputContext]=0x1124762e0 *NO* NSRemoteViewController to client, NSError=Error Domain=NSCocoaErrorDomain Code=4097 "connection from pid 0" UserInfo={NSDebugDescription=connection from pid 0}, com.apple.inputmethod.EmojiFunctionRowItem
+2017-09-16 23:37:35.121 firefox-bin[12396:2077060] IMKInputSession presentFunctionRowItemTextInputViewWithEndpoint:completionHandler: : [self textInputContext]=0x1124762e0 *NO* NSRemoteViewController to client, NSError=Error Domain=NSCocoaErrorDomain Code=4097 "connection from pid 0" UserInfo={NSDebugDescription=connection from pid 0}, com.apple.inputmethod.EmojiFunctionRowItem
+2017-09-16 23:37:49.832 firefox-bin[12396:2077060] IMKInputSession presentFunctionRowItemTextInputViewWithEndpoint:completionHandler: : [self textInputContext]=0x1124762e0 *NO* NSRemoteViewController to client, NSError=Error Domain=NSCocoaErrorDomain Code=4097 "connection from pid 0" UserInfo={NSDebugDescription=connection from pid 0}, com.apple.inputmethod.EmojiFunctionRowItem
