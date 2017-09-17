@@ -49,6 +49,7 @@ Verify Page is Loaded for Product ${product}
 
 
 Add to Shopping Cart
+    Wait Until Element Is Visible  ${ADD_TO_CART_BUTTON}
     Click Button  ${ADD_TO_CART_BUTTON}
 
 
@@ -59,6 +60,7 @@ Click 'Write Review' Button
 
 Select Star Rating
     [Arguments]  ${stars}
+    Wait Until Element Is Visible  ${FIVE_STAR_RATING}
     Click Element  ${FIVE_STAR_RATING}
 
 
@@ -70,10 +72,12 @@ Enter Review Title
 
 Enter Review Content
     [Arguments]  ${content}
+    Wait Until Element Is Visible  ${REVIEW_CONTENT}
     Input Text  ${REVIEW_CONTENT}  ${content}
 
 
 Submit The Review
+    Wait Until Element Is Visible  ${SEND_REVIEW_BUTTON}
     Click Button  ${SEND_REVIEW_BUTTON}
 
 
@@ -89,19 +93,23 @@ Click 'Ok' On Review Confirmation Popup
 
 Select Size Value
     [Arguments]  ${size}
+    Wait Until Element Is Visible  ${SIZE_DROP_DOWN}
     Select From List By Label  ${SIZE_DROP_DOWN}  ${size}
 
 
 Enter Quantity Value
     [Arguments]  ${quantity}
+    Wait Until Element Is Visible  ${QUANTITY_FIELD}
     Input Text  ${QUANTITY_FIELD}  ${quantity}
 
 
 Click Quantity 'Plus' icon
+    Wait Until Element Is Visible  ${QUANTITY_PLUS_ICON}
     Click Element  ${QUANTITY_PLUS_ICON}
 
 
 Click Quantity 'Minus' icon
+    Wait Until Element Is Visible  ${QUANTITY_MINUS_ICON}
     Click Element  ${QUANTITY_MINUS_ICON}
 
 
@@ -111,7 +119,7 @@ Click 'Add to wishlist'
 
 
 Verify 'Wishlist Confirmation Popup' Displayed
-    WAIT UNTIL ELEMENT IS VISIBLE  ${WISHLIST_CONFIRMATION_POPUP_TEXT}
+    Wait Until Element Is Visible  ${WISHLIST_CONFIRMATION_POPUP_TEXT}
     Element Text Should Be  ${WISHLIST_CONFIRMATION_POPUP_TEXT}  Added to your wishlist.
 
 

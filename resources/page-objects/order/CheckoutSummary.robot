@@ -1,20 +1,19 @@
 *** Settings ***
 Library  Selenium2Library
-Library  Dialogs
 
 
 
 *** Variables ***
-${ORDERSUMMARY_PROCEED_TO_CHECKOUT_BUTTON}          css=.button.btn.btn-default.standard-checkout.button-medium>span
-${PRODUCT_IN_CART}                                  //tr[starts-with(@class,'cart_item')]//p/a
-${DELETE_ICON}                                      xpath=//a[@title='Delete']
+${CHECKOUTSUMMARY_PROCEED_TO_CHECKOUT_BUTTON}          css=.button.btn.btn-default.standard-checkout.button-medium>span
+${PRODUCT_IN_CART}                                     //tr[starts-with(@class,'cart_item')]//p/a
+${DELETE_ICON}                                         xpath=//a[@title='Delete']
 
 
 
 *** Keywords ***
 Click 'Proceed To Checkout'
-    Wait Until Element Is Visible  ${ORDERSUMMARY_PROCEED_TO_CHECKOUT_BUTTON}
-    Click Element  ${ORDERSUMMARY_PROCEED_TO_CHECKOUT_BUTTON}
+    Wait Until Element Is Visible  ${CHECKOUTSUMMARY_PROCEED_TO_CHECKOUT_BUTTON}
+    Click Element  ${CHECKOUTSUMMARY_PROCEED_TO_CHECKOUT_BUTTON}
 
 
 Get Products In Shopping Cart

@@ -3,9 +3,17 @@ Resource            ../resources/keywords/search_kw.robot
 Resource            ../resources/common.robot
 Test Setup          Begin Web Test
 Test Teardown       End Web Test
+Library  Dialogs
 
 
 # robot -d results tests/search.robot
+
+
+*** Variables ***
+${URL} =  http://automationpractice.com/index.php
+${BROWSER} =  Firefox
+
+
 
 *** Test Cases ***
 User is able to search successfully

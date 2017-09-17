@@ -8,6 +8,7 @@ ${PRODUCT_IMAGE}                            xpath=//a[@class='product_img_link']
 ${MORE_BUTTON}                              css=.button.lnk_view.btn.btn-default
 ${PRODUCT_NAME_LOCATOR}                     xpath=//div[@class='product-container']//a[@class='product-name']
 ${SEARCH_RESULTS_ADD_TO_CART_BUTTON}        css=.button.ajax_add_to_cart_button.btn.btn-default>span
+${FOUND_PRODUCTS}       xpath=//div[@class='product-container']//a[@class='product-name']
 
 
 *** Keywords ***
@@ -20,6 +21,7 @@ Click 'Quick View' Link
 
 
 Click On Product Image
+    Wait Until Element Is Visible  ${PRODUCT_IMAGE}
     Click Image  ${PRODUCT_IMAGE}
 
 
@@ -31,6 +33,7 @@ Click 'More' button
 
 
 Click on Product Name
+    Wait Until Element Is Visible  ${PRODUCT_NAME_LOCATOR}
     Click Link  ${PRODUCT_NAME_LOCATOR}
 
 

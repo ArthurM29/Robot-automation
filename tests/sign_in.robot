@@ -6,6 +6,13 @@ Test Teardown       End Web Test
 
 # robot -d results tests/sign_in.robot
 
+
+*** Variables ***
+${URL} =  http://automationpractice.com/index.php
+${BROWSER} =  Firefox
+
+
+
 *** Test Cases ***
 Email is required
     Sign In  ${EMPTY}  ${VALID_PASSWORD}

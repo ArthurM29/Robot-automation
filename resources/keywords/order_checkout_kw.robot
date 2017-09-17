@@ -3,6 +3,7 @@ Resource            view_product_kw.robot
 Resource            ../page-objects/MyAddresses.robot
 Resource            ../page-objects/AddToCart.robot
 Resource            ../page-objects/order/CheckoutSummary.robot
+Resource            ../page-objects/order/CheckoutSignIn.robot
 Resource            ../page-objects/order/CheckoutAddress.robot
 Resource            ../page-objects/order/CheckoutShipping.robot
 Resource            ../page-objects/order/CheckoutPayment.robot
@@ -28,12 +29,14 @@ Checkout The Order
     CheckoutPayment.Click On 'Pay by bank wire' Payment Method
     CheckoutPayment.Click 'Proceed To Checkout'
 
+
 Checkout The Order From Address
     CheckoutAddress.Click 'Proceed To Checkout'
     CheckoutShipping.Accept Terms Of Service
     CheckoutShipping.Click 'Proceed To Checkout'
     CheckoutPayment.Click On 'Pay by bank wire' Payment Method
     CheckoutPayment.Click 'Proceed To Checkout'
+
 
 Checkout The Order and Do Not Accept 'Terms of service'
     CheckoutSummary.Click 'Proceed To Checkout'
@@ -71,15 +74,19 @@ Add Product to Shopping Cart
     ProductDetails.Add to Shopping Cart
     AddToCart.Verify 'Added to Cart' message
 
+
 Verify 'Added to Cart' Confirmation Message
     AddToCart.Verify 'Added to Cart' message
+
 
 Add Product to Shopping Cart from 'Quick View'
     Proceed To 'Quick View'
     ProductQuickView.Click 'Add to Cart' Button
 
+
 Add Product to Shopping Cart from 'Search results'
     SearchResults.Click 'Add to Cart' Button
+
 
 Verify Product Is In Shopping Cart
     [Arguments]  ${prod}
@@ -213,3 +220,11 @@ Select Shipping Address
 Verify Shipping Address Is Selected
     [Arguments]  ${address}
     MyAddresses.Address Should Be Selected  ${address}
+
+
+User Is Prompted to Sign In
+    CheckoutSignIn.Page Heading Should Be
+
+
+Sign In and Proceed to 'Checkout Address'
+    CheckoutSignIn.Sign In and Navigate To 'Checkout Address'  ${VALID_EMAIL}  ${VALID_PASSWORD}

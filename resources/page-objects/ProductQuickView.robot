@@ -33,6 +33,7 @@ Click 'Add to Cart' Button
     Wait Until Element Is Visible  ${QUICK_VIEW_WINDOW}
     Select Frame  ${QUICK_VIEW_WINDOW}
     Click Element  ${QUICK_VIEW_ADD_TO_CART_BUTTON}
+    Unselect Frame
 
 
 

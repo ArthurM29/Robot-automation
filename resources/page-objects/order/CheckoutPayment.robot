@@ -21,8 +21,8 @@ ${TOTAL_PRICE}                                      css=#total_price
 
 *** Keywords ***
 Click 'Proceed To Checkout'
-    Wait Until Element Is Visible  ${ORDERADDRESS_PROCEED_TO_CHECKOUT_BUTTON}
-    Click Element  ${ORDERADDRESS_PROCEED_TO_CHECKOUT_BUTTON}
+    Wait Until Element Is Visible  ${ORDERPAYMENT_PROCEED_TO_CHECKOUT_BUTTON}
+    Click Element  ${ORDERPAYMENT_PROCEED_TO_CHECKOUT_BUTTON}
 
 
 Verify Confirmation Text Displayed
@@ -85,10 +85,12 @@ Payment Method Should Be
 
 Product Price Should Be
     [Arguments]  ${price}
+    Wait Until Element Is Visible  ${PRODUCT_PRICE}
     Element Text Should Be  ${PRODUCT_PRICE}  ${price}
 
 
 Total Price Should Be
     [Arguments]  ${price}
+    Wait Until Element Is Visible  ${TOTAL_PRICE}
     Element Text Should Be  ${TOTAL_PRICE}  ${price}
 

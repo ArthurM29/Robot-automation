@@ -10,6 +10,7 @@ ${MY_ADDRESSES_LINK}         css=a[title='Addresses']
 
 *** Keywords ***
 Verify Page Loaded
+    Wait Until Element Contains  css=.page-heading  MY ACCOUNT
     Title Should Be  ${MY_ACCOUNT_PAGE_TITLE}
 
 

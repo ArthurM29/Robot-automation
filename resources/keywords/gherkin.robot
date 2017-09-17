@@ -1,20 +1,15 @@
 *** Settings ***
-Resource            ../Resources/PO/SearchResults.robot
-Resource            ../Resources/PO/ProductDetails.robot
-Resource            ../Resources/PO/AddToCart.robot
-Resource            PO/ShoppingCart.robot
-Resource            search_keywords.robot
-Library  Dialogs
+Resource            ../page-objects/SearchResults.robot
+Resource            ../page-objects/ProductDetails.robot
+Resource            ../page-objects/AddToCart.robot
+Resource            search_kw.robot
+Resource            order_checkout_kw.robot
 
-
-
-*** Variables ***
-${CLOSE_BUTTON}
 
 
 *** Keywords ***
 user is not logged in the application
-    Navigate To Home Page
+    Log  Launch Application without logging in
 
 
 user searches for product
@@ -27,50 +22,25 @@ the product is present in search results
     Search Results should contain  ${product}
 
 
+user proceeds to view Product Details
+    [Arguments]  ${product}
+    SearchResults.Click 'More' button
+    ProductDetails.Verify Page is Loaded for Product ${product}
+
+
 user adds the product to Shopping Cart
     [Arguments]  ${product}
-    SearchResults.Click 'Add to Cart' button for  ${product}
-    AddToCart.Click 'Close' button
+    ProductDetails.Add to Shopping Cart
+    AddToCart.Verify 'Added to Cart' message
 
 
 the product is present in Shopping Cart
     [Arguments]  ${product}
-    ShoppingCart.Verify Shopping Cart Contains Product  ${product}
-
-
-#user adds the product to Shopping Cart
-#    [Arguments]  ${product}
-#    ProductDetails.Add to Shopping Cart
-#    AddToCart.Verify 'Added to Cart' message
-#    AddToCart.Click 'Close' button
+    Proceed to Order Checkout
+    Verify Product Is In Shopping Cart  ${product}
 
 
 
-
-#user proceeds to view Product Details
-#    [Arguments]  ${product}
-#    SearchResults.Click 'More' button
-#    ProductDetails.Verify product is loaded  ${product}
-#
-#
-#user adds the product to Shopping Cart
-#    [Arguments]  ${product}
-#    ProductDetails.Add to Shopping Cart
-#    AddToCart.Verify 'Added to Cart' message
-#    AddToCart.Click 'Close' button
-#
-
-#
-#
-#user removes the product from Shopping Cart
-#    [Arguments]  ${product}
-#    ShoppingCart.Open Shopping Cart
-#    Click Link  xpath=//div[@class='product-name']//a[text()='${product}']/parent::div/parent::div/following-sibling::span/a
-#
-#
-#the product is not present in Shopping Cart
-#    [Arguments]  ${product}
-#    ShoppingCart.Verify Shopping Cart Doesn't Contain Product  ${product}
 
 
 

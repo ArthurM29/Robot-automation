@@ -11,10 +11,12 @@ ${VIEW_MY_ACCOUNT_LINK}     css=.account
 
 *** Keywords ***
 Click 'Sign In' Link
+    Wait Until Element Is Visible  ${SIGN_IN_LINK}
     Click Link  ${SIGN_IN_LINK}
 
 
 Click 'Sign Out' Link
+    Wait Until Element Is Visible  ${SIGN_OUT_LINK}
     Click Link  ${SIGN_OUT_LINK}
 
 

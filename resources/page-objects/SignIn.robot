@@ -27,17 +27,25 @@ ${VALIDATION_ALERT}         css=.alert.alert-danger>ol>li
 Verify Page Loaded
     Title Should Be  ${SIGN_IN_PAGE_TITLE}
 
+
 Enter Email
     [Arguments]  ${email}
+    Wait Until Element Is Visible  ${EMAIL_FIELD}
     Input Text  ${EMAIL_FIELD}  ${email}
+
 
 Enter Password
     [Arguments]  ${password}
+    Wait Until Element Is Visible  ${PASSWORD_FIELD}
     Input Password  ${PASSWORD_FIELD}  ${password}
 
+
 Submit Credentials
+    Wait Until Element Is Visible  ${SIGN_IN_BUTTON}
     Click Button  ${SIGN_IN_BUTTON}
+
 
 Validation Message Should Be
     [Arguments]  ${message}
+    Wait Until Element Is Visible  ${VALIDATION_ALERT}
     Element Text Should Be  ${VALIDATION_ALERT}  ${message}

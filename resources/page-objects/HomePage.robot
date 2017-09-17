@@ -10,6 +10,7 @@ ${HOME_PAGE_TITLE}     My Store
 Load
     Go To  ${URL}
 
+
 Verify Page Loaded
     Title Should Be  ${HOME_PAGE_TITLE}
 
