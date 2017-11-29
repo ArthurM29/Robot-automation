@@ -1,0 +1,2126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20171130 01:21:56.114" generator="Robot 3.0.2 (Python 2.7.13 on darwin)">
+<suite source="/Users/amanasyan/Documents/Python-projects/Robot-automation/tests/search.robot" id="s1" name="Search">
+<test id="s1-t1" name="User is able to search successfully">
+<kw type="setup" name="Begin Web Test" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20171130 01:21:56.277" level="INFO">Opening browser 'Firefox' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20171130 01:21:59.056" starttime="20171130 01:21:56.277"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20171130 01:21:59.139" starttime="20171130 01:21:59.057"></status>
+</kw>
+<kw name="Navigate To Home Page" library="signin_kw">
+<kw name="Load" library="HomePage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20171130 01:21:59.141" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20171130 01:22:04.817" starttime="20171130 01:21:59.140"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:04.817" starttime="20171130 01:21:59.140"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:04.884" starttime="20171130 01:22:04.818"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+<arg>Automation Practice Website</arg>
+</arguments>
+<msg timestamp="20171130 01:22:04.885" level="INFO">Verifying element 'css=#editorial_block_center&gt;h1' contains exactly text 'Automation Practice Website'.</msg>
+<status status="PASS" endtime="20171130 01:22:04.905" starttime="20171130 01:22:04.884"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:04.905" starttime="20171130 01:22:04.817"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:04.905" starttime="20171130 01:21:59.139"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:04.905" starttime="20171130 01:21:56.277"></status>
+</kw>
+<kw name="Search" library="search_kw">
+<arguments>
+<arg>${SIMPLE_TERM}</arg>
+</arguments>
+<kw name="Clear Search Field" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:04.930" starttime="20171130 01:22:04.906"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:04.950" starttime="20171130 01:22:04.930"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:04.950" starttime="20171130 01:22:04.906"></status>
+</kw>
+<kw name="Enter Search Term" library="Search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:04.969" starttime="20171130 01:22:04.951"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:04.970" level="INFO">Typing text 'blouse' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20171130 01:22:05.008" starttime="20171130 01:22:04.969"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:05.009" starttime="20171130 01:22:04.951"></status>
+</kw>
+<kw name="Click Search Button" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:05.027" starttime="20171130 01:22:05.009"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:05.028" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20171130 01:22:07.414" starttime="20171130 01:22:05.028"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:07.415" starttime="20171130 01:22:05.009"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:07.415" starttime="20171130 01:22:04.905"></status>
+</kw>
+<kw name="Verify Search Results For" library="search_kw">
+<arguments>
+<arg>${SIMPLE_TERM}</arg>
+</arguments>
+<kw name="Result Title Should Be" library="SearchResults">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SEARCH_HEADING}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:07.437" starttime="20171130 01:22:07.416"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:07.483" starttime="20171130 01:22:07.438"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${actual_value}</var>
+</assign>
+<msg timestamp="20171130 01:22:07.503" level="INFO">${actual_value} = Blouse</msg>
+<status status="PASS" endtime="20171130 01:22:07.503" starttime="20171130 01:22:07.483"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${actual_value}</arg>
+<arg>ignore_case=true</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:07.504" starttime="20171130 01:22:07.503"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:07.504" starttime="20171130 01:22:07.416"></status>
+</kw>
+<kw name="Results Count Should Be" library="SearchResults">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:07.524" starttime="20171130 01:22:07.504"></status>
+</kw>
+<kw name="Get Webelements" library="Selenium2Library">
+<doc>Returns list of WebElement objects matching locator.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${search_results}</var>
+</assign>
+<msg timestamp="20171130 01:22:07.530" level="INFO">${search_results} = [&lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session="703ccdcd-3a36-8c42-a60b-8d381078c1d0", element="090cc316-b2a4-2945-bbcf-a5a9c0c55e52")&gt;]</msg>
+<status status="PASS" endtime="20171130 01:22:07.530" starttime="20171130 01:22:07.524"></status>
+</kw>
+<kw name="Length Should Be" library="BuiltIn">
+<doc>Verifies that the length of the given item is correct.</doc>
+<arguments>
+<arg>${search_results}</arg>
+<arg>${count}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:07.531" level="INFO">Length is 1</msg>
+<status status="PASS" endtime="20171130 01:22:07.531" starttime="20171130 01:22:07.530"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:07.531" starttime="20171130 01:22:07.504"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:07.531" starttime="20171130 01:22:07.415"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171130 01:22:07.789" starttime="20171130 01:22:07.532"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:07.789" starttime="20171130 01:22:07.531"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:07.789" critical="yes" starttime="20171130 01:21:56.276"></status>
+</test>
+<test id="s1-t2" name="Search without entering search keyword">
+<kw type="setup" name="Begin Web Test" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:07.791" level="INFO">Opening browser 'Firefox' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20171130 01:22:10.665" starttime="20171130 01:22:07.791"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20171130 01:22:11.240" starttime="20171130 01:22:10.665"></status>
+</kw>
+<kw name="Navigate To Home Page" library="signin_kw">
+<kw name="Load" library="HomePage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:11.242" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20171130 01:22:16.433" starttime="20171130 01:22:11.242"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:16.433" starttime="20171130 01:22:11.241"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:16.502" starttime="20171130 01:22:16.434"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+<arg>Automation Practice Website</arg>
+</arguments>
+<msg timestamp="20171130 01:22:16.502" level="INFO">Verifying element 'css=#editorial_block_center&gt;h1' contains exactly text 'Automation Practice Website'.</msg>
+<status status="PASS" endtime="20171130 01:22:16.523" starttime="20171130 01:22:16.502"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:16.523" starttime="20171130 01:22:16.434"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:16.523" starttime="20171130 01:22:11.241"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:16.523" starttime="20171130 01:22:07.790"></status>
+</kw>
+<kw name="Search" library="search_kw">
+<arguments>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="Clear Search Field" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:16.548" starttime="20171130 01:22:16.525"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:16.569" starttime="20171130 01:22:16.549"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:16.569" starttime="20171130 01:22:16.524"></status>
+</kw>
+<kw name="Enter Search Term" library="Search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:16.587" starttime="20171130 01:22:16.569"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:16.588" level="INFO">Typing text '' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20171130 01:22:16.617" starttime="20171130 01:22:16.588"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:16.617" starttime="20171130 01:22:16.569"></status>
+</kw>
+<kw name="Click Search Button" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:16.636" starttime="20171130 01:22:16.618"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:16.637" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20171130 01:22:17.742" starttime="20171130 01:22:16.636"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:17.742" starttime="20171130 01:22:16.617"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:17.742" starttime="20171130 01:22:16.524"></status>
+</kw>
+<kw name="Verify 'Empty Search' Message" library="search_kw">
+<kw name="Warning Message Should Be" library="SearchResults">
+<arguments>
+<arg>${EMPTY_SEARCH_MSG}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_WARNING}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:17.816" starttime="20171130 01:22:17.743"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>${SEARCH_WARNING}</arg>
+<arg>${message}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:17.817" level="INFO">Verifying element 'css=.alert.alert-warning' contains exactly text 'Please enter a search keyword'.</msg>
+<status status="PASS" endtime="20171130 01:22:17.836" starttime="20171130 01:22:17.817"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:17.836" starttime="20171130 01:22:17.743"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:17.836" starttime="20171130 01:22:17.743"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171130 01:22:18.117" starttime="20171130 01:22:17.837"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:18.117" starttime="20171130 01:22:17.836"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:18.117" critical="yes" starttime="20171130 01:22:07.790"></status>
+</test>
+<test id="s1-t3" name="Search with no result">
+<kw type="setup" name="Begin Web Test" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:18.119" level="INFO">Opening browser 'Firefox' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20171130 01:22:20.840" starttime="20171130 01:22:18.119"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20171130 01:22:21.308" starttime="20171130 01:22:20.840"></status>
+</kw>
+<kw name="Navigate To Home Page" library="signin_kw">
+<kw name="Load" library="HomePage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:21.310" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20171130 01:22:25.818" starttime="20171130 01:22:21.310"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:25.818" starttime="20171130 01:22:21.309"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:25.898" starttime="20171130 01:22:25.819"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+<arg>Automation Practice Website</arg>
+</arguments>
+<msg timestamp="20171130 01:22:25.898" level="INFO">Verifying element 'css=#editorial_block_center&gt;h1' contains exactly text 'Automation Practice Website'.</msg>
+<status status="PASS" endtime="20171130 01:22:25.918" starttime="20171130 01:22:25.898"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:25.919" starttime="20171130 01:22:25.818"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:25.919" starttime="20171130 01:22:21.309"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:25.919" starttime="20171130 01:22:18.118"></status>
+</kw>
+<kw name="Search" library="search_kw">
+<arguments>
+<arg>${NO_RESULTS_TERM}</arg>
+</arguments>
+<kw name="Clear Search Field" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:25.946" starttime="20171130 01:22:25.920"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:25.965" starttime="20171130 01:22:25.946"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:25.965" starttime="20171130 01:22:25.920"></status>
+</kw>
+<kw name="Enter Search Term" library="Search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:25.983" starttime="20171130 01:22:25.966"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:25.983" level="INFO">Typing text 'nothing' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20171130 01:22:26.022" starttime="20171130 01:22:25.983"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:26.022" starttime="20171130 01:22:25.965"></status>
+</kw>
+<kw name="Click Search Button" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:26.042" starttime="20171130 01:22:26.023"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:26.042" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20171130 01:22:27.270" starttime="20171130 01:22:26.042"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:27.271" starttime="20171130 01:22:26.023"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:27.271" starttime="20171130 01:22:25.919"></status>
+</kw>
+<kw name="Verify 'No Search Results' Message" library="search_kw">
+<kw name="Warning Message Should Be" library="SearchResults">
+<arguments>
+<arg>${NO_RESULTS_MSG}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_WARNING}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:27.315" starttime="20171130 01:22:27.273"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>${SEARCH_WARNING}</arg>
+<arg>${message}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:27.315" level="INFO">Verifying element 'css=.alert.alert-warning' contains exactly text 'No results were found for your search "nothing"'.</msg>
+<status status="PASS" endtime="20171130 01:22:27.332" starttime="20171130 01:22:27.315"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:27.332" starttime="20171130 01:22:27.272"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:27.332" starttime="20171130 01:22:27.271"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171130 01:22:27.604" starttime="20171130 01:22:27.333"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:27.604" starttime="20171130 01:22:27.333"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:27.604" critical="yes" starttime="20171130 01:22:18.118"></status>
+</test>
+<test id="s1-t4" name="Search works with partial match">
+<kw type="setup" name="Begin Web Test" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:27.608" level="INFO">Opening browser 'Firefox' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20171130 01:22:30.413" starttime="20171130 01:22:27.607"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20171130 01:22:30.903" starttime="20171130 01:22:30.414"></status>
+</kw>
+<kw name="Navigate To Home Page" library="signin_kw">
+<kw name="Load" library="HomePage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:30.906" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20171130 01:22:35.395" starttime="20171130 01:22:30.905"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:35.395" starttime="20171130 01:22:30.905"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:35.480" starttime="20171130 01:22:35.397"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+<arg>Automation Practice Website</arg>
+</arguments>
+<msg timestamp="20171130 01:22:35.481" level="INFO">Verifying element 'css=#editorial_block_center&gt;h1' contains exactly text 'Automation Practice Website'.</msg>
+<status status="PASS" endtime="20171130 01:22:35.516" starttime="20171130 01:22:35.480"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:35.516" starttime="20171130 01:22:35.395"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:35.517" starttime="20171130 01:22:30.904"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:35.517" starttime="20171130 01:22:27.606"></status>
+</kw>
+<kw name="Search" library="search_kw">
+<arguments>
+<arg>${PARTIAL_MATCH}</arg>
+</arguments>
+<kw name="Clear Search Field" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:35.552" starttime="20171130 01:22:35.519"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:35.583" starttime="20171130 01:22:35.553"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:35.583" starttime="20171130 01:22:35.518"></status>
+</kw>
+<kw name="Enter Search Term" library="Search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:35.637" starttime="20171130 01:22:35.584"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:35.638" level="INFO">Typing text 'blo' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20171130 01:22:35.684" starttime="20171130 01:22:35.637"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:35.685" starttime="20171130 01:22:35.584"></status>
+</kw>
+<kw name="Click Search Button" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:35.713" starttime="20171130 01:22:35.686"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:35.714" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20171130 01:22:37.060" starttime="20171130 01:22:35.713"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:37.060" starttime="20171130 01:22:35.685"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:37.061" starttime="20171130 01:22:35.517"></status>
+</kw>
+<kw name="Verify Search Results For" library="search_kw">
+<arguments>
+<arg>${SIMPLE_TERM}</arg>
+</arguments>
+<kw name="Result Title Should Be" library="SearchResults">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SEARCH_HEADING}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:37.085" starttime="20171130 01:22:37.062"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:37.130" starttime="20171130 01:22:37.086"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${actual_value}</var>
+</assign>
+<msg timestamp="20171130 01:22:37.152" level="INFO">${actual_value} = Blouse</msg>
+<status status="PASS" endtime="20171130 01:22:37.152" starttime="20171130 01:22:37.131"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${actual_value}</arg>
+<arg>ignore_case=true</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:37.152" starttime="20171130 01:22:37.152"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:37.153" starttime="20171130 01:22:37.062"></status>
+</kw>
+<kw name="Results Count Should Be" library="SearchResults">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:37.177" starttime="20171130 01:22:37.153"></status>
+</kw>
+<kw name="Get Webelements" library="Selenium2Library">
+<doc>Returns list of WebElement objects matching locator.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${search_results}</var>
+</assign>
+<msg timestamp="20171130 01:22:37.186" level="INFO">${search_results} = [&lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session="e8e3c252-37fc-2749-9a29-719a927f5656", element="e295a986-373a-944d-a29e-457ecc48682c")&gt;]</msg>
+<status status="PASS" endtime="20171130 01:22:37.186" starttime="20171130 01:22:37.178"></status>
+</kw>
+<kw name="Length Should Be" library="BuiltIn">
+<doc>Verifies that the length of the given item is correct.</doc>
+<arguments>
+<arg>${search_results}</arg>
+<arg>${count}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:37.187" level="INFO">Length is 1</msg>
+<status status="PASS" endtime="20171130 01:22:37.187" starttime="20171130 01:22:37.186"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:37.187" starttime="20171130 01:22:37.153"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:37.188" starttime="20171130 01:22:37.061"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171130 01:22:37.497" starttime="20171130 01:22:37.188"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:37.497" starttime="20171130 01:22:37.188"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:37.497" critical="yes" starttime="20171130 01:22:27.605"></status>
+</test>
+<test id="s1-t5" name="Search is case-insensitive">
+<kw type="setup" name="Begin Web Test" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:37.500" level="INFO">Opening browser 'Firefox' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20171130 01:22:40.243" starttime="20171130 01:22:37.500"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20171130 01:22:40.714" starttime="20171130 01:22:40.243"></status>
+</kw>
+<kw name="Navigate To Home Page" library="signin_kw">
+<kw name="Load" library="HomePage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:40.716" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20171130 01:22:45.545" starttime="20171130 01:22:40.715"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:45.545" starttime="20171130 01:22:40.715"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:45.662" starttime="20171130 01:22:45.546"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+<arg>Automation Practice Website</arg>
+</arguments>
+<msg timestamp="20171130 01:22:45.663" level="INFO">Verifying element 'css=#editorial_block_center&gt;h1' contains exactly text 'Automation Practice Website'.</msg>
+<status status="PASS" endtime="20171130 01:22:45.684" starttime="20171130 01:22:45.663"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:45.684" starttime="20171130 01:22:45.545"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:45.684" starttime="20171130 01:22:40.714"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:45.684" starttime="20171130 01:22:37.499"></status>
+</kw>
+<kw name="Search And Verify Results" library="search_kw">
+<arguments>
+<arg>blouse</arg>
+</arguments>
+<kw name="Search" library="search_kw">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Clear Search Field" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:45.709" starttime="20171130 01:22:45.686"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:45.730" starttime="20171130 01:22:45.709"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:45.730" starttime="20171130 01:22:45.686"></status>
+</kw>
+<kw name="Enter Search Term" library="Search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:45.751" starttime="20171130 01:22:45.731"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:45.751" level="INFO">Typing text 'blouse' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20171130 01:22:45.792" starttime="20171130 01:22:45.751"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:45.792" starttime="20171130 01:22:45.730"></status>
+</kw>
+<kw name="Click Search Button" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:45.812" starttime="20171130 01:22:45.793"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:45.812" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20171130 01:22:47.312" starttime="20171130 01:22:45.812"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:47.313" starttime="20171130 01:22:45.793"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:47.313" starttime="20171130 01:22:45.685"></status>
+</kw>
+<kw name="Verify Search Results For" library="search_kw">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Result Title Should Be" library="SearchResults">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SEARCH_HEADING}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:47.344" starttime="20171130 01:22:47.316"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:47.402" starttime="20171130 01:22:47.345"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${actual_value}</var>
+</assign>
+<msg timestamp="20171130 01:22:47.427" level="INFO">${actual_value} = Blouse</msg>
+<status status="PASS" endtime="20171130 01:22:47.427" starttime="20171130 01:22:47.402"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${actual_value}</arg>
+<arg>ignore_case=true</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:47.428" starttime="20171130 01:22:47.427"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:47.428" starttime="20171130 01:22:47.314"></status>
+</kw>
+<kw name="Results Count Should Be" library="SearchResults">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:47.449" starttime="20171130 01:22:47.428"></status>
+</kw>
+<kw name="Get Webelements" library="Selenium2Library">
+<doc>Returns list of WebElement objects matching locator.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${search_results}</var>
+</assign>
+<msg timestamp="20171130 01:22:47.455" level="INFO">${search_results} = [&lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session="965f3254-7562-fb43-95e2-940c6bda1c61", element="463645a2-3e26-6746-8fc6-dc80e23e99a4")&gt;]</msg>
+<status status="PASS" endtime="20171130 01:22:47.455" starttime="20171130 01:22:47.449"></status>
+</kw>
+<kw name="Length Should Be" library="BuiltIn">
+<doc>Verifies that the length of the given item is correct.</doc>
+<arguments>
+<arg>${search_results}</arg>
+<arg>${count}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:47.456" level="INFO">Length is 1</msg>
+<status status="PASS" endtime="20171130 01:22:47.456" starttime="20171130 01:22:47.455"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:47.456" starttime="20171130 01:22:47.428"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:47.456" starttime="20171130 01:22:47.313"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:47.456" starttime="20171130 01:22:45.685"></status>
+</kw>
+<kw name="Search And Verify Results" library="search_kw">
+<arguments>
+<arg>BLOUSE</arg>
+</arguments>
+<kw name="Search" library="search_kw">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Clear Search Field" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:47.476" starttime="20171130 01:22:47.458"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:47.512" starttime="20171130 01:22:47.476"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:47.512" starttime="20171130 01:22:47.457"></status>
+</kw>
+<kw name="Enter Search Term" library="Search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:47.546" starttime="20171130 01:22:47.513"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:47.547" level="INFO">Typing text 'BLOUSE' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20171130 01:22:47.593" starttime="20171130 01:22:47.546"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:47.594" starttime="20171130 01:22:47.513"></status>
+</kw>
+<kw name="Click Search Button" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:47.612" starttime="20171130 01:22:47.594"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:47.613" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20171130 01:22:48.715" starttime="20171130 01:22:47.612"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:48.715" starttime="20171130 01:22:47.594"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:48.716" starttime="20171130 01:22:47.457"></status>
+</kw>
+<kw name="Verify Search Results For" library="search_kw">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Result Title Should Be" library="SearchResults">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SEARCH_HEADING}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:48.769" starttime="20171130 01:22:48.718"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:48.815" starttime="20171130 01:22:48.769"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${actual_value}</var>
+</assign>
+<msg timestamp="20171130 01:22:48.835" level="INFO">${actual_value} = Blouse</msg>
+<status status="PASS" endtime="20171130 01:22:48.835" starttime="20171130 01:22:48.816"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${actual_value}</arg>
+<arg>ignore_case=true</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:48.836" starttime="20171130 01:22:48.835"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:48.836" starttime="20171130 01:22:48.717"></status>
+</kw>
+<kw name="Results Count Should Be" library="SearchResults">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:48.858" starttime="20171130 01:22:48.837"></status>
+</kw>
+<kw name="Get Webelements" library="Selenium2Library">
+<doc>Returns list of WebElement objects matching locator.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${search_results}</var>
+</assign>
+<msg timestamp="20171130 01:22:48.866" level="INFO">${search_results} = [&lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session="965f3254-7562-fb43-95e2-940c6bda1c61", element="f593c8dc-9b69-6c4f-997b-0ae3394e7dcf")&gt;]</msg>
+<status status="PASS" endtime="20171130 01:22:48.866" starttime="20171130 01:22:48.859"></status>
+</kw>
+<kw name="Length Should Be" library="BuiltIn">
+<doc>Verifies that the length of the given item is correct.</doc>
+<arguments>
+<arg>${search_results}</arg>
+<arg>${count}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:48.867" level="INFO">Length is 1</msg>
+<status status="PASS" endtime="20171130 01:22:48.867" starttime="20171130 01:22:48.866"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:48.867" starttime="20171130 01:22:48.837"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:48.867" starttime="20171130 01:22:48.716"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:48.868" starttime="20171130 01:22:47.457"></status>
+</kw>
+<kw name="Search And Verify Results" library="search_kw">
+<arguments>
+<arg>BloUse</arg>
+</arguments>
+<kw name="Search" library="search_kw">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Clear Search Field" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:48.887" starttime="20171130 01:22:48.869"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:48.911" starttime="20171130 01:22:48.887"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:48.912" starttime="20171130 01:22:48.869"></status>
+</kw>
+<kw name="Enter Search Term" library="Search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:48.930" starttime="20171130 01:22:48.912"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:48.931" level="INFO">Typing text 'BloUse' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20171130 01:22:48.993" starttime="20171130 01:22:48.930"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:48.993" starttime="20171130 01:22:48.912"></status>
+</kw>
+<kw name="Click Search Button" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:49.017" starttime="20171130 01:22:48.995"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:49.018" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20171130 01:22:50.367" starttime="20171130 01:22:49.018"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:50.367" starttime="20171130 01:22:48.994"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:50.367" starttime="20171130 01:22:48.868"></status>
+</kw>
+<kw name="Verify Search Results For" library="search_kw">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Result Title Should Be" library="SearchResults">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SEARCH_HEADING}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:50.381" starttime="20171130 01:22:50.369"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:50.423" starttime="20171130 01:22:50.381"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${actual_value}</var>
+</assign>
+<msg timestamp="20171130 01:22:50.436" level="INFO">${actual_value} = Blouse</msg>
+<status status="PASS" endtime="20171130 01:22:50.436" starttime="20171130 01:22:50.423"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${actual_value}</arg>
+<arg>ignore_case=true</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:50.437" starttime="20171130 01:22:50.436"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:50.437" starttime="20171130 01:22:50.368"></status>
+</kw>
+<kw name="Results Count Should Be" library="SearchResults">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:22:50.451" starttime="20171130 01:22:50.437"></status>
+</kw>
+<kw name="Get Webelements" library="Selenium2Library">
+<doc>Returns list of WebElement objects matching locator.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${search_results}</var>
+</assign>
+<msg timestamp="20171130 01:22:50.456" level="INFO">${search_results} = [&lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session="965f3254-7562-fb43-95e2-940c6bda1c61", element="91a7af94-0cb9-ba4d-b55e-a0ee74374d39")&gt;]</msg>
+<status status="PASS" endtime="20171130 01:22:50.456" starttime="20171130 01:22:50.451"></status>
+</kw>
+<kw name="Length Should Be" library="BuiltIn">
+<doc>Verifies that the length of the given item is correct.</doc>
+<arguments>
+<arg>${search_results}</arg>
+<arg>${count}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:50.456" level="INFO">Length is 1</msg>
+<status status="PASS" endtime="20171130 01:22:50.456" starttime="20171130 01:22:50.456"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:50.457" starttime="20171130 01:22:50.437"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:50.457" starttime="20171130 01:22:50.368"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:50.457" starttime="20171130 01:22:48.868"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171130 01:22:50.747" starttime="20171130 01:22:50.458"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:50.747" starttime="20171130 01:22:50.457"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:22:50.747" critical="yes" starttime="20171130 01:22:37.498"></status>
+</test>
+<test id="s1-t6" name="Search ignores spaces from both sides of search term">
+<kw type="setup" name="Begin Web Test" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:50.749" level="INFO">Opening browser 'Firefox' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20171130 01:22:53.577" starttime="20171130 01:22:50.749"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20171130 01:22:54.066" starttime="20171130 01:22:53.577"></status>
+</kw>
+<kw name="Navigate To Home Page" library="signin_kw">
+<kw name="Load" library="HomePage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20171130 01:22:54.069" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20171130 01:23:01.356" starttime="20171130 01:22:54.068"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:01.356" starttime="20171130 01:22:54.068"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:01.450" starttime="20171130 01:23:01.358"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+<arg>Automation Practice Website</arg>
+</arguments>
+<msg timestamp="20171130 01:23:01.451" level="INFO">Verifying element 'css=#editorial_block_center&gt;h1' contains exactly text 'Automation Practice Website'.</msg>
+<status status="PASS" endtime="20171130 01:23:01.477" starttime="20171130 01:23:01.450"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:01.477" starttime="20171130 01:23:01.356"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:01.477" starttime="20171130 01:22:54.067"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:01.478" starttime="20171130 01:22:50.749"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>${SPACE} ${SIMPLE_TERM} ${SPACE}</arg>
+</arguments>
+<assign>
+<var>${search_term}</var>
+</assign>
+<msg timestamp="20171130 01:23:01.479" level="INFO">${search_term} =   blouse  </msg>
+<status status="PASS" endtime="20171130 01:23:01.479" starttime="20171130 01:23:01.478"></status>
+</kw>
+<kw name="Search" library="search_kw">
+<arguments>
+<arg>${search_term}</arg>
+</arguments>
+<kw name="Clear Search Field" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:01.510" starttime="20171130 01:23:01.481"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:01.536" starttime="20171130 01:23:01.510"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:01.536" starttime="20171130 01:23:01.480"></status>
+</kw>
+<kw name="Enter Search Term" library="Search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:01.559" starttime="20171130 01:23:01.537"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:01.561" level="INFO">Typing text '  blouse  ' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20171130 01:23:01.618" starttime="20171130 01:23:01.560"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:01.619" starttime="20171130 01:23:01.536"></status>
+</kw>
+<kw name="Click Search Button" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:01.647" starttime="20171130 01:23:01.619"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:01.648" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20171130 01:23:02.880" starttime="20171130 01:23:01.648"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:02.880" starttime="20171130 01:23:01.619"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:02.881" starttime="20171130 01:23:01.479"></status>
+</kw>
+<kw name="Verify Search Results For" library="search_kw">
+<arguments>
+<arg>${SIMPLE_TERM}</arg>
+</arguments>
+<kw name="Result Title Should Be" library="SearchResults">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SEARCH_HEADING}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:02.899" starttime="20171130 01:23:02.882"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:02.944" starttime="20171130 01:23:02.900"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${actual_value}</var>
+</assign>
+<msg timestamp="20171130 01:23:02.959" level="INFO">${actual_value} = Blouse</msg>
+<status status="PASS" endtime="20171130 01:23:02.959" starttime="20171130 01:23:02.945"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${actual_value}</arg>
+<arg>ignore_case=true</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:02.960" starttime="20171130 01:23:02.959"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:02.960" starttime="20171130 01:23:02.882"></status>
+</kw>
+<kw name="Results Count Should Be" library="SearchResults">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:02.976" starttime="20171130 01:23:02.961"></status>
+</kw>
+<kw name="Get Webelements" library="Selenium2Library">
+<doc>Returns list of WebElement objects matching locator.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${search_results}</var>
+</assign>
+<msg timestamp="20171130 01:23:02.982" level="INFO">${search_results} = [&lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session="b29bdc9d-a35b-4c47-aee7-344f18097c4d", element="bfb271dd-6242-9d46-82bb-bef264e31564")&gt;]</msg>
+<status status="PASS" endtime="20171130 01:23:02.982" starttime="20171130 01:23:02.977"></status>
+</kw>
+<kw name="Length Should Be" library="BuiltIn">
+<doc>Verifies that the length of the given item is correct.</doc>
+<arguments>
+<arg>${search_results}</arg>
+<arg>${count}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:02.983" level="INFO">Length is 1</msg>
+<status status="PASS" endtime="20171130 01:23:02.983" starttime="20171130 01:23:02.983"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:02.983" starttime="20171130 01:23:02.960"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:02.984" starttime="20171130 01:23:02.881"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171130 01:23:03.293" starttime="20171130 01:23:02.985"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:03.293" starttime="20171130 01:23:02.984"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:03.293" critical="yes" starttime="20171130 01:22:50.748"></status>
+</test>
+<test id="s1-t7" name="Search works with Enter key">
+<kw type="setup" name="Begin Web Test" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:03.296" level="INFO">Opening browser 'Firefox' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20171130 01:23:06.024" starttime="20171130 01:23:03.295"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20171130 01:23:06.481" starttime="20171130 01:23:06.025"></status>
+</kw>
+<kw name="Navigate To Home Page" library="signin_kw">
+<kw name="Load" library="HomePage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:06.484" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20171130 01:23:11.264" starttime="20171130 01:23:06.484"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:11.264" starttime="20171130 01:23:06.483"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:11.334" starttime="20171130 01:23:11.265"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+<arg>Automation Practice Website</arg>
+</arguments>
+<msg timestamp="20171130 01:23:11.335" level="INFO">Verifying element 'css=#editorial_block_center&gt;h1' contains exactly text 'Automation Practice Website'.</msg>
+<status status="PASS" endtime="20171130 01:23:11.357" starttime="20171130 01:23:11.335"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:11.357" starttime="20171130 01:23:11.265"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:11.357" starttime="20171130 01:23:06.482"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:11.357" starttime="20171130 01:23:03.295"></status>
+</kw>
+<kw name="Search with Enter Key" library="search_kw">
+<arguments>
+<arg>${SIMPLE_TERM}</arg>
+</arguments>
+<kw name="Clear Search Field" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:11.383" starttime="20171130 01:23:11.358"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:11.405" starttime="20171130 01:23:11.384"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:11.405" starttime="20171130 01:23:11.358"></status>
+</kw>
+<kw name="Enter Search Term" library="Search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:11.423" starttime="20171130 01:23:11.406"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:11.424" level="INFO">Typing text 'blouse' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20171130 01:23:11.463" starttime="20171130 01:23:11.424"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:11.463" starttime="20171130 01:23:11.405"></status>
+</kw>
+<kw name="Hit Enter On Search Button" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:11.488" starttime="20171130 01:23:11.464"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:11.546" starttime="20171130 01:23:11.489"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:11.546" starttime="20171130 01:23:11.464"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:11.546" starttime="20171130 01:23:11.357"></status>
+</kw>
+<kw name="Verify Search Results For" library="search_kw">
+<arguments>
+<arg>${SIMPLE_TERM}</arg>
+</arguments>
+<kw name="Result Title Should Be" library="SearchResults">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${SEARCH_HEADING}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:12.549" starttime="20171130 01:23:11.548"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:12.693" starttime="20171130 01:23:12.550"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${actual_value}</var>
+</assign>
+<msg timestamp="20171130 01:23:12.709" level="INFO">${actual_value} = Blouse</msg>
+<status status="PASS" endtime="20171130 01:23:12.709" starttime="20171130 01:23:12.693"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${value}</arg>
+<arg>${actual_value}</arg>
+<arg>ignore_case=true</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:12.709" starttime="20171130 01:23:12.709"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:12.710" starttime="20171130 01:23:11.547"></status>
+</kw>
+<kw name="Results Count Should Be" library="SearchResults">
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:12.730" starttime="20171130 01:23:12.710"></status>
+</kw>
+<kw name="Get Webelements" library="Selenium2Library">
+<doc>Returns list of WebElement objects matching locator.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${search_results}</var>
+</assign>
+<msg timestamp="20171130 01:23:12.736" level="INFO">${search_results} = [&lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session="a30303bd-d91d-9041-a7d5-d434338723e6", element="12ce636d-6557-9241-bae1-90761677526d")&gt;]</msg>
+<status status="PASS" endtime="20171130 01:23:12.736" starttime="20171130 01:23:12.730"></status>
+</kw>
+<kw name="Length Should Be" library="BuiltIn">
+<doc>Verifies that the length of the given item is correct.</doc>
+<arguments>
+<arg>${search_results}</arg>
+<arg>${count}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:12.737" level="INFO">Length is 1</msg>
+<status status="PASS" endtime="20171130 01:23:12.737" starttime="20171130 01:23:12.737"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:12.737" starttime="20171130 01:23:12.710"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:12.737" starttime="20171130 01:23:11.547"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171130 01:23:13.009" starttime="20171130 01:23:12.738"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:13.009" starttime="20171130 01:23:12.738"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:13.010" critical="yes" starttime="20171130 01:23:03.294"></status>
+</test>
+<test id="s1-t8" name="Verify Search Count Label">
+<kw type="setup" name="Begin Web Test" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:13.011" level="INFO">Opening browser 'Firefox' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20171130 01:23:15.719" starttime="20171130 01:23:13.011"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20171130 01:23:16.201" starttime="20171130 01:23:15.719"></status>
+</kw>
+<kw name="Navigate To Home Page" library="signin_kw">
+<kw name="Load" library="HomePage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:16.203" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20171130 01:23:21.071" starttime="20171130 01:23:16.203"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:21.071" starttime="20171130 01:23:16.202"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:21.143" starttime="20171130 01:23:21.073"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+<arg>Automation Practice Website</arg>
+</arguments>
+<msg timestamp="20171130 01:23:21.144" level="INFO">Verifying element 'css=#editorial_block_center&gt;h1' contains exactly text 'Automation Practice Website'.</msg>
+<status status="PASS" endtime="20171130 01:23:21.166" starttime="20171130 01:23:21.143"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:21.166" starttime="20171130 01:23:21.072"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:21.166" starttime="20171130 01:23:16.201"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:21.166" starttime="20171130 01:23:13.011"></status>
+</kw>
+<kw name="Search_Count Label for ${NO_RESULTS_TERM} is 0 results have been found." library="search_kw">
+<kw name="Search" library="search_kw">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Clear Search Field" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:21.191" starttime="20171130 01:23:21.168"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:21.211" starttime="20171130 01:23:21.191"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:21.211" starttime="20171130 01:23:21.167"></status>
+</kw>
+<kw name="Enter Search Term" library="Search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:21.231" starttime="20171130 01:23:21.212"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:21.232" level="INFO">Typing text 'nothing' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20171130 01:23:21.273" starttime="20171130 01:23:21.231"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:21.273" starttime="20171130 01:23:21.212"></status>
+</kw>
+<kw name="Click Search Button" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:21.295" starttime="20171130 01:23:21.274"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:21.295" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20171130 01:23:22.648" starttime="20171130 01:23:21.295"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:22.648" starttime="20171130 01:23:21.273"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:22.648" starttime="20171130 01:23:21.167"></status>
+</kw>
+<kw name="Results Count Label Should Be" library="SearchResults">
+<arguments>
+<arg>${label}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${RESULT_COUNT_LABEL}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:22.687" starttime="20171130 01:23:22.649"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>${RESULT_COUNT_LABEL}</arg>
+<arg>${message}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:22.688" level="INFO">Verifying element 'css=.heading-counter' contains exactly text '0 results have been found.'.</msg>
+<status status="PASS" endtime="20171130 01:23:22.709" starttime="20171130 01:23:22.688"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:22.709" starttime="20171130 01:23:22.648"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:22.710" starttime="20171130 01:23:21.167"></status>
+</kw>
+<kw name="Search_Count Label for ${SIMPLE_TERM} is 1 result has been found." library="search_kw">
+<kw name="Search" library="search_kw">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Clear Search Field" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:22.732" starttime="20171130 01:23:22.711"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:22.751" starttime="20171130 01:23:22.732"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:22.751" starttime="20171130 01:23:22.711"></status>
+</kw>
+<kw name="Enter Search Term" library="Search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:22.768" starttime="20171130 01:23:22.752"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:22.768" level="INFO">Typing text 'blouse' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20171130 01:23:22.819" starttime="20171130 01:23:22.768"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:22.819" starttime="20171130 01:23:22.751"></status>
+</kw>
+<kw name="Click Search Button" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:22.844" starttime="20171130 01:23:22.820"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:22.845" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20171130 01:23:24.054" starttime="20171130 01:23:22.844"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:24.054" starttime="20171130 01:23:22.819"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:24.054" starttime="20171130 01:23:22.710"></status>
+</kw>
+<kw name="Results Count Label Should Be" library="SearchResults">
+<arguments>
+<arg>${label}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${RESULT_COUNT_LABEL}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:24.102" starttime="20171130 01:23:24.055"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>${RESULT_COUNT_LABEL}</arg>
+<arg>${message}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:24.103" level="INFO">Verifying element 'css=.heading-counter' contains exactly text '1 result has been found.'.</msg>
+<status status="PASS" endtime="20171130 01:23:24.118" starttime="20171130 01:23:24.102"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:24.118" starttime="20171130 01:23:24.055"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:24.118" starttime="20171130 01:23:22.710"></status>
+</kw>
+<kw name="Search_Count Label for dress is 7 results have been found." library="search_kw">
+<kw name="Search" library="search_kw">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Clear Search Field" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:24.138" starttime="20171130 01:23:24.120"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:24.158" starttime="20171130 01:23:24.138"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:24.159" starttime="20171130 01:23:24.119"></status>
+</kw>
+<kw name="Enter Search Term" library="Search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:24.176" starttime="20171130 01:23:24.159"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:24.177" level="INFO">Typing text 'dress' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20171130 01:23:24.219" starttime="20171130 01:23:24.177"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:24.219" starttime="20171130 01:23:24.159"></status>
+</kw>
+<kw name="Click Search Button" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:24.240" starttime="20171130 01:23:24.220"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:24.241" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20171130 01:23:25.721" starttime="20171130 01:23:24.240"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:25.721" starttime="20171130 01:23:24.219"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:25.721" starttime="20171130 01:23:24.119"></status>
+</kw>
+<kw name="Results Count Label Should Be" library="SearchResults">
+<arguments>
+<arg>${label}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${RESULT_COUNT_LABEL}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:25.785" starttime="20171130 01:23:25.722"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>${RESULT_COUNT_LABEL}</arg>
+<arg>${message}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:25.786" level="INFO">Verifying element 'css=.heading-counter' contains exactly text '7 results have been found.'.</msg>
+<status status="PASS" endtime="20171130 01:23:25.799" starttime="20171130 01:23:25.785"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:25.800" starttime="20171130 01:23:25.721"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:25.800" starttime="20171130 01:23:24.119"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171130 01:23:26.131" starttime="20171130 01:23:25.801"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:26.131" starttime="20171130 01:23:25.800"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:26.131" critical="yes" starttime="20171130 01:23:13.010"></status>
+</test>
+<test id="s1-t9" name="Search works properly for multiple search results">
+<kw type="setup" name="Begin Web Test" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:26.133" level="INFO">Opening browser 'Firefox' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20171130 01:23:28.888" starttime="20171130 01:23:26.133"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20171130 01:23:29.416" starttime="20171130 01:23:28.889"></status>
+</kw>
+<kw name="Navigate To Home Page" library="signin_kw">
+<kw name="Load" library="HomePage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:29.420" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20171130 01:23:33.987" starttime="20171130 01:23:29.418"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:33.988" starttime="20171130 01:23:29.417"></status>
+</kw>
+<kw name="Verify Page Loaded" library="HomePage">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:34.188" starttime="20171130 01:23:33.989"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>css=#editorial_block_center&gt;h1</arg>
+<arg>Automation Practice Website</arg>
+</arguments>
+<msg timestamp="20171130 01:23:34.189" level="INFO">Verifying element 'css=#editorial_block_center&gt;h1' contains exactly text 'Automation Practice Website'.</msg>
+<status status="PASS" endtime="20171130 01:23:34.218" starttime="20171130 01:23:34.189"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:34.218" starttime="20171130 01:23:33.988"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:34.219" starttime="20171130 01:23:29.417"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:34.219" starttime="20171130 01:23:26.132"></status>
+</kw>
+<kw name="Search" library="search_kw">
+<arguments>
+<arg>short sleeve</arg>
+</arguments>
+<kw name="Clear Search Field" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:34.262" starttime="20171130 01:23:34.220"></status>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<doc>Clears the text value of text entry element identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:34.326" starttime="20171130 01:23:34.263"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:34.326" starttime="20171130 01:23:34.219"></status>
+</kw>
+<kw name="Enter Search Term" library="Search">
+<arguments>
+<arg>${term}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:34.353" starttime="20171130 01:23:34.327"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${term}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:34.354" level="INFO">Typing text 'short sleeve' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20171130 01:23:34.406" starttime="20171130 01:23:34.353"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:34.407" starttime="20171130 01:23:34.326"></status>
+</kw>
+<kw name="Click Search Button" library="Search">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:34.427" starttime="20171130 01:23:34.408"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${SEARCH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20171130 01:23:34.429" level="INFO">Clicking button 'name=submit_search'.</msg>
+<status status="PASS" endtime="20171130 01:23:35.689" starttime="20171130 01:23:34.428"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:35.689" starttime="20171130 01:23:34.407"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:35.690" starttime="20171130 01:23:34.219"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>Faded Short Sleeve T-shirts</arg>
+<arg>Blouse</arg>
+<arg>Printed Dress</arg>
+<arg>Printed Summer Dress</arg>
+</arguments>
+<assign>
+<var>${expected_results}</var>
+</assign>
+<msg timestamp="20171130 01:23:35.690" level="INFO">${expected_results} = [u'Faded Short Sleeve T-shirts', u'Blouse', u'Printed Dress', u'Printed Summer Dress']</msg>
+<status status="PASS" endtime="20171130 01:23:35.691" starttime="20171130 01:23:35.690"></status>
+</kw>
+<kw name="Verify multiple search results" library="search_kw">
+<arguments>
+<arg>${expected_results}</arg>
+</arguments>
+<kw name="Get Webelements" library="Selenium2Library">
+<doc>Returns list of WebElement objects matching locator.</doc>
+<arguments>
+<arg>${SEARCH_RESULT_ITEM}</arg>
+</arguments>
+<assign>
+<var>${search_results}</var>
+</assign>
+<msg timestamp="20171130 01:23:35.744" level="INFO">${search_results} = [&lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session="9f6feb8f-58c9-454e-af70-1a5bc35ee2b1", element="f86f4fb3-3d54-6a40-a9cd-a73fccf25d5c")&gt;, &lt;selenium.webdriver.firefox.webelement.Fire...</msg>
+<status status="PASS" endtime="20171130 01:23:35.744" starttime="20171130 01:23:35.691"></status>
+</kw>
+<kw name="Get Texts In Webelements" library="MyLibrary">
+<doc>Fails if list of web elements is empty</doc>
+<arguments>
+<arg>${search_results}</arg>
+</arguments>
+<assign>
+<var>${search_result_names}</var>
+</assign>
+<msg timestamp="20171130 01:23:35.817" level="INFO">${search_result_names} = ['Faded Short Sleeve T-shirts', 'Blouse', 'Printed Dress', 'Printed Summer Dress']</msg>
+<status status="PASS" endtime="20171130 01:23:35.817" starttime="20171130 01:23:35.744"></status>
+</kw>
+<kw name="Lists Should Be Equal" library="Collections">
+<doc>Fails if given lists are unequal.</doc>
+<arguments>
+<arg>${search_result_names}</arg>
+<arg>${expected_results}</arg>
+</arguments>
+<status status="PASS" endtime="20171130 01:23:35.819" starttime="20171130 01:23:35.818"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:35.819" starttime="20171130 01:23:35.691"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20171130 01:23:36.128" starttime="20171130 01:23:35.820"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:36.128" starttime="20171130 01:23:35.819"></status>
+</kw>
+<status status="PASS" endtime="20171130 01:23:36.128" critical="yes" starttime="20171130 01:23:26.132"></status>
+</test>
+<status status="PASS" endtime="20171130 01:23:36.130" starttime="20171130 01:21:56.117"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="9">Critical Tests</stat>
+<stat fail="0" pass="9">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Search" pass="9">Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

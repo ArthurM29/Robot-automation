@@ -15,7 +15,7 @@ ${ADDTOCART_PROCEED_TO_CHECKOUT_BUTTON}         css=.btn.btn-default.button.butt
 
 *** Keywords ***
 Verify 'Added to Cart' message
-    Wait Until Element Is Visible  ${ADDED_TO_CART_LABEL}
+    Wait Until Element Contains  ${ADDED_TO_CART_LABEL}  ${ADDED_TO_CART_MSG}
     Element Text Should Be  ${ADDED_TO_CART_LABEL}  ${ADDED_TO_CART_MSG}
 
 

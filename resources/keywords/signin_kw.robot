@@ -22,7 +22,6 @@ Sign In
 
 Sign Out
     TopNav.Click 'Sign Out' Link
-    SignIn.Verify Page Loaded
 
 
 Invalid Sign In

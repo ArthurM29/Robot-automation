@@ -123,9 +123,22 @@ Verify 'Wishlist Confirmation Popup' Displayed
     Element Text Should Be  ${WISHLIST_CONFIRMATION_POPUP_TEXT}  Added to your wishlist.
 
 
+Page is unlocked
+    [Documentation]  This keyword is to support waiting until page is unlocked after closing 'Add to wishlist' popup
+    ${attr} =  Get Element Attribute  css=html@class
+    Should Be Equal As Strings  ${attr}  ${EMPTY}
+    # left for demo
+    # Log To Console  ${\n}
+    # Log To Console  ${attr}
+
+
 Close 'Wishlist Confirmation Popup'
     Wait Until Element Is Visible  ${WISHLIST_CLOSE_CONFIRMATION_BUTTON}
     Click Link  ${WISHLIST_CLOSE_CONFIRMATION_BUTTON}
+    # In DOM, html tag has 'class' attribute with empty value: html class=""
+    # when you click 'Add to wishlist', the whole page gets locked and 'class' attribue takes new value - class="fancybox-margin fancybox-lock".
+    # to make sure the page is unlocked - you need to wait until 'class' attribute again has value class=""
+    Wait Until Keyword Succeeds  10 sec  0.2 sec  Page Is Unlocked
 
 
 Click 'View Larger' button

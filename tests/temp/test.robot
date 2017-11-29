@@ -18,9 +18,6 @@ Test locators
     Close Browser
 
 
-Test string splitting
-    Open Browser  http://automationpractice.com/index.php?controller=order&multi-shipping=  Firefox
-    Maximize Browser Window
 
 
 

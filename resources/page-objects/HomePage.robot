@@ -12,7 +12,8 @@ Load
 
 
 Verify Page Loaded
-    Title Should Be  ${HOME_PAGE_TITLE}
+    Wait Until Element Is Visible  css=#editorial_block_center>h1
+    Element Text Should Be  css=#editorial_block_center>h1  Automation Practice Website
 
 
 

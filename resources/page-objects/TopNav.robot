@@ -21,11 +21,10 @@ Click 'Sign Out' Link
 
 
 Go To 'My Account'
-    # added implicit delay as it didn't work with Wait keywords:
-    # both Wait and Click Link  keywords showed as passed,
-    # but actually the button was not clicked
-    sleep  1
+    Wait Until Element Is Visible  ${VIEW_MY_ACCOUNT_LINK}
     Click Link  ${VIEW_MY_ACCOUNT_LINK}
+
+
 
 
 

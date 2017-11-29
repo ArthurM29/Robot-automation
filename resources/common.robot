@@ -6,6 +6,7 @@ Resource  keywords/signin_kw.robot
 ${URL} =  http://automationpractice.com/index.php
 ${BROWSER} =  Firefox
 
+
 *** Keywords ***
 Begin Web Test
     Open Browser  about:blank  ${BROWSER}

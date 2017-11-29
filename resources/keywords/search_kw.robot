@@ -22,17 +22,17 @@ Search with Enter Key
 
 
 Verify 'Empty Search' Message
-    Search.Warning Message Should Be  ${EMPTY_SEARCH_MSG}
+    SearchResults.Warning Message Should Be  ${EMPTY_SEARCH_MSG}
 
 
 Verify 'No Search Results' Message
-    Search.Warning Message Should Be  ${NO_RESULTS_MSG}
+    SearchResults.Warning Message Should Be  ${NO_RESULTS_MSG}
 
 
 Verify Search Results For
     [Arguments]  ${term}
-    Search.Result Title Should Be  ${term}
-    Search.Results Count Should Be  1
+    SearchResults.Result Title Should Be  ${term}
+    SearchResults.Results Count Should Be  1
 
 
 Search And Verify Results
@@ -49,7 +49,7 @@ Search Results Should Contain
 
 Search_Count Label for ${term} is ${label}
     Search  ${term}
-    Search.Results Count Label Should Be  ${label}
+    SearchResults.Results Count Label Should Be  ${label}
 
 
 Verify multiple search results
