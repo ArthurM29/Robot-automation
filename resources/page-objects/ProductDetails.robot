@@ -17,7 +17,7 @@ ${ADD_TO_CART_BUTTON}                   name=Submit
 ${MORE_BUTTON}                          css=.button.lnk_view.btn.btn-default
 ${WRITE_REVIEW_BUTTON}                  id=new_comment_tab_btn
 ${REVIEW_TITLE}                         id=comment_title
-${FIVE_STAR_RATING}                     xpath=//div[@class='star_content']//a[@title='5']
+${STAR_RATING_PICKER}                   xpath=//div[@class='star_content']//a[@title='{placeholder}']
 ${REVIEW_CONTENT}                       id=content
 ${SEND_REVIEW_BUTTON}                   id=submitNewMessage
 ${REVIEW_CONFIRMATION_TEXT}             xpath=//div[@class='fancybox-inner']/p[1]
@@ -60,8 +60,9 @@ Click 'Write Review' Button
 
 Select Star Rating
     [Arguments]  ${stars}
-    Wait Until Element Is Visible  ${FIVE_STAR_RATING}
-    Click Element  ${FIVE_STAR_RATING}
+    ${star_locator} =  Replace String  ${STAR_RATING_PICKER}  {placeholder}  ${stars}
+    Wait Until Element Is Visible  ${star_locator}
+    Click Element  ${star_locator}
 
 
 Enter Review Title
