@@ -10,7 +10,7 @@ ${SEARCH_BUTTON}               name=submit_search
 
 # search terms
 ${NO_RESULTS_TERM}             nothing
-${SIMPLE_TERM}                 blouse
+${SIMPLE_TERM}                 Blouse
 ${PARTIAL_MATCH}               blo
 ${MULTI_WORD_TERM}             chiffon dress
 

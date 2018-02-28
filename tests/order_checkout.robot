@@ -18,6 +18,7 @@ ${BROWSER} =  Firefox
 *** Test Cases ***
 User is able to add a product to 'Shopping Cart' from 'Product Details'
     Sign In  ${VALID_EMAIL}  ${VALID_PASSWORD}
+    Search and Add To Shopping Cart  ruffled dress
     Search  ${SIMPLE_TERM}
     Proceed to 'Product Details'
     Add Product to Shopping Cart
@@ -41,15 +42,14 @@ User is able to add a product to Shopping Cart from Quick View
 
 User is able to remove a product from Shopping Cart
     Sign In  ${VALID_EMAIL}  ${VALID_PASSWORD}
+    Search and Add To Shopping Cart  ruffled dress
     Search  ${SIMPLE_TERM}
     Proceed to 'Product Details'
     Add Product to Shopping Cart
     Proceed to Order Checkout
-    Verify Product Is In Shopping Cart  ${SIMPLE_TERM}
-    Remove Product From Shopping Cart
+    Remove Product From Shopping Cart  ${SIMPLE_TERM}
     Verify Product Is Not In Shopping Cart  ${SIMPLE_TERM}
-
-
+#
 User is able to checkout a product
     Sign In  ${VALID_EMAIL}  ${VALID_PASSWORD}
     Search  ${SIMPLE_TERM}
@@ -159,26 +159,26 @@ User is able to choose 'Pay by check' payment method
     Verify Payment Method Is  Check payment
 
 
-Correct value is displayed for 'Product Price'
+'Product Total Price' is calculated correctly
     Sign In  ${VALID_EMAIL}  ${VALID_PASSWORD}
+    Search and Add To Shopping Cart  ruffled dress
     Search  ${SIMPLE_TERM}
     Proceed to 'Product Details'
-    Enter Product Quantity  2
+    Enter Product Quantity  45
     Add To Shopping Cart
     Proceed to Order Checkout
     Proceed to 'Order Payment'
-    Verify Product Price Is  $54.00
+    Verify Product Total Price is Calculated Correctly  ${SIMPLE_TERM}
 
 
-Correct value is displayed for 'Total Price'
+'Order Total Price' is calculated correctly
     Sign In  ${VALID_EMAIL}  ${VALID_PASSWORD}
     Search  ${SIMPLE_TERM}
     Proceed to 'Product Details'
-    Enter Product Quantity  2
     Add To Shopping Cart
     Proceed to Order Checkout
     Proceed to 'Order Payment'
-    Verify Total Price Is  $56.00
+    Verify Order Total Price is Calculated Correctly
 
 
 User is able to create a shipping address

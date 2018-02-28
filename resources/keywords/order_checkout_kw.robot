@@ -104,7 +104,8 @@ Verify Product Is Not In Shopping Cart
 
 
 Remove Product From Shopping Cart
-    CheckoutSummary.Click 'Delete' icon
+    [Arguments]  ${product}
+    CheckoutSummary.Click 'Delete' icon  ${product}
 
 
 Open 'Terms of service'
@@ -228,3 +229,28 @@ User Is Prompted to Sign In
 
 Sign In and Proceed to 'Checkout Address'
     CheckoutSignIn.Sign In and Navigate To 'Checkout Address'  ${VALID_EMAIL}  ${VALID_PASSWORD}
+
+
+Search and Add To Shopping Cart
+    [Arguments]  ${product}
+    Search  ${product}
+    Proceed to 'Product Details'
+    Add To Shopping Cart
+    AddToCart.Click 'Close' button
+
+
+Verify Product Total Price is Calculated Correctly
+    [Arguments]  ${product}
+    ${unit_price} =  CheckoutPayment.Get Unit Price for Product  ${product}
+    ${quantity} =  CheckoutPayment.Get Quantity for Product  ${product}
+    ${actual_total_price} =  CheckoutPayment.Get Total Price for Product  ${product}
+    ${expected_total_price} =  Evaluate  ${unit_price} * ${quantity}
+    Should Be Equal As Numbers  ${expected_total_price}  ${actual_total_price}
+
+
+Verify Order Total Price is Calculated Correctly
+    ${total_products_price} =  CheckoutPayment.Get Total Products Price
+    ${total_shipping_price} =  CheckoutPayment.Get Total Shipping Price
+    ${expected_order_total_price} =  CheckoutPayment.Get Order Total Price
+    ${actual_order_total_price} =  Evaluate  ${total_products_price} + ${total_shipping_price}
+    Should Be Equal As Numbers  ${expected_order_total_price}  ${actual_order_total_price}
